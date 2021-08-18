@@ -15,7 +15,8 @@
     "try": {
       "dir": "~/couchbase/try-cb-lcb/",
       "url": "https://github.com/couchbaselabs/try-cb-lcb/"
-    }
+    },
+    "aliases": ["lcb", "libcouchbase"]
   },
   "common": {
     "doc": {
@@ -40,13 +41,15 @@
     "try": {
       "dir": "~/couchbase/try-cb-dotnet/",
       "url": "https://github.com/couchbaselabs/try-cb-dotnet"
-    }
+    },
+    "aliases": ["net", ".net"]
   },
   "frontend": {
     "try": {
       "dir": "~/couchbase/try-cb-frontend-v2/",
       "url": "https://github.com/couchbaselabs/try-cb-frontend-v2"
-    }
+    },
+    "aliases": ["fe"]
   },
   "go": {
     "sdk": {
@@ -64,7 +67,8 @@
     "try": {
       "dir": "~/couchbase/try-cb-golang/",
       "url": "https://github.com/couchbaselabs/try-cb-golang"
-    }
+    },
+    "aliases": ["golang"]
   },
   "java": {
     "sdk": {
@@ -82,7 +86,8 @@
     "try": {
       "dir": "~/couchbase/try-cb-java/",
       "url": "https://github.com/couchbaselabs/try-cb-java"
-    }
+    },
+    "aliases": ["jvm"]
   },
   "nodejs": {
     "sdk": {
@@ -100,7 +105,8 @@
     "try": {
       "dir": "~/couchbase/try-cb-nodejs/",
       "url": "https://github.com/couchbaselabs/try-cb-nodejs"
-    }
+    },
+    "aliases": ["js", "node.js", "node", "couchnode"]
   },
   "python": {
     "sdk": {
@@ -118,7 +124,8 @@
     "try": {
       "dir": "~/couchbase/try-cb-python/",
       "url": "https://github.com/couchbaselabs/try-cb-python"
-    }
+    },
+    "aliases": ["py"]
   },
   "php": {
     "sdk": {
@@ -154,13 +161,15 @@
     "try": {
       "dir": "~/couchbase/try-cb-ruby/",
       "url": "https://github.com/couchbaselabs/try-cb-ruby"
-    }
+    },
+    "aliases": ["rb"]
   },
   "rust": {
     "sdk": {
       "dir": "~/couchbase/couchbase-rs",
       "url": "https://github.com/couchbaselabs/couchbase-rs"
-    }
+    },
+    "aliases": ["rs"]
   },
   "scala": {
     "sdk": {
@@ -184,6 +193,7 @@
     "tools": {
       "dir": "~/couchbase/docs-tooling/",
       "url": "https://github.com/couchbaselabs/docs-tooling/"
-    }
+    },
+    "aliases": ["tool", "tools"]
   }
 }

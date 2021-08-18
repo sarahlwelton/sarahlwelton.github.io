@@ -9,12 +9,16 @@ vaq() {
   jq -e "$QUERY" $CONF $OPTIONS
 }
 
+__va_resolve() {
+	KEY=$1 vaq 'to_entries | map(select(.key == env.KEY or (.value.aliases // [] | any(. == env.KEY)))) | first.key' -r
+}
+
 __va2() {
   if [[ $# < 2 ]]; then
     return 1
   fi
 
-  VA_1=$1
+  VA_1=$(__va_resolve $1)
   VA_2=$2
 
   if LOOKUP=`vaq ".$VA_1.$VA_2"`; then
@@ -42,7 +46,7 @@ __va1() {
     return 1
   fi
 
-  local VA_1=$1
+  local VA_1=$(__va_resolve $1)
 
   if LOOKUP=`vaq .$VA_1`; then
 
@@ -74,4 +78,3 @@ vap() {
   fi
   vaq "$PRED keys |.[]" -r
 }
-
