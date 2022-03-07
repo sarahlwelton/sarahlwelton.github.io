@@ -9,4 +9,5 @@ Add yours to this list today!
 
 ## Experimental
 
+ * `templates` -- AsciiDoc templates for documentation.
  * `va` - jump around and get information about various projects. @osfameron
