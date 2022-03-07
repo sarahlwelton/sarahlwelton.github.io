@@ -1,0 +1,201 @@
+= Title of Guide
+:page-topic-type: guide
+:page-partial:
+:page-pagination:
+:imagesdir: ../assets/images
+:tabs:
+:description: One-sentence abstract for SEO.
+
+[abstract]
+{description}
+
+== Introduction
+
+// tag::intro[]
+Reiterate the concept that this how-to guide covers, in one or two sentences.
+This is tagged so that it can be transcluded into an associative navigation page for linked how-to guides.
+// end::intro[]
+
+Include any partials here that users will need to follow the examples.
+Be brief!
+
+== Single-Step Procedure
+
+Optional single paragraph, summarizing any concepts that this procedure covers.
+
+To achieve this, do this -- must be an imperative sentence: "do this", not "you can".
+
+For example, the following query ... [illustrates the procedure].
+
+====
+.Query
+[source,n1ql]
+----
+SELECT * FROM `travel-sample`.inventory.hotel -- <.>
+LIMIT 1;
+----
+
+<.> Callouts if necessary.
+
+.Result
+[source,json]
+----
+{"hotel": "Nero's Palace"} // <.>;
+----
+
+<.> Callouts if necessary.
+====
+
+NOTE: Any further notes.
+
+For more information and examples, refer to [concept or reference].
+
+== Multi-Step Procedure
+
+Optional single paragraph, summarizing any concepts that this procedure covers.
+
+To achieve this ... [goal of the procedure]:
+
+1. Step: must be an imperative sentence -- "do this", not "you can".
++
+Result -- only if necessary
++
+Image -- only if necessary
+
+2. Step: as above
+
+   a. Substep -- only if necessary.
+
+   b. Substep
+
+   c. Substep
+
+3. Step: as above -- as many as necessary.
+
+TIP: Any hints or tips that apply to the procedure.
+
+For example, the following query ... [illustrates the procedure].
+
+====
+.Query
+[source,n1ql]
+----
+SELECT * FROM `travel-sample`.inventory.hotel -- <.>
+LIMIT 1;
+----
+
+<.> Callouts if necessary.
+
+.Result
+[source,json]
+----
+{"hotel": "Nero's Palace"} // <.>;
+----
+
+<.> Callouts if necessary.
+====
+
+NOTE: Any further notes.
+
+For more information and examples, refer to [concept or reference].
+
+== Procedure with Tabbed Examples
+
+Optional single paragraph, summarizing any concepts that this procedure covers.
+[Use this template when there is one procedure, but several related examples, e.g. using different language constructs].
+
+Single-step or multi-step procedure, as above.
+
+TIP: Any hints or tips that apply to the procedure.
+
+[{tabs}]
+====
+Language 1::
++
+--
+For example, the following code ...
+
+[Example as above].
+
+For more information and examples, refer to [concept or reference].
+--
+
+Language 2::
++
+--
+For example, the following code ...
+
+[Example as above].
+
+For more information and examples, refer to [concept or reference].
+--
+====
+
+== Tabbed Procedure
+
+Optional single paragraph, summarizing any concepts that this procedure covers.
+[Use this template when there are several related procedures, e.g. using GUI versus Shell, or using different SDKs].
+
+
+
+[{tabs}]
+====
+Interface 1::
++
+--
+Single-step or multi-step procedure, as above.
+
+TIP: Any hints or tips that apply to the procedure.
+
+'''
+
+For example, the following code ...
+
+[Example as above].
+
+For more information and examples, refer to [concept or reference].
+--
+
+Interface 2::
++
+--
+Single-step or multi-step procedure, as above.
+
+TIP: Any hints or tips that apply to the procedure.
+
+'''
+
+For example, the following code ...
+
+[Example as above].
+
+For more information and examples, refer to [concept or reference].
+--
+====
+
+
+== Related Links
+
+Explanations:
+
+* Link(s) to concept topics, if available.
+
+Reference:
+
+* Link(s) to reference topics, if available.
+
+Tutorials:
+
+* Link(s) to tutorials, if available
+
+SDK topics:
+
+* C
+| .NET
+| Go
+| Java
+| Node.js
+| PHP
+| Python
+| Ruby
+| Scala
