@@ -1,0 +1,10 @@
+#!/bin/bash
+
+cd ~/couchbase
+
+for text in "$@"
+do
+    echo Checking "$text"
+    rg "$text" --type asciidoc --count-matches --word-regexp | cut -d: -f2 | numsum
+done
+
