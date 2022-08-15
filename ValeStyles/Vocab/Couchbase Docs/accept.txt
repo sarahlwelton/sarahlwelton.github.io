@@ -3,6 +3,7 @@ Amazon cloud
 Analytics Service
 APAC
 API
+App Services
 ASCII
 automatic schema discovery
 auto-sharding

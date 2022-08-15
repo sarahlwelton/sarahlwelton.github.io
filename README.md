@@ -66,3 +66,22 @@ Vale generates a report that provides the following information:
 5. The location of the YAML file that flagged the issue, written as `<FolderName>.<FileName>`. 
 
 ![A screenshot from Windows Terminal, showing a possible output of running Vale on a file.](vale-report-example.png)
+
+## Tweak styles 
+
+To tweak the existing styles, open any `.yml` file in a text editor and make your changes. 
+
+Vale uses Go-based RegEx. If you need help to write a RegEx pattern, use a site like [regex101.com](https://regex101.com/) to learn syntax and test your patterns.
+
+If you have a specific term, like a page or product name, that must be spelled the same and appear the same way everywhere, add it to the **Vocab** files: 
+
+1. Go to `ValeStyles\Vocab\Couchbase Docs`. 
+2. Do one of the following: 
+    - To add a word or phrase that Vale should never flag as incorrect in any other rule, modify the `accept.txt` file. 
+    - To add a word or phrase that Vale should always reject that isn't yet covered by another rule, modify the `reject.txt` file. 
+
+Keep the following in mind: 
+
+- Add only a single word or phrase per line to the `accept.txt` or `reject.txt`. 
+- If multiple spellings for your word or phrase are correct, make sure that you add them with RegEx to the `accept.txt`. Otherwise, Vale flags any spellings or capitalization styles that don't exactly match what's present in the file. 
+- If your word or phrase includes punctuation or other characters that are a part of RegEx syntax, make sure you escape them with a backslash (\\). Otherwise, Vale breaks. 
