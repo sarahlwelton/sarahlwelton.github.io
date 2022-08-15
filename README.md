@@ -28,7 +28,7 @@ The package manager does all of the heavy lifting to install Vale. If you receiv
 
 This repo contains a `.vale.ini` file that contains everything you need to get started. This file contains all of the necessary configuration for Vale to lint your text files.
 
-Make a couple changes to ensure your Vale installation pulls your styles from the correct location: 
+Make a couple changes to make sure your Vale installation pulls your styles from the correct location: 
 
 1. In your file explorer, move the `.vale.ini` from this repository to your `$HOME` directory: 
     - On Windows: `C:\Users\<yourusername>`
@@ -43,23 +43,26 @@ Make a couple changes to ensure your Vale installation pulls your styles from th
 
 ### Configure your dicpath/ignore for `Couchbase.Spelling`
 
-Unfortunately, the Spelling rule for our spellcheck searches for the path to the required dictionary and ignore files relative to the directory where you're trying to lint. 
+Unfortunately, the Spelling rule for the spellcheck searches for the path to the required dictionary and ignore files relative to the directory where you're trying to lint. Not great. 
 
-Not great. 
+Set the location of the dictionary file and the ignore file:
 
-1. Replace the `$REPO` in the `dicpath` and `ignore` attributes to the location of the local copy of this repository on your machine. 
+1. Replace the `$REPO` in the `dicpath` and `ignore` attributes to the location of the `ValeStyles` folder in your local copy of this repository. 
 
 ## Lint a file 
 
 After you've done all the set up, you're ready to lint some files! 
 
-### Lint a single file 
+1. Open the file or folder's location on your filesystem in a terminal window. 
 
-1. Open the file's folder location in a terminal window. 
-
-2. Run `vale <filename>`. 
+2. Run `vale <FileName>` or `vale <FolderName>`. 
 
 Vale generates a report that provides the following information: 
 
-1. The line number and character number where it found an issue. 
-2. 
+1. If you ran Vale on a folder, the name of the file where Vale found the following list of issues.  
+2. The line number and character/column number where Vale found an issue. 
+3. The severity of the issue: Suggestion, Warning, or Error.
+4. The description of why Vale flagged the issue. 
+5. The location of the YAML file that flagged the issue, written as `<FolderName>.<FileName>`. 
+
+![A screenshot from Windows Terminal, showing a possible output of running Vale on a file.](vale-report-example.png)

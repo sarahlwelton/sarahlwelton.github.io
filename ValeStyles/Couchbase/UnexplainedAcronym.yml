@@ -19,12 +19,15 @@ exceptions:
   - CSV
   - cURL
   - DEBUG
+  - DITA
+  - DOC
   - DOM
   - DPI
   - FAQ
   - GCC
   - GDB
   - GET
+  - GIF
   - GPU
   - GTK
   - GUI
@@ -34,6 +37,8 @@ exceptions:
   - IDE
   - JAR
   - JIRA
+  - JPEG
+  - JPG
   - JSON
   - JSX
   - LESS
@@ -45,9 +50,12 @@ exceptions:
   - PATH
   - PDF
   - PHP
+  - PNG
   - POST
   - RAM
   - REPL
+  - REST
+  - ROOT
   - RSA
   - SCM
   - SCSS
