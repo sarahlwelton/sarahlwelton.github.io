@@ -15,8 +15,8 @@ To get started with the Vale Style guide, you need to:
 To install Vale: 
 
 1. Install a package manager: 
-    a. On Windows: [Chocolatey](https://chocolatey.org/install)
-    b. On Mac/Linux: [Homebrew](https://brew.sh/)
+    - On Windows: [Chocolatey](https://chocolatey.org/install)
+    - On Mac/Linux: [Homebrew](https://brew.sh/)
 
 2. Open a terminal application with administrator permissions. 
 
@@ -26,7 +26,7 @@ The package manager does all of the heavy lifting to install Vale. If you receiv
 
 ### Set up a .vale.ini file 
 
-This repo contains a `.vale.ini` file that contains everything you need to get started. This file contains all of the necessary configuration for Vale to lint your text files.
+This repository contains a `.vale.ini` file that contains everything you need to get started. This file contains all of the necessary configuration for Vale to lint your text files.
 
 Make a couple changes to make sure your Vale installation pulls your styles from the correct location: 
 
@@ -67,13 +67,18 @@ Vale generates a report that provides the following information:
 
 ![A screenshot from Windows Terminal, showing a possible output of running Vale on a file.](vale-report-example.png)
 
+If you run into issues linting a folder:
+
+- Check your `.vale.ini` to see what file types Vale lints. If you see a [*] above the `BasedOnStyles` setting, Vale lints all file types. Enter a file type (`.adoc`, for example) to change the scope. 
+- Change the folder to limit the scope of the files you want Vale to lint.
+
 ## Tweak styles 
 
 To tweak the existing styles, open any `.yml` file in a text editor and make your changes. 
 
 Vale uses Go-based RegEx. If you need help to write a RegEx pattern, use a site like [regex101.com](https://regex101.com/) to learn syntax and test your patterns.
 
-If you have a specific term, like a page or product name, that must be spelled the same and appear the same way everywhere, add it to the **Vocab** files: 
+If you have a specific term like a page or product name that must be spelled the same and appear the same way everywhere, add it to the **Vocab** files: 
 
 1. Go to `ValeStyles\Vocab\Couchbase Docs`. 
 2. Do one of the following: 
