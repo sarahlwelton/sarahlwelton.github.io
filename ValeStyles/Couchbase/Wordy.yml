@@ -17,6 +17,7 @@ tokens:
   - going forward
   - \billustrat(e|ing)\b
   - \bimpact(|ing)\b
+  - in doing so
   - \binitiat(e|ing)\b
   - innovative
   - \bleverag(e|ing)\b

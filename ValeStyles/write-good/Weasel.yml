@@ -1,5 +1,6 @@
 extends: existence
 message: "'%s' is a weasel word!"
+link: https://en.wikipedia.org/wiki/Weasel_word
 ignorecase: true
 level: warning
 tokens:
@@ -140,6 +141,7 @@ tokens:
   - quarterly
   - quickly
   - quietly
+  - radically
   - rapidly
   - rarely
   - really
