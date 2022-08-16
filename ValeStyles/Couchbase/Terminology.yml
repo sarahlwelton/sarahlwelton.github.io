@@ -5,7 +5,6 @@ ignorecase: true
 
 swap: 
   (?:dotnet|.net): .NET
-  information on: information about
   (?:access list|access-list|accesslist|allowlist|allow-list|allow list|white list|white-list|whitelist): Allowlist
   adaptor: adapter 
   ad-hoc: (adhoc|ad hoc)
@@ -50,7 +49,9 @@ swap:
   indices: indexes
   (?:index scan|index-scan): IndexScan
   industry-standard: Industry standard
+  information on: information about
   in memory : in-memory
+  in order to : to
   (?:intracluster replication|intra cluster replication) : intra-cluster replication
   (?:key space|key-space): keyspace
   (?:keyvalue|key value): key-value
@@ -95,5 +96,6 @@ swap:
   (?:sub queries|sub-queries) : subqueries
   (?:touch-point|touch point) : touchpoint
   toward : towards
+  (?:utilize|utilizing) : use|using
   (?:white paper|white-paper) : whitepaper
   yellow: amber
