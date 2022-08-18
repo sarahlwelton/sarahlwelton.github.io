@@ -1,0 +1,8 @@
+extends: spelling
+message: Did you really mean '%s'?
+level: error
+dicpath: .github/ValeStyles
+dictionaries:
+  - en_US-web
+ignore:
+  - .github/ValeStyles/Couchbase/ignore.txt
