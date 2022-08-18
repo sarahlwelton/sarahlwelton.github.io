@@ -1,0 +1,9 @@
+extends: existence
+message: Use "refer to," not "see".
+level: warning
+ignorecase: true
+
+tokens: 
+  - see (http://|https://)
+  - see xref:.+.adoc\[.+\]
+  - see {.+}\[.+\]
