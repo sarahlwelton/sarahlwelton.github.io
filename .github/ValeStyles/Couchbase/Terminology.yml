@@ -89,7 +89,7 @@ swap:
   role based access control : Role-Based Access Control
   (?:schemaless|schema less) : schema-less
   (?:screen-shot|screen shot) : screenshot
-  see : refer to
+  # see : refer to
   slave: secondary
   (?:sub clause|subclause) : sub-clause
   (?:sub millisecond|submillisecond) : sub-millisecond
