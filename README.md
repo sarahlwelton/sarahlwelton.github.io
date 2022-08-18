@@ -8,7 +8,7 @@ To get started with the Vale Style guide, you need to:
 
 1. [Install Vale](#install-vale). 
 2. [Set up a `.vale.ini` file](#set-up-a-valeini-file).
-3. [Configure your dicpath/ignore for Coucbase.Spelling](#configure-your-dicpathignore-for-couchbasespelling)
+3. [Configure your dicpath/ignore for Couchbase.Spelling](#configure-your-dicpathignore-for-couchbasespelling)
 
 ### Install Vale
 
