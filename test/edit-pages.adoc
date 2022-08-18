@@ -1,6 +1,6 @@
 = Edit Existing Documentation
 
-The following sections describe the document editing process using the Atom editor; however, you can write AsciiDoc in the plain text editor or integrated development environment (IDE) of your choice.
+The following sections describe the document editing process using the Atom editor. You can write AsciiDoc in the plain text editor or integrated development environment (IDE) of your choice.
 
 == General Editing Steps Using Atom
 

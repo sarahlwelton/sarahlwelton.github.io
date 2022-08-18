@@ -1,7 +1,0 @@
-extends: occurrence
-message: This might be a run-on sentence (more than 2 commas)
-level: warning
-scope: sentence
-ignorecase: false
-max: 2
-token: ','
