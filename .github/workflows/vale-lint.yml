@@ -1,8 +1,8 @@
-name: reviewdog
+name: vale-lint
 on: [pull_request]
 
 jobs:
-  prose:
+  vale:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
