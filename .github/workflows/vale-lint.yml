@@ -12,7 +12,7 @@ jobs:
       uses: errata-ai/vale-action@reviewdog
       with:
         fail_on_error: true
-        reporter: github-check
+        reporter: github-pr-review
         filter_mode: added
       env:
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
