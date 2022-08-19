@@ -20,7 +20,7 @@ Compare and Swap
 CentOS
 Cluster Manager
 ConfigProviderBase
-Couchbase
+(Couchbase|cloud\.couchbase)
 Couchbase Autonomous Operator
 Couchbase Backup Manager
 Couchbase Capella
