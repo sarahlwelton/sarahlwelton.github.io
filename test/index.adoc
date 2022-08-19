@@ -21,7 +21,7 @@ You can also raise a DOC issue by clicking the btn:[Feedback?] button in the bot
 *Use a clear and descriptive title*.
 For example, "`Instructions for disabling THP on RHEL/CentOS 7 and later do not work.`"
 
-Make sure titles follow the terminology rules. Couchbase Capella should not appear as . (Add a note about)
+Make sure titles follow the terminology rules. Couchbase Capella shouldn't appear as . (Add a note about)
 
 *Describe the problem or enhancement in full*.
 For any problem, describe it in detail, including any expected results and how they differ from the real results.
