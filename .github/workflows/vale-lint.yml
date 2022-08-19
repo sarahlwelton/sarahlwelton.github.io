@@ -13,6 +13,6 @@ jobs:
       with:
         fail_on_error: true
         reporter: github-check
-        filter-mode: added
+        filter_mode: added
       env:
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}

@@ -14,7 +14,7 @@ All bugs and enhancements for the Couchbase documentation are tracked using the 
 Even if you don't plan to make the change yourself, we would still like to know what it is!
 Raise a DOC bug and someone on the team will look at it.
 
-You can also raise a DOC issue by clicking the btn:[Feedback?] button in the bottom-right corner of any page on this site.
+You can also raise a DOC issue by clicking the btn:[Feedback?] button in the bottom-right corner of any page on this site. (Add a note about couchbase capella)
 
 === How Do I Submit a Good DOC Issue?
 
