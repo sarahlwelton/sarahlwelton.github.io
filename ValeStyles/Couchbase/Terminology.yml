@@ -92,10 +92,11 @@ swap:
   # see : refer to
   slave: secondary
   (?:sub clause|subclause) : sub-clause
+  (?:sub document|subdocument) : sub-document
   (?:sub millisecond|submillisecond) : sub-millisecond
   (?:sub queries|sub-queries) : subqueries
   (?:touch-point|touch point) : touchpoint
   toward : towards
-  (?:utilize|utilizing) : use|using
+  (?:utilize|utilizing) : (use|using)
   (?:white paper|white-paper) : whitepaper
   yellow: amber
