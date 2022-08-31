@@ -11,6 +11,8 @@ Availability Zone
 BI
 bootstrap
 CAS
+callout
+callouts
 cbbackupmgr
 cbcollect
 (?i)CBQ
@@ -20,16 +22,16 @@ Compare and Swap
 CentOS
 Cluster Manager
 ConfigProviderBase
-(Couchbase|cloud\.couchbase)
-Couchbase Autonomous Operator
-Couchbase Backup Manager
-Couchbase Capella
-Couchbase Cluster Connection Protocol
-Couchbase Data Platform
-Couchbase Eventing Service
-Couchbase Functions
-Couchbase Monitoring and Observability Stack
-Couchbase Server
+Couchbase
+cloud\.couchbase
+Autonomous Operator
+Backup Manager
+Cluster Connection Protocol
+Data Platform
+Eventing Service
+Functions
+Monitoring and Observability Stack
+Server
 Couchstore
 cURL
 Database Change Protocol
@@ -73,6 +75,7 @@ JavaScript
 JIRA
 JSON
 Kafka
+Kroki
 KV Service
 Last Write Wins
 LWW
@@ -110,6 +113,8 @@ rack awareness
 RA
 RBAC
 Read Committed
+rebase
+repositories
 Role-Based Access Control
 RYOW
 RxJava
@@ -129,6 +134,7 @@ targetNozzlePerNode
 tcpdump
 THP
 time to live
+toolchain
 TTL
 Ubuntu
 UNNEST
@@ -144,5 +150,6 @@ wifi
 X\.509
 XDCR
 XML
+(?i)yaml
 Zendesk
 zip

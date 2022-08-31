@@ -9,6 +9,8 @@ swap:
   adaptor: adapter 
   ad-hoc: (adhoc|ad hoc)
   afterward: afterwards
+  amazon cloud: Amazon cloud
+  analytics service: Analytics Service
   app: application
   (?:'auto sharding'|autosharding) : auto-sharding
   (?:blacklist|blocklist|deny-list): Denylist

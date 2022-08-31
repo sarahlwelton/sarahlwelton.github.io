@@ -4,5 +4,3 @@ level: error
 dicpath: $REPO
 dictionaries:
   - en_US-web
-ignore:
-  - $REPO/ValeStyles/Couchbase/ignore.txt

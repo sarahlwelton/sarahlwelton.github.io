@@ -1,0 +1,34 @@
+= General Principles of Couchbase Style
+
+The following are some general principles of writing in the Couchbase Style: 
+
+* <<Write in American English>>
+* <<Write in the Present Tense>>
+* <<Write in Second Person>>
+* <<Use Active Voice>>
+* <<Use Plain Language and Contractions>>
+* <<Use Simple Sentences and Short Paragraphs>>
+
+== Write in American English
+
+Use American English spelling, not British or Canadian English. The Vale automated spellcheck is based on an American English dictionary. 
+
+If you need to check the spelling of a word, consult the https://www.merriam-webster.com/[Merriam-Webster's Collegiate Dictionary, Eleventh Edition^]. 
+
+If Vale flags a product name or other technical industry term as incorrect: 
+    
+    * If the add the term to either the `Couchbase\Terminology.yml` Vale Style, or the `Vocab\Couchbase\accept.txt` file, as appropriate. 
+
+== Write in the Present Tense 
+
+Don't write in past tense or future tense. 
+
+== Write in Second Person 
+
+You can address the user as "you" 
+
+== Use Active Voice 
+
+== Use Plain Language and Contractions
+
+== Use Simple Sentences and Short Paragraphs
