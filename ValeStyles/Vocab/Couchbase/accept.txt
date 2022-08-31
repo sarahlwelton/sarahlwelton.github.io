@@ -15,23 +15,21 @@ callout
 callouts
 cbbackupmgr
 cbcollect
-(?i)CBQ
 cbtransfer
 Capella
 Compare and Swap
 CentOS
 Cluster Manager
 ConfigProviderBase
-Couchbase
 cloud\.couchbase
-Autonomous Operator
-Backup Manager
-Cluster Connection Protocol
-Data Platform
-Eventing Service
-Functions
-Monitoring and Observability Stack
-Server
+Couchbase Autonomous Operator
+Couchbase Backup Manager
+Couchbase Cluster Connection Protocol
+Couchbase Data Platform
+Couchbase Eventing Service
+Couchbase Functions
+Couchbase Monitoring and Observability Stack
+Couchbase Server
 Couchstore
 cURL
 Database Change Protocol
@@ -86,7 +84,7 @@ massively parallel processing
 MPP
 Memcached bucket
 Memcached
-Node.js
+Node\.js
 npm
 MongoDB™
 Multi-Dimensional Scaling
@@ -146,10 +144,10 @@ Views Service
 [Vv]irtualization
 vmstat
 VMware
-wifi
 X\.509
 XDCR
 XML
-(?i)yaml
+yaml
+YAML
 Zendesk
 zip
