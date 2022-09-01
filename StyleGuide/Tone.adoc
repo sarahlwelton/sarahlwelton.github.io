@@ -3,16 +3,17 @@
 
 The Couchbase Voice aims to be: 
 
-Confident :: We know what we're talking about, and how to communicate it to our users. We know the answers. 
+Confident :: We know what we're talking about, and how to communicate it to our users. We have the answers and we know it. 
 Reassuring and Empathetic :: We know where the user is coming from and what they want to do. We know that databases can be complicated, but we're right there with them and will lead them to what they're looking for. We are the user's friend, not their adversary. 
 Approachable :: We don't talk down to the user. We're the user's coach, and we're always open to questions. 
 Opinionated and Visionary :: We have a strong opinion about our product and what it can do to solve a user's problems. We know it requires a bold approach to make progress and we have a grand vision of the future of databases that we want to share.
 
+To achieve these goals, there are certain things that the Couchbase Voice avoids.
 |===
 | | Explanation | Example 
 
 | *Avoid humor* 
-| Humor distracts from the information we need to provide and doesn't translate well. Keep to factual statements.
+| Humor distracts from the information we need to provide and doesn't translate well. Keep to factual statements. It can also cause frustration if a user just wants an answer to their problem.
 | _It's not CRUDDY to use CRUD operations!_
 
 | *Avoid personal opinions*
@@ -33,3 +34,5 @@ a |
 | Write about what the product does, not about what it can or may do in the future. Stick to what's in the product. 
 | _Someday, Couchbase may support this feature._
 |===
+
+Aim to keep a neutral tone in the documentation. Think about what drove the user to the documentation and try to be as helpful and to-the-point as possible. Give them what they need to be successful. 

@@ -1,6 +1,0 @@
-extends: spelling
-message: Did you really mean '%s'?
-level: error
-dicpath: $REPO
-dictionaries:
-  - en_US-web

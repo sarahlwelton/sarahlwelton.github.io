@@ -1,0 +1,50 @@
+extends: substitution
+message: Use '%s', not '%s'
+level: error
+ignorecase: false
+
+swap:
+  (?:amazon cloud|amazon-cloud|amazon-Cloud|amazon Cloud|Amazon Cloud): Amazon cloud
+  (?:analytics service|Analytics service|analytics Service): Analytics Service
+  (?:app services|App services|app Services): App Services
+  (?:Automatic Schema Discovery|Automatic Schema discovery|Automatic schema discovery|Automatic schema Discovery|automatic Schema Discovery): automatic schema discovery
+  (?:availability zone|Availability zone|availability Zone): Availability Zone
+  (?:cluster manager|Cluster manager|cluster Manager): Cluster Manager
+  (?:compare and swap|Compare and swap|Compare And swap|compare And Swap|compare and Swap|compare And swap): Compare and Swap
+  (?:couchbase autonomous operator|Couchbase autonomous operator|Couchbase Autonomous operator|Couchbase autonomous Operator|couchbase autonomous Operator|couchbase Autonomous Operator): Couchbase Autonomous Operator
+  (?:couchbase backup manager|Couchbase backup manager|Couchbase Backup manager|Couchbase backup Manager|couchbase Backup Manager): Couchbase Backup Manager
+  (?:couchbase cluster connection protocol|Couchbase cluster connection protocol|Couchbase Cluster connection protocol|Couchbase Cluster Connection protocol|Couchbase cluster Connection protocol|Couchbase cluster connection Protocol|Couchbase Cluster Connection protocol|couchbase Cluster Connection protocol|couchbase Cluster Connection Protocol): Couchbase Cluster Connection Protocol
+  (?:couchbase data platform|Couchbase data platform|Couchbase Data platform|Couchbase data Platform|couchbase Data Platform): Couchbase Data Platform
+  (?:couchbase eventing service|Couchbase eventing service|Couchbase Eventing service|Couchbase eventing Service|couchbase Eventing service): Couchbase Eventing Service
+  (?:couchbase functions|Couchbase functions|couchbase Functions): Couchbase Functions
+  (?:couchbase monitoring and observability stack|Couchbase monitoring and observability stack|couchbase Monitoring and observability stack|couchbase monitoring and Observability stack|couchbase monitoring and observability Stack|Couchbase Monitoring and observability stack|Couchbase Monitoring and Observability stack|couchbase Monitoring and Observability stack|Couchbase Monitoring And Observability Stack): Couchbase Monitoring and Observability Stack
+  (?:couchbase server|Couchbase server|couchbase Server): Couchbase Server
+  (?:database change protocol|database Change protocol|database change Protocol|Database change protocol|Database Change protocol|Database change Protocol|database Change Protocol): Database Change Protocol
+  (?:engagement database|engagement Database|Engagement database|engagement-database|Engagement-database|engagement-Database): Engagement Database
+  (?:event-condition-action model|event-condition-action-model|Event-condition-action model|Event-condition-action-model|event-Condition-action model|event-Condition-action-model|event-condition-Action model|event-condition-Action-model|event-condition-action Model|event-condition-action-Model|Event-Condition-action model|Event-Condition-action-model|Event-condition-Action model|Event-condition-Action-model|event-Condition-Action model|event-Condition-Action-model|event-condition-Action Model|event-condition-Action-Model|event-Condition-Action Model|event-Condition-Action-Model): Event-Condition-Action model
+  (?:full-text search|full text search|full-text-search|Full-text search|Full text search|Full-text-search|full-Text-search|full Text search|full-Text-search|full-text Search|full text Search|full-text-Search|full-Text Search|full Text Search|full-Text-Search): Full-Text Search
+  (?:global secondary indexes|Global secondary indexes|global Secondary indexes|global secondary Indexes|Global Secondary indexes|global Secondary Indexes|Global secondary Indexes|global-secondary indexes|Global-secondary indexes|Global-Secondary indexes|global-secondary Indexes): Global Secondary Indexes
+  (?:google cloud platform|Google cloud platform|google cloud Platform|Google Cloud platform|google Cloud Platform|Google cloud Platform): Google Cloud Platform
+  (?:internet of things|Internet of things|internet Of things|internet of Things|Internet Of things|internet Of Things|internet-of-things|Internet-of-things|internet-of-Things|Internet-Of-things|internet-Of-Things): Internet of Things
+  (?:kv service|KV service|Kv service|kV service|kv Service|Kv Service|kV Service): KV Service
+  (?:last write wins|Last write wins|last Write wins|last write Wins|Last Write wins|last Write Wins|Last write Wins|last-write-wins|Last-write-wins|last-Write-wins|last-write-Wins|Last-Write-wins|last-Write-Wins|Last-write-Wins): Last Write Wins
+  (?:Massively Parallel Processing|Massively Parallel processing|massively Parallel Processing|Massively parallel Processing): massively parallel processing
+  (?:Memcached Bucket|memcached Bucket): Memcached bucket
+  (?:multi-dimensional scaling|Multi-dimensional scaling|multi-dimensional Scaling|Multi-Dimensional scaling|multi-Dimensional Scaling|Multi-dimensional Scaling): Multi-Dimensional Scaling
+  (?:pluggable authentication modules|Pluggable authentication modules|pluggable Authentication modules|pluggable authentication Modules|Pluggable Authentication modules|pluggable Authentication Modules|Pluggable authentication Modules): Pluggable Authentication Modules
+  (?:Query Editor|query Editor|Query editor): query editor
+  (?:Query Executor|query Executor|Query executor): query executor
+  (?:Query Monitoring|Query monitoring|query Monitoring): query monitoring
+  (?:Query Planner|query Planner|Query planner): query planner
+  (?:Query Plan Visualizer|query Plan Visualizer|query plan Visualizer|Query plan Visualizer): query plan visualizer
+  (?:query service|Query service|query Service): Query Service
+  (?:Query Shell|Query shell|query Shell): query shell
+  (?:query workbench|Query workbench|query Workbench): Query Workbench
+  (?:Rack Awareness): rack awareness
+  (?:read committed|read-committed|Read-committed|Read committed|read Committed|read-Committed): Read Committed
+  (?:role-based access control|Role-based access control|Role-Based access control|Role-Based Access control|role-based Access Control|Role-based access Control): Role-Based Access Control
+  (?:search service|search-service|search Service|search-Service|Search-service|Search service): Search Service
+  (?:spark datasets|spark-datasets|Spark datasets|Spark-datasets|spark Datasets|spark-Datasets): Spark Datasets
+  (?:structured streaming|structured-streaming|structured Streaming|structured-Streaming|Structured streaming|Structured-streaming): Structured Streaming
+  (?:Time To Live|Time to Live|Time to live|time To Live): time to live
+  (?:views service|Views service|views Service): Views Service

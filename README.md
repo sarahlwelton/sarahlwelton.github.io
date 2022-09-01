@@ -8,7 +8,6 @@ To get started with the Vale Style guide, you need to:
 
 1. [Install Vale](#install-vale). 
 2. [Set up a `.vale.ini` file](#set-up-a-valeini-file).
-3. [Configure your dicpath for Couchbase.Spelling](#configure-your-dicpath-for-couchbasespelling)
 
 ### Install Vale
 
@@ -39,15 +38,7 @@ Make a couple changes to make sure your Vale installation pulls your styles from
 2. Open the `.vale.ini` file in a text editor. 
 
 3. Set the `StylesPath` to the location of the `ValeStyles` folder in this repository. 
-    For example, `C:\Users\<yourusername>\GitHub\cb-vale-style-guide\ValeStyles`
-
-### Configure your dicpath for `Couchbase.Spelling`
-
-Unfortunately, the Spelling rule for the spellcheck searches for the path to the required dictionary relative to the directory where you're trying to lint. Not great. 
-
-Set the location of the dictionary file:
-
-1. Replace the `$REPO` in the `dicpath` attribute to the location of the `ValeStyles` folder in your local copy of this repository. 
+    For example, `C:\Users\<yourusername>\GitHub\cb-vale-style-guide\ValeStyles` 
 
 ## Lint a file 
 

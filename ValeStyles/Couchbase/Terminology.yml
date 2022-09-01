@@ -9,14 +9,16 @@ swap:
   adaptor: adapter 
   ad-hoc: adhoc|ad hoc
   afterward: afterwards
-  amazon cloud: Amazon cloud
-  analytics service: Analytics Service
+  app-services: App Services
   app: application
   '(?:auto sharding|autosharding)': auto-sharding
+  '(?:automatic-schema discovery|automatic-schema-discovery)': automatic schema discovery
+  availability-zone: Availability Zone
   '(?:blacklist|blocklist|deny-list)': Denylist
   cheatsheet: cheat sheet
   check point: checkpoint
   '(?:code base|code-base)': codebase
+  '(?:compare-and-swap|compare-and swap|compare and-swap)': Compare and Swap
   '(?:cross-datacenter replication|cross data center replication|cross-datacenter-replication)': cross datacenter replication
   '(?:datacenter|data-center)': data center
   '(?:data center replication|data-center replication)': datacenter replication
@@ -67,6 +69,7 @@ swap:
   '(?:micro-services|micro services)': microservices
   '(?:multi channel|multi-channel)': multichannel
   '(?:multi datacenter|multidatacenter)': multi-datacenter
+  '(?:multi dimensional|multidimensional)': multi-dimensional
   '(?:multi lingual|multi-lingual)': multilingual
   '(?:multi-master|multimaster)': primary
   '(?:multi model|multimodel)': multi-model
@@ -88,15 +91,16 @@ swap:
   read your own writes : read-your-own-writes
   '(?:re-indexing|re indexing)': reindexing
   retriable : retryable
-  role based access control : Role-Based Access Control
+  '(?:role based access control|role-based-access control|role-based-access-control): Role-Based Access Control
   '(?:schemaless|schema less)': schema-less
   '(?:screen-shot|screen shot)': screenshot
   # see : refer to
   slave: secondary
   '(?:sub clause|subclause)': sub-clause
-  '(?:sub document|subdocument)': sub-document
+  '(?:sub document|subdocument)': Sub-Document
   '(?:sub millisecond|submillisecond)': sub-millisecond
   '(?:sub queries|sub-queries)': subqueries
+  time-to-live: time to live
   '(?:touch-point|touch point)': touchpoint
   toward : towards
   '(?:utilize|utilizing)': use|using

@@ -1,13 +1,8 @@
 \.NET
-Amazon cloud
-Analytics Service
 APAC
 API
-App Services
 ASCII
-automatic schema discovery
 auto-sharding
-Availability Zone
 BI
 bootstrap
 CAS
@@ -17,22 +12,12 @@ cbbackupmgr
 cbcollect
 cbtransfer
 Capella
-Compare and Swap
 CentOS
-Cluster Manager
 ConfigProviderBase
 cloud\.couchbase
-Couchbase Autonomous Operator
-Couchbase Backup Manager
-Couchbase Cluster Connection Protocol
-Couchbase Data Platform
-Couchbase Eventing Service
-Couchbase Functions
-Couchbase Monitoring and Observability Stack
-Couchbase Server
+Couchbase
 Couchstore
 cURL
-Database Change Protocol
 DataOps
 DCP
 DDL
@@ -42,20 +27,14 @@ digitization
 DML
 Elasticsearch
 EMEA
-Engagement Database
 Elasticsearch
 ETL
-Event-Condition-Action model
 FAQ
 FaaS
 Forestdb
 FQDN
-Full-Text Search
 FTS
 Geofencing
-GitHub
-Global Secondary Indexes
-Google Cloud Platform
 guid
 gzip
 HTML
@@ -65,7 +44,6 @@ IaaS
 IndexScan
 initargs
 Internet
-Internet of Things
 IoT
 JAR
 Java
@@ -74,20 +52,15 @@ JIRA
 JSON
 Kafka
 Kroki
-KV Service
-Last Write Wins
 LWW
 LCB
 LDAP
 MapReduce
-massively parallel processing
 MPP
-Memcached bucket
 Memcached
 Node\.js
 npm
 MongoDB™
-Multi-Dimensional Scaling
 MDS
 nginx
 NRU
@@ -97,32 +70,17 @@ Objective-C
 Omnichannel
 optimisticReplicationThreshold
 PDF
-Pluggable Authentication Modules
 PAM
-query editor
-query executor
-query monitoring
-query planner
-query plan visualizer
-Query Service
-query shell
-Query Workbench
-rack awareness
 RA
 RBAC
-Read Committed
 rebase
 repositories
-Role-Based Access Control
 RYOW
 RxJava
 SDK
 SDKs
-Search Service
 SGCollect
-Spark Datasets
 [Ss]tartup
-Structured Streaming
 Sub-Document
 sudo
 [Ss]wappiness
@@ -131,7 +89,6 @@ tar
 targetNozzlePerNode
 tcpdump
 THP
-time to live
 toolchain
 TTL
 Ubuntu
@@ -140,7 +97,6 @@ vBucket
 vBucketMap
 vBuckets
 VBucketServerMap
-Views Service
 [Vv]irtualization
 vmstat
 VMware
