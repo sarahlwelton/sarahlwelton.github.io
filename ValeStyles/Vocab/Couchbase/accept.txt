@@ -30,6 +30,7 @@ Couchbase Eventing Service
 Couchbase Functions
 Couchbase Monitoring and Observability Stack
 Couchbase Server
+Couchbase
 Couchstore
 cURL
 Database Change Protocol
@@ -43,7 +44,6 @@ DML
 Elasticsearch
 EMEA
 Engagement Database
-Elasticsearch
 ETL
 Event-Condition-Action model
 FAQ
