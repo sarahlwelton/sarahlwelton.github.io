@@ -17,7 +17,7 @@ Use American English spelling, not British or Canadian English. The Vale automat
 
 If Vale flags a product name or other technical industry term as incorrect: 
 
-* If it's a phrase or word that must have specific capitalization, add it to the `Vocab\Couchbase\accept.txt` file.
+* If it's a phrase or single word that must have specific capitalization, add it to the `Vocab\Couchbase\accept.txt` file.
 * If it's a phrase that needs a specific arrangement of hyphens or spaces and the capitalization doesn't matter, add it to the `Couchbase\Terminology.yml` Vale Style.
 
 == Write in the Present Tense 
@@ -108,3 +108,7 @@ Use contractions. For more information, refer to https://developers.google.com/s
 |===
 
 == Use Simple Sentences and Short Paragraphs
+
+Don't write a wall of text. Break things up with separate paragraphs, headings, and lists. Try to make your text easy to scan and read. 
+
+Keep sentences under 25 words. Vale flags longer sentences and sentences that have more than two commas.
