@@ -20,8 +20,10 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: '16'
-      - name: Install Antora
-        run: npm i antora@3.0.0
+      - name: Install Antora 
+        run: npm i antora/cli@3.1
+      - name: Install Antora Site Generator
+        run: npm i @antora/site-generator@3.1
       - name: Generate Site
         run: npx antora antora-playbook.yml
       - name: Publish to GitHub Pages
