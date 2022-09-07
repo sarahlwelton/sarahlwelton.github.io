@@ -3,7 +3,7 @@ antora:
   - '@antora/site-generator-ms'
 site:
   title: Couchbase Documentation Style Guide
-  url: https://github.io/
+  url: https://labs.couchbase.com/
   start_page: ROOT:index.adoc
   robots: disallow
 git:
