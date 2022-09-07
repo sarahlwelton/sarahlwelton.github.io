@@ -53,5 +53,11 @@ asciidoc:
 ui:
   bundle:
     url: https://github.com/couchbase/docs-ui/releases/download/prod-152/ui-bundle.zip
+  supplemental_files:
+  - path: ui.yml
+    contents: |
+      static_files:
+      - .nojekyll
+  - path: .nojekyll
 output:
-  dir: ./style-guide
+  dir: ./docs
