@@ -6,6 +6,11 @@ site:
   url: https://labs.couchbase.com/
   start_page: ROOT:index.adoc
   robots: disallow
+  keys: 
+    nav_groups: |
+      [
+        { "title": "Home", "startPage": "ROOT:index.adoc", "components": ["ROOT"] }
+      ]
 git:
   ensure_git_suffix: false
   fetch_concurrency: 10
