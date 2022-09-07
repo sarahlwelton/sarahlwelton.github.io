@@ -4,7 +4,6 @@ antora:
 site:
   title: Couchbase Documentation Style Guide
   url: https://labs.couchbase.com/style-guide-site
-  start_page: ROOT:index.adoc
   robots: disallow
  # keys: 
    # nav_groups: |
@@ -20,7 +19,8 @@ urls:
 content:
   sources:
   - url: .
-    branches: style-guide-site
+    branches: HEAD
+    start_path: style-guide
 asciidoc:
   attributes:
     site-navigation-data-path: _/js/site-navigation-data.js
@@ -52,7 +52,8 @@ asciidoc:
   - asciidoctor-external-callout
 ui:
   bundle:
-    url: https://github.com/couchbase/docs-ui/releases/download/prod-152/ui-bundle.zip
+    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
+    snapshot: true
   supplemental_files:
   - path: ui.yml
     contents: |

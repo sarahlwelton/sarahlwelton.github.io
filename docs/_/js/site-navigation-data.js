@@ -1,1 +1,1 @@
-siteNavigationData=[{name:"ROOT",title:"Home",versions:[{version:"",displayVersion:"default",sets:[]}]}];
+siteNavigationData=[{name:"style-guide",title:"Home",versions:[{version:"",displayVersion:"default",sets:[]}]}];
