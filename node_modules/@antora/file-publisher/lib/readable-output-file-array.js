@@ -10,9 +10,9 @@ class File extends Vinyl {
 }
 
 class ReadableOutputFileArray extends Readable {
-  constructor (array) {
+  constructor (array, cloneStreams) {
     super({ objectMode: true })
-    this._array = array.slice().reverse()
+    this._array = array.map((it) => toOutputFile(it, cloneStreams)).reverse()
   }
 
   _read (size) {
@@ -20,15 +20,26 @@ class ReadableOutputFileArray extends Readable {
     while (size--) {
       const next = array.pop()
       if (next === undefined) break
-      this.push(toOutputFile(next))
+      this.push(next)
     }
     if (size > -1) this.push(null)
   }
 }
 
-function toOutputFile (file) {
-  // Q: do we also need to clone contents and stat?
-  return new File({ contents: file.contents, path: file.out.path, stat: file.stat })
+// Q: do we also need to clone stat?
+function toOutputFile (file, cloneStreams) {
+  const contents = file.contents
+  const outputFile = new File({ contents, path: file.out.path, stat: file.stat })
+  if (cloneStreams && outputFile.isStream()) {
+    const outputFileContents = outputFile.contents
+    if (outputFileContents !== contents) {
+      // NOTE: workaround for @antora/lunr-extension <= 1.0.0-alpha.8
+      if (!('get' in (Object.getOwnPropertyDescriptor(file, 'contents') || {}))) file.contents = outputFileContents
+    }
+    // NOTE: even the last occurrence must be cloned when using vinyl-fs even though cloneable-readable claims otherwise
+    outputFile.contents = outputFileContents.clone()
+  }
+  return outputFile
 }
 
 module.exports = ReadableOutputFileArray

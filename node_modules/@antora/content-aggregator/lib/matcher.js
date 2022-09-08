@@ -1,7 +1,7 @@
 'use strict'
 
 const { compile: bracesToGroup, expand: expandBraces } = require('braces')
-const { makeRe: makeMatcherRx } = require('picomatch')
+const { makeRe } = require('picomatch')
 
 const BASE_OPTS = {
   bash: true,
@@ -14,6 +14,11 @@ const BASE_OPTS = {
   noquantifiers: true,
   regex: false,
   strictSlashes: true,
+}
+
+function makeMatcherRx (input, opts) {
+  if (input && ~input.indexOf('{')) input = input.replace(/^([^({]+)\./, '$1(?:.)')
+  return makeRe(input, opts)
 }
 
 module.exports = {

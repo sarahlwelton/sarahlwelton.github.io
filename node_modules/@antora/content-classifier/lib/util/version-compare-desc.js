@@ -27,7 +27,7 @@ function versionCompareDesc (a, b) {
     if (semverA) {
       return semverB ? -semverCompare(semverA, semverB) : 1
     } else {
-      return semverB ? -1 : -a.localeCompare(b, 'en', { numeric: true })
+      return semverB ? -1 : -2 * a.localeCompare(b, 'en', { numeric: true })
     }
   }
   return a ? 1 : -1

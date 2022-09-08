@@ -1,64 +1,12 @@
-antora:
-  extensions:
-  - '@antora/site-generator-ms'
 site:
   title: Couchbase Documentation Style Guide
   url: https://labs.couchbase.com/style-guide-site
-  robots: disallow
- # keys: 
-   # nav_groups: |
-     # [
-     #   { "title": "Home", "startPage": "ROOT:index.adoc", "components": ["ROOT"] }
-     # ]
-git:
-  ensure_git_suffix: false
-  fetch_concurrency: 10
-urls:
-  latest_version_segment_strategy: redirect:to
-  latest_version_segment: current
 content:
   sources:
   - url: .
     branches: HEAD
-    start_path: style-guide
-asciidoc:
-  attributes:
-    site-navigation-data-path: _/js/site-navigation-data.js
-    enable-cmos: ''
-    max-include-depth: 10
-    page-partial: false
-    experimental: ''
-    idprefix: '@'
-    idseparator: '-@'
-    tabs: tabs
-    toc: ~
-    page-toclevels: 1@
-    xrefstyle: short
-    enterprise: https://www.couchbase.com/products/editions[ENTERPRISE EDITION]
-    community: https://www.couchbase.com/products/editions[COMMUNITY EDITION]
-    sqlpp: N1QL
-    cbpp: Couchbase++
-    kroki-server-url: http://3.91.133.254:9500
-    kroki-fetch-diagram: true
-  extensions:
-  - ./lib/source-url-include-processor.js
-  - ./lib/json-config-ui-block-macro.js
-  - ./lib/inline-man-macro.js
-  - ./lib/multirow-table-head-tree-processor.js
-  - ./lib/swagger-ui-block-macro.js
-  - ./lib/tabs-block.js
-  - ./lib/markdown-block.js
-  - asciidoctor-kroki
-  - asciidoctor-external-callout
+    start_path: styleguide
 ui:
   bundle:
-    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
+    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable 
     snapshot: true
-  supplemental_files:
-  - path: ui.yml
-    contents: |
-      static_files:
-      - .nojekyll
-  - path: .nojekyll
-output:
-  dir: ./docs

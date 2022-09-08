@@ -12,18 +12,12 @@ async function mergeBuffers (data) {
   if (!Array.isArray(data)) return data
   if (data.length === 1 && data[0] instanceof Buffer) return data[0]
   const buffers = []
-  let offset = 0
-  let size = 0
+  let totalLength = 0
   for await (const chunk of data) {
     buffers.push(chunk)
-    size += chunk.byteLength
+    totalLength += chunk.byteLength
   }
-  data = new Uint8Array(size)
-  for (const buffer of buffers) {
-    data.set(buffer, offset)
-    offset += buffer.byteLength
-  }
-  return Buffer.from(data.buffer)
+  return Buffer.concat(buffers, totalLength)
 }
 
 function mergeHeaders (headers, extraHeaders) {

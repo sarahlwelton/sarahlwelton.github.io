@@ -1,6 +1,6 @@
 'use strict'
 
-const flattenDeep = require('./flatten-deep')
+const deepFlatten = require('./deep-flatten')
 const { promises: fsp } = require('fs')
 const git = require('./git')
 const invariably = require('./invariably')
@@ -56,7 +56,7 @@ async function glob (base, patternSegments, listDirents, retrievePath, { oid, pa
     }
     let dirents = await listDirents(base, oid || path)
     if (explicit) dirents = dirents.filter((dirent) => !explicit.has(dirent.name))
-    const discovered = flattenDeep(
+    const discovered = deepFlatten(
       await Promise.all(
         dirents.map((dirent) =>
           dirent.isDirectory() && isMatch(dirent.name)

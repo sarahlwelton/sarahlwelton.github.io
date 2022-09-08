@@ -1,7 +1,7 @@
 'use strict'
 
 const File = require('vinyl')
-const versionCompare = require('@antora/content-classifier/lib/util/version-compare-desc')
+const versionCompare = require('@antora/content-classifier/util/version-compare-desc')
 
 const XML_DECL = '<?xml version="1.0" encoding="UTF-8"?>'
 const SITEMAPS_NS = 'http://www.sitemaps.org/schemas/sitemap/0.9'

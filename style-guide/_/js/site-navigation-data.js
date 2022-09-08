@@ -1,1 +1,0 @@
-siteNavigationData=[{name:"ROOT",title:"Home",versions:[{version:"",displayVersion:"default",sets:[]}]}];
