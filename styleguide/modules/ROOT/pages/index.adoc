@@ -1,4 +1,4 @@
-= Welcome to the Couchbase Style Guide
+= Introduction to Couchbase Style
 
 This guide outlines how to write in Couchbase style for all technical documentation of Couchbase products. 
 
