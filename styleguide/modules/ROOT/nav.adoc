@@ -1,5 +1,3 @@
-.Welcome to the Couchbase Style Guide
-
 * xref:Intro.adoc[Introduction to Couchbase Style]
     
 * xref:General.adoc[General Principles of Couchbase Style]
