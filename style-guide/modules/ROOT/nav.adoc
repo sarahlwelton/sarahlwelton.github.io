@@ -1,9 +1,9 @@
 * xref:index.adoc[]
 * xref:general.adoc[]
 * xref:tone.adoc[]
-.Formatting and Organization
+* Formatting and Organization
 ** xref:headings.adoc[]
 ** xref:images-diagrams.adoc[]
 ** xref:tables.adoc[]
-.Linking
+* Linking
 ** xref:links.adoc[]
