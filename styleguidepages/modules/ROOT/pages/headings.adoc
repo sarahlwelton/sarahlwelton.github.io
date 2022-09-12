@@ -2,7 +2,7 @@
 
 Use headings to split up the content on a page and make it easier for a user to scan. A heading indicates what information a user finds in a specific section of the page. 
 
-NOTE: This guidance applies only to H<n> elements. For guidance on captions for images and tables, see xref:Images.adoc[Images] and xref:Tables.adoc[Tables], respectively.
+NOTE: This guidance applies only to H<n> elements. For guidance on captions for images and tables, see xref:images-diagrams.adoc[Images] and xref:tables.adoc[Tables], respectively.
 
 Use the following guidance to write headings in your topics: 
 
