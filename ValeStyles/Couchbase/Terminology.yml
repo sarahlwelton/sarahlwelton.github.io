@@ -105,5 +105,6 @@ swap:
   '(?:touch-point|touch point)': touchpoint
   toward : towards
   '(?:utilize|utilizing)': use|using
+  wish: want
   '(?:white paper|white-paper)': whitepaper
   yellow: amber

@@ -1,10 +1,11 @@
 extends: existence
-message: Use "refer to," not "see".
+message: Use "see" for links.
 level: warning
+link: https://developers.google.com/style/link-text
 ignorecase: true
 
 tokens: 
-  - see (http://|https://)
-  - see xref:.+.adoc\[.+\]
-  - see {.+}\[.+\]
-  - see <<.+>>
+  - refer to (http://|https://)
+  - refer to xref:.+.adoc\[.+\]
+  - refer to {.+}\[.+\]
+  - refer to <<.+>>
