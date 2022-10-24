@@ -1,0 +1,21 @@
+site:
+  title: Couchbase Documentation Test
+  url: https://sarahlwelton.github.io/docs-tooling
+  robots: disallow
+content:
+  sources:
+  - url: .
+    branches: HEAD
+    start_path: testpages
+ui:
+  bundle:
+    url: ./ui/build/ui-bundle.zip
+  supplemental_files:
+  - path: ui.yml
+    contents: |
+      static_files:
+      - .nojekyll
+  - path: .nojekyll
+output: 
+  clean: true
+  dir: ./docs
