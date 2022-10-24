@@ -1,6 +1,6 @@
 site:
   title: Couchbase Documentation Test
-  url: https://sarahlwelton.github.io/docs-tooling
+  url: https://sarahlwelton.github.io/
   robots: disallow
 content:
   sources:

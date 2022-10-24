@@ -1,0 +1,95 @@
+= Create a Free Account and Deploy Your Database
+:page-topic-type: guide
+:description: Create a Couchbase Capella account to start using Capella to manage your data.
+:page-aliases: create-app-services-account.adoc, get-started.adoc
+
+[abstract]
+{description}
+
+To get started, you can use a Couchbase Capella Free Trial.
+
+NOTE: If you have an Activation ID, after you <<sign-up-free-trial,>>, you can xref:billing:manage-billing.adoc#add-activation-id[Add your Activation ID] to your account.
+
+[#sign-up-free-trial]
+== Create a Free Account
+
+. In your web browser, go to the https://cloud.couchbase.com/sign-up[Couchbase Capella Sign-up page].
+
+. In the *Full Name* field, enter your full name. 
+
+. In the *Email Address* field, enter the user address you want to use to login to your Capella account. 
+
+. In the *Password* field, enter a password for your Capella account.
++
+[NOTE]
+====
+Your password must:
+
+* Contain at least eight characters.
+* Contain uppercase characters (A-Z).
+* Contain lowercase characters (a-z).
+* Contain numbers (0-9). 
+* Contain special characters, such as @, #, or $.
+====
+
+. Select btn:[Get Started]. 
++
+Couchbase sends an email to your provided email address with a confirmation code for your account. 
+
+. Enter the code from the email into the provided field. 
+
+. Review and agree to the https://www.couchbase.com/CapellaCSSA10192021[Terms of Service^] and https://www.couchbase.com/privacy-policy[Privacy Policy^]. 
+
+. (Optional) To subscribe to email updates from Couchbase, select *I agree to be updated on offers, products, and services from Couchbase*. 
+
+. Select btn:[Create Account].
+
+
+[#getting-started]
+== Deploy Your Database
+
+After you create your account, answer some questions to customize your Capella experience and deploy your database. 
+
+. In the *Preferences* section, do one of the following: 
++
+* To set your Preferences, select one or more options for your expected use of Capella and your experience level with Couchbase. Select btn:[Next].
+* To skip setting any Preferences, select btn:[Skip].
+
+. In the *Languages* section, do one of the following: 
++
+* To set a preferred programming language, select one or more of the programming languages you want to use with Capella. Select btn:[Next].
+* To skip selecting a preferred programming language, select btn:[Skip].
+
+. In the *Database Name* field, enter a name for your database or accept the default. 
+
+. Select an available cloud provider: 
++
+* *AWS*
+* *Google Cloud*
++
+For more information about the available cloud providers for Capella, see xref:reference:aws.adoc[] or xref:reference:gcp.adoc[].
+
+. Select an available geographic region for your database or accept the default. 
++
+For more information about the supported regions for Capella, see xref:reference:aws.adoc[] or xref:reference:gcp.adoc[].
+
+. In the *CIDR Block* field, enter a range of IP addresses in CIDR notation for your database or accept the default. 
+
+. Select btn:[Deploy Now].
++
+Capella deploys your database with your chosen settings.
+
+== Next Steps
+
+To connect to your database after it's deployed: 
+
+. xref:clusters:manage-database-users.adoc[]
+. xref:clusters:allow-ip-address.adoc[]
+. Choose and install a xref:home:ROOT:sdk.adoc[Couchbase SDK]
+
+After you deploy your database, you can also: 
+
+- xref:query-workbench.adoc[Query the sample data] in your database
+- xref:clusters:data-service/import-data-documents.adoc[Import your own data] 
+- xref:app-services:deployment:creating-an-app-service.adoc[Add App Services to your database] for use with xref:couchbase-lite:ROOT:index.adoc[Couchbase Lite] and mobile applications
+

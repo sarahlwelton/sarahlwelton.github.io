@@ -1,0 +1,346 @@
+= Import Data
+:description: Import JSON docs and CSV files, from a local machine or URL.
+:page-toclevels: 2
+
+[abstract]
+{description}
+
+If you have a dataset in CSV form, or already converted to JSON (list or JSON docs), you can import it to Couchbase Capella from a local file on your laptop -- or by pointing the import at a remote URL or a file on S3.
+This file archive can be zipped up before import.
+
+Replication or backup-restore may be easier options if you are migrating to Capella from an on-premises database, but where that's not possible then *Import* will give you flexibility over which documents are imported, and key-generation may be an advantage during a migration -- keys for each document extracted from a CSV row or JSON list flat file can be auto-generated, or you may specify your own generating expression.
+
+
+== Accessing Import in the Capella UI
+
+The Import tool, a list of previous imports, and sample bucket data are all accessible from an open cluster by clicking menu:Tools[Import].
+
+image::tools-import-hosted.png["Import is found under Tools."]
+
+[#import-overview]
+=== Import Overview
+
+The *Import* screen is divided into two major sections: _Import_ and _Import Sample Data_.
+
+[#import-section]
+.Import section
+At the top of the screen, the _Import_ section provides controls to initiate the import process and lists any previous imports.
+You can search this list of imports or filter it to only show imports initiated by your account.
+Imports show the destination bucket, the import status, who imported the data, when the data was imported, and the import file name and size.
+
+.Import Sample Data section
+The bottom half of the Import screen includes a selection of sample buckets that you can import into your cluster.
+These buckets include example data and indexes for experimentation and testing purposes.
+You can import sample data by clicking btn:[Import] inside the sample description block.
+When a sample is imported, the btn:[Import] button will change to Imported.
+
+
+== Import Data
+
+IMPORTANT: Capella does not inspect file contents before the import process
+
+. To import data, click btn:[Import].
++
+This action opens the *Import Documents* flyout menu.
+
+. Use the *Bucket* drop-down menu to choose a destination bucket where you want to import your file.
++
+If you don't have the appropriate bucket, you need to xref:data-service/manage-buckets.adoc#add-bucket[create one].
++
+image::flyout-bucket-hosted.png["Choose a destination bucket."]
+
+. Click btn:[Next].
+
+. Choose the file type and format (if applicable).
++
+You have the option of choosing the JSON or CSV format matching the file that you're importing.
+If you've chosen the JSON format, you also need to specify the format type.
+JSON format types include:
++
+* *Lines* -- JSON doc on each line.
+* *List* -- List of JSON docs.
+* *Archive* -- Multiple JSON documents in a ZIP file.
+
+. Upload file
++
+You have the option to upload a file from your laptop (*Using your web browser*) or
+use a pre-signed URL to manually upload with a custom `cURL` command (*Manually*).
++
+image::flyout-json-hosted.png["Choose JSON or CSV, then specify the file's location.", 500]
++
+. Click btn:[Next] to apply <<collection-mapping, collection mapping>>.
+
+=== Collection Mapping
+
+With the <<import-data, destination bucket and file type set>>, you need to add your collection mapping.
+The import feature provides the option to *Select Single Collection* to import that data to, or *Custom Collection Mapping* using the sort of custom generation also outlined in the <<choose-keys, Choose your Keys>> section.
+
+[start=7]
+. Choose which collection documents are inserted into.
+
+.. *Select Single Collection* (default)
++
+This option allows you to import all documents in your import file into a single collection.
+Choosing the *Select Single Collection* option provides you with drop-down menus to select the scope and collection from the destination bucket.
+
+.. *Custom Collection Mapping*
++
+NOTE: Make sure that any desired scope or bucket has already been created in the destination bucket when creating a custom collection mapping expression.
++
+While choosing a single collection to import your data to is the simplest method, you may need to insert different documents into different collections.
+For example, you can use custom collection mapping to import your data to a previously created collection based on a field in a document.
+In this case, if we wanted to import a new set of documents to the travel-sample's `inventory` scope, within a collection based on each record's `type` field, we could use the `inventory.%type%` expression.
++
+... Test collection mapping
++
+Capella also offers the ability to test your collection mapping to verify that it can be parsed and that it meets your expectations.
+To test collection mapping, enter or copy a sample JSON record from your import into the *Test your collection mapping* text area.
+The *Generated Collection Mapping Expression per tested record* field will automatically update to show a preview of the collection mapping as it applies to the sample JSON record.
++
+image::import-to-cluster-hosted.png["Specify a custom cluster mapping", 500]
++
+. Click btn:[Next] to <<choose-keys, choose how to generate keys>>.
+
+////
+Collection mapping is being able to import documents to different collections based on the document field (inventory.%type%) -- which would import docs into inventory (scope) and whatever their type (collection) is set in the docs, like "airline", "hotel", or "landmark" . You can also choose to import _everything_ into a single collection with no granularity.
+////
+
+
+//Note about testing add JSOn example first
+
+// When using a custom collection mapping expression, please ensure that any desired scopes and collections have already been created within travel-sample bucket./
+
+[#choose-keys]
+=== Choose your Keys
+
+After <<collection-mapping,adding your collection mapping>>, you must add your key generator.
+Import offers many options for custom key generation.
+By default, it will automatically generate UUIDs for each JSON document in your file, but you have the option to generate custom keys.
+
+[start=9]
+. Choose how to generate a key name.
+
+.. *Automatically Generated UUIDs*
++
+This is the default option.
+
+.. *Custom Generation*
++
+To generate custom keys, you can use a combination of the following:
+
+* Characters (any combination of ASCII characters).
+* The values from a given field in the JSON document.
+Wrap the field name in `%`, e.g. -- `%insurance_number%`.
+Nested field names should be separated by dots -- `key::%name.full.name%`.
+* Custom generators, wrapped in `&#x23;`, e.g. `&#x23;MONO_INCR&#x23;`.
+
+.. Copy or enter a JSON record from your data import into the *Test your key name expression* text area.
++
+TIP: If you enter the custom generator expression before adding a sample JSON record, the test may fail.
+
+.. Enter a custom generator expression into the *Key Name Generator Expression* field.
++
+While there is some validation to check that expressions can be parsed, Capella also offers the ability to test your key name expression to verify that it meets your expectations.
+The *Generated Key Name Expression per tested record* field will automatically update to show a preview of the collection mapping as it applies to the sample JSON record.
+For example, if we were to enter `&#x23;MONO_INCR&#x23;` based on a document's `type` field, it will produce `airline::1`.
+As `MONO_INCR` was used, the number counter starts with `1` and increments for subsequent records.
++
+image::flyout-generator-hosted.png["Choose how to generate a key name", 500]
++
+[#custom-generators]
+[TIP]
+====
+The following two functions can be used along with the characters and field values used to generate custom key names:
+
+* `&#x23;MONO_INCR&#x23;` -- integer, incremented by one for each document in the file archive, and starting at `1`.
+* `&#x23;UUID&#x23;` -- A generated https://en.wikipedia.org/wiki/Universally_unique_identifier[Universally Unique IDentifier^].
+====
++
+. Click btn:[Next] to apply various <<configurations, configurations>>.
+
+
+=== Configurations
+
+Now that you have <<choose-keys, added your key generator>>, you have a range of configuration options to choose from.
+These configuration options control which parts of an archive are imported.
+
+[start=11]
+. Review the available configuration options for the file type that you are importing.
+Toggle any options that you want to apply to your import.
++
+[{tabs}]
+====
+JSON::
++
+--
+* *Skip Documents* -- By default, all documents are loaded.
+Setting this option allows some documents to be skipped before the importation stage.
+When enabled, a field is shown where you must enter the number of documents to skip before the import starts.
+* *Limit Documents* -- Stop loading after a certain number of documents.
+This can be used for partially loading large datasets.
+When enabled, a field is shown where you must enter the number of documents to import.
+* *Ignore Fields* -- Omit named fields from the uploaded documents.
+Use this in conjunction with the `%field_name%` part of the custom generator to take out a document key from a field in a document -- removing it from the body of the document, and placing it in the key name.
+When enabled, a field is shown where you must specify a comma-separated list of field names to exclude from the import.
+--
+CSV::
++
+* *Skip Documents* -- By default, all documents are loaded.
+Setting this option allows some documents to be skipped before importation stage.
+When enabled, a field is shown where you must enter the number of documents to skip before the import starts.
+* *Limit Documents* -- Stop loading after a certain number of documents.
+This can be used for partially loading large datasets.
+When enabled, a field is shown where you must enter the number of documents to import.
+* *Ignore Fields* -- Omit named fields from the uploaded documents.
+Use this in conjunction with the `%field_name%` part of the custom generator to take out a document key from a field in a document -- removing it from the body of the document, and placing it in the key name.
+When enabled, a field is shown where you must specify a comma-separated list of field names to exclude from the import.
+* *Infer Field Types* -- All values in a CSV are interpreted as strings by default.
+Setting this option will cause the Import tool to look at each value and decide if it's a string, integer, or boolean value and put the inferred field type into the document.
+* *Omit Empty Fields* -- Rows in the CSV file which do not contain data are stored as empty strings in the JSON doc.
+Setting this option will omit these fields from the uploaded document.
+// not yet implemented:
+// * *Keep Import File* -- Retains the uploaded archive in your Cloud's storage - e.g. S3 - for a user-selectable number of days.
+====
++
+. Click btn:[Next] to <<review, review>> the details of your import.
+
+
+=== Review
+
+With the import's <<configurations, configuration options>> set, you have the chance to review the details of your import.
+
+[start=13]
+. Verify that the details of your import match your requirements.
++
+Several <<configurations,configurations>> are available, to skip or alter the documents uploaded.
+If you need to make any changes, click the btn:[Back] button to return to the previous stage of the import.
+Alternatively, at the top of the fly-out menu, click the tab of the import stage that you want to return to.
++
+NOTE: You cannot close the flyout and come back to the same step by reopening the flyout menu.
+All of the steps for the import process must be completed in one UI session.
++
+image::flyout-review-hosted.png["Review the import settings.", 500]
++
+. After reviewing the details of your import, click btn:[Import].
++
+The Import tool will start the process of importing your data.
+You can track the progress of this process using the tool's <<import-status, import status>> information.
+
+
+=== Import Status
+
+The *Import Documents* flyout menu remains open to show the status of the import.
+Feel free to navigate away from this menu to other tasks -- the status of imports is also shown on the menu:Tools[Import] screen's <<import-section, import section>>.
+Once an import is successful, its status changes from _In Progress_ to _Completed_.
+
+image::import-status.png["The `In Progress` status of an import"]
+
+Clicking on the name of the destination bucket for an import listed in the Import section opens the *Import Documents* flyout menu.
+This menu shows an import summary which includes the number of imported and failed documents, collection mapping, key name, and any ignored fields.
+
+The listing for your import in the Import section also includes a link to down the import's _Records Log_.
+This is found by clicking the *More options* (icon:ellipsis-v[]) button on the same line as the import that you are working with and clicking btn:[Download Log File].
+
+Import logs are retained for seven days.
+An option to delete import logs before this period elapses is available under the *More options* (icon:ellipsis-v[]) button.
+
+=== Further Reading
+
+The Import tool loads data into a bucket on your cluster.
+If you wish to _restore_ a bucket of data, refer to the xref:clusters:manage-restore.adoc#restore-bucket[Restore a Bucket] page.
+
+
+
+== Import Data with Couchbase Capella in Own VPC
+
+include::get-started:partial$invpc.adoc[admonition]
+
+=== The Import Screen
+
+Navigate to the [.ui]*Tools* tab under [.ui]*Clusters*, and you'll find the [.ui]*Import* button.
+image:tools-import.png["Import is found under Tools."]
+
+Selecting this will open the [.ui]*Import* flyout, and allow you to select a bucket, into which to import your file (if you don't have the appropriate bucket, you'll need to xref:data-service/manage-buckets.adoc#add-bucket[create one]).
+image:flyout-bucket.png["Choose a new or existing bucket."]
+
+Here you can choose JSON or CSV format, and specify a pre-signed URL to manually upload with a custom `cURL` command, or upload a file from your laptop.
+image:flyout-json.png["Choose JSON or CSV, then specify the file's location."]
+
+
+
+=== Choose your Keys
+
+Import offers many options for custom key generation, but defaults to using automatically-generated UUIDs for each JSON document in your file.
+For custom keys, you can use a combination of the following:
+
+* Characters (any combination of ASCII characters).
+* The values from a given field in the JSON document.
+Wrap the field name in `%`, e.g. -- `%insurance_number%`.
+Nested field names should be separated by dots -- `key::%name.full.name%`.
+* Custom generators, wrapped in `&#x23;`, e.g. `&#x23;MONO_INCR&#x23;`.
+
+Entering a custom generator expression will result in a prompt to test it with a representative sample of your JSON data.
+image:flyout-generator.png[""]
+
+`&#x23;MONO_INCR&#x23;` will simply toggle a number counter, starting at `1`.
+In the pictured example, above, `%type%::#MONO_INCR#` produces the document's `type` field, two colon separators, and the number `1` (which would be incremented for subsequent records).
+For a list of custom generators, see <<custom-generators,below>>.
+
+=== Review
+
+A range of <<field-document-options,options>> are available, to skip or alter the documents uploaded.
+Having selected some or none of them, you have a chance to review the details of your import.
+image:flyout-review.png["Review the import settings."]
+Add e-mail addresses here to receive a report on the import.
+
+NOTE: You cannot close the flyout and come back to the same step by reopening.
+All of the steps for the import process must be completed in one UI session.
+
+
+=== Progress Report
+
+The screen will show upload status, but feel free to navigate away to other tasks -- the status of imports can also be seen on the [.ui]*Tools* tab of the [.ui]*Clusters* page.
+You will see a link to download the import's _Records Log_.
+
+Logs can be accessed afterwards in the UI, and are retained for seven days.
+
+
+=== Options
+
+Options chosen during the import process are listed here for reference.
+You will also find explanations for each field in tooltips, as you follow the steps in the _Import Tool's_ interface.
+
+==== Field & Document Options
+
+The following options are available, which modify which parts of an archive are imported:
+
+* *Skip Documents* -- By default, all documents are loaded; set this to allow some to be skipped before importation stage.
+* *Limit Documents* -- Stop loading after a certain number of documents.
+This can be used for partially loading large datasets.
+* *Ignore Fields* -- Omit named fields from the uploaded documents.
+Use this in conjunction with the `%field_name%` part of the custom generator to take out a document key from a field in a document -- removing it from the body of the document, and placing it in the key name.
+* *Ignore Field Types* -- All fields will be interpreted by default as strings.
+Set this flag to get the tool to infer whether the field values are strings, or are integers of boolean values.
+* *Omit Empty Fields* -- Rows in the CSV file which do not contain data are stored as empty strings in the JSON doc.
+Setting this flag will omit these fields from the uploaded document.
+
+
+==== Custom Generators
+
+The following two functions can be used along with the characters and field values used to generate custom key names:
+
+* `&#x23;MONO_INCR&#x23;` -- integer, incremented by one for each document in the file archive, and starting at `1`.
+* `&#x23;UUID&#x23;` -- A generated https://en.wikipedia.org/wiki/Universally_unique_identifier[Universally Unique IDentifier^].
+
+
+=== Further Reading
+
+The import tool loads data into a bucket on your Cloud cluster.
+If you wish to restore a whole _Cluster_ of bucket data, refer to the xref:clusters:manage-restore.adoc#restore-invpc[Restore a Backup in Own VPC] page.
+
+
+
+
+
+
+

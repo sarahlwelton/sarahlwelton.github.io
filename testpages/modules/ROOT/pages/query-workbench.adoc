@@ -1,0 +1,480 @@
+= Query Workbench
+:infer: xref:server:n1ql:n1ql-language-reference/infer.adoc
+:scan_consistency: xref:server:settings:query-settings.adoc#scan_consistency
+:limit: xref:server:n1ql:n1ql-language-reference/limit.adoc
+:update: xref:server:n1ql:n1ql-language-reference/update.adoc
+:delete: xref:server:n1ql:n1ql-language-reference/delete.adoc
+:explain: xref:server:n1ql:n1ql-language-reference/explain.adoc
+:select: xref:server:n1ql:n1ql-language-reference/selectintro.adoc
+:merge: xref:server:n1ql:n1ql-language-reference/merge.adoc
+:advise: xref:server:n1ql:n1ql-language-reference/advise.adoc
+:covering-indexes: xref:server:n1ql:n1ql-language-reference/covering-indexes.adoc
+:recommendation-rules: xref:server:n1ql:n1ql-language-reference/advise.adoc#recommendation-rules
+:tabs:
+
+[abstract]
+The Query Workbench provides a rich graphical user interface to perform query development.
+
+Using the Query Workbench, you can conveniently explore data, create, edit, run, and save N1QL queries, view and save query results, and explore the document structures in a bucket - all in a single window.
+
+Features of the Query Workbench include:
+
+* A single, integrated visual interface to perform query development and testing.
+
+* Easy viewing and editing of complex queries by providing features such as multi-line formatting, copy-and-paste, syntax coloring, auto completion of N1QL keywords and bucket and field names, and easy cursor movement.
+
+* View the structure of the documents in a bucket by using the N1QL {infer}[INFER] command.
+You no longer have to select the documents at random and guess the structure of the document.
+
+* Display query results in multiple formats: JSON, table, and tree.
+You can also save the query results to a file on disk.
+
+NOTE: The Query Workbench is only available on clusters that are running the xref:clusters:query-service/query-service.adoc[Query Service].
+
+== Accessing the Query Workbench
+
+[#permissions-required]
+.Permissions Required
+[IMPORTANT]
+====
+To access the Query Workbench and execute queries that _read_ documents, you must have the xref:projects:project-roles.adoc#project-cluster-data-reader[`Cluster Data Reader`] project role. To execute queries that _read_ and _modify_ documents, you must have the xref:projects:project-roles.adoc#project-owner-role[`Project Owner`] or xref:projects:project-roles.adoc#project-cluster-data-reader-writer[`Cluster Data / Reader`] role. 
+====
+
+If a cluster is running the xref:clusters:query-service/query-service.adoc[Query Service], the Query Workbench can be accessed under the cluster's *Tools > Query Workbench* tab.
+
+image:cluster-query-workbench.png["The cluster's 'Advanced > Query Workbench' tab."]
+
+The Query Workbench consists of three working areas:
+
+* <<n1ql-editor,Query Editor>>
+* <<results,Query Results and Plans>>
+* <<insights-sidebar,Data / Bucket Insights>>
+
+[#n1ql-editor]
+== Using the Query Editor
+
+The Query Editor is where you build and run queries, and view query execution plans.
+Enter a query into the Query Editor, and then run the query by clicking btn:[Execute].
+
+TIP: You can also execute queries by typing a semi-colon (`;`) at the end of the query and hitting kbd:[Enter].
+
+The Query Editor provides the following additional features:
+
+* *Syntax coloring* -- For easy viewing, N1QL keywords, numbers and string literals are differently colored.
+//* *Auto-completion* - When entering a keyword in the Query Editor, if you press the kbd:[Tab] key or kbd:[Ctrl+Space], the tool offers a list of matching N1QL keywords and bucket names that are close to what you have typed so far.
+//For names that have a space or a hyphen (-), the auto-complete option includes back quotes around the name.
+//If you expand a bucket in the Data Bucket Analysis, the tool learns and includes the field names from the schema of the expanded bucket.
+* *Support for N1QL INFER statements* -- The tool supports the N1QL {infer}[INFER] statement.
+
+== Specify Bucket and Scope Context
+[{tabs}] 
+==== 
+Couchbase 7.0+:: 
++ 
+-- 
+
+You can specify the bucket and scope query context using the drop-down menus near the top left of the Query Editor. 
+When the query context is set to a specified bucket and scope, you can write queries using just the collection name and do not need to specify the keyspace path. 
+
+For example, here's how a query would look without specifying a bucket and scope in the Query Editor: 
+
+[source,N1QL]
+----
+SELECT * FROM `travel-sample`.`inventory`.`airline`;
+----
+
+If you then specify the bucket as `travel-sample` and the scope as `inventory`, the query can be simplified to:
+
+[source,N1QL]
+----
+SELECT * FROM `airline`; 
+----
+
+To specify the query context:
+
+. Near the top left of the Query Editor, open the *bucket* drop-down menu and choose a bucket. 
+. With a bucket now selected, the *scope* drop-down menu is enabled with the `_default` scope selected. 
+Using this drop-down, you can choose a different scope within the current bucket.
+
+To remove the query context, open the *bucket* drop-down and choose `Select a bucket`.
+
+For more information on scopes and collections, refer to 
+xref:server:learn:data/scopes-and-collections.adoc[Scopes and Collections].
+
+--
+
+Couchbase 6.6::
++
+If you are using Couchbase Server 6.6 in Capella, you are unable to specify scope and bucket context. 
+This feature relies on scopes and collections introduced in xref:server:introduction:whats-new.adoc[Couchbase Server 7.0]. 
+====
+
+== Run a Query
+
+After entering a query, you can execute the query either by typing a semicolon (`;`) and pressing kbd:[Enter], or by clicking the btn:[Execute] button.
+When the query is running, the btn:[Execute] button changes to btn:[Cancel], which allows you to cancel the running query.
+When you cancel a running query, it stops the activity on the cluster side as well.
+
+NOTE: The btn:[Cancel] button does not cancel index creation statements.
+The index creation continues on the server side even though it appears to have been canceled from the Query Workbench.
+
+== Run a Transaction
+[{tabs}] 
+==== 
+Couchbase 7.0+:: 
++ 
+-- 
+
+The Query Editor can be used to run a Couchbase transaction. 
+A transaction is a group of operations that are either committed to the database together or are all undone from the database if there's a failure. 
+For a complete overview of Couchbase transaction, see xref:server:learn:data/transactions.adoc[Transactions].
+
+//To execute a transaction containing multiple statements, compose the sequence of statements in the Query Editor. You must terminate each statement with a semicolon. 
+
+//Clicking btn:[Execute] will run the query as a transaction.
+
+You can use the Query Editor to run a single statement as a transaction. 
+To do this, enter the statement into the Query Editor and click btn:[Transaction].
+--
+
+Couchbase 6.6::
++
+If you are using Couchbase Server 6.6 in Capella, you are unable to run a Couchbase transaction using the Query Editor.  
+====
+
+== Index Advisor
+[{tabs}] 
+==== 
+Couchbase 7.0+:: 
++ 
+-- 
+The {advise}[ADVISE] command generates index advice that optimizes response time for a query. 
+You can use this command with {select}[SELECT], {merge}[MERGE], {update}[UPDATE], or {delete}[DELETE] queries. 
+To display index advice for a query entered into the Query Editor, click btn:[Advise]. 
+
+Query Workbench will then show any suggested indexes in the Query Results area using JSON format. 
+This will not prepend {advise}[ADVISE] to the current query in the Query Editor
+--
+
+Couchbase 6.6::
++
+The Advise button is not available with clusters using Couchbase Server 6.6 in Capella.
++
+You can still manually prepend the {advise}[ADVISE] command to a query in the Query Editor and run it to get results. 
+====
+
+[#results]
+== Viewing the Query Results
+
+When you execute a query, the results are displayed in the *Query Results* area.
+Since large result sets can take a long time to display, it's recommended that you use the {limit}[LIMIT] clause as part of your query when appropriate.
+
+The figures in this section display the result of the following query:
+
+[source,n1ql]
+----
+SELECT * FROM `travel-sample` WHERE type="airport" LIMIT 1;
+----
+
+When a query finishes, metrics for that query are displayed between the *Query Editor* and the *Query Results* areas.
+
+image::query-workbench-query-metrics.png["The executed query with its metrics highlighted.",500]
+
+The following query metrics are displayed:
+
+* *Status* -- Shows the status of the query.
+The values can be: success, failed, or HTTP codes.
+* *Last Run* -- The time at which the query was last executed.
+* *Round-trip time (RTT)* -- The total time it took to send the request and receive the response from the server.
+* *Elapsed* -- The time taken by the server to process the request.
+* *Execution* -- The time taken by the server to execute the query.
+* *Docs* -- The number of documents returned.
+* *Mutation Count* -- The number of documents deleted or changed by the query.
+This appears only for {update}[UPDATE] and {delete}[DELETE] queries instead of Result Count.
+* *Size* -- The total size, in bytes, of the documents returned.
+
+=== JSON Format
+
+The *JSON* tab formats the results to make the data easy to read.
+You can also expand and collapse objects and array values using the small arrow icons next to the line numbers.
+
+NOTE: If you clicked btn:[Execute], the results of the query are shown.
+If you clicked btn:[Explain], the results are the same as <<results-plan-text,Plan Text>> format.
+
+image::query-workbench-result-json.png["The Query Results area with the 'JSON' tab selected.",500]
+
+=== Table Format
+
+The *Table* tab presents the results in a tabular format.
+The tool converts the JSON documents to HTML tables, and presents sub-objects or sub-arrays as sub-tables.
+This format works well for queries that return an array of objects, like `pass:c[select `beer-sample`.* from `beer-sample`;]`.
+You can hover the mouse pointer over a data value to see the path to that value in a tool tip.
+You can sort a column by clicking the column header.
+
+image::query-workbench-result-table.png["The Query Results area with the 'Table' tab selected.",500]
+
+=== Plans
+
+Each time a query is executed, an {explain}[EXPLAIN] command is automatically run in the background to retrieve the query plan for that query.
+You may also generate the query plan by clicking btn:[Explain].
+
+There are two ways to display the query plan: <<results-plan,Plan>> (graphical) and <<results-plan-text,Plan Text>>.
+
+[#results-plan]
+==== Plan
+
+The *Plan* tab presents the query in a graphical format.
+
+At the top, it shows a summary which also shows lists of the buckets, indexes, and fields used by the query.
+
+At the bottom is a data-flow diagram of query operators, with the initial scans at the right, and the final output on the left.
+
+Potentially expensive operators are highlighted.
+
+The data flow generally follows these steps:
+
+. Scan
+. Fetch
+. Filter
+. Projection (part 1)
+. Order
+. Projection (part 2)
+
+NOTE: Projection is split into two parts (one before Order and one after Order), but Query Workbench shows only the first part.
+
+image::query-workbench-result-plan.png["The Query Results area with the 'Plan' tab selected.",500]
+
+Hovering over any unit of the plan shows more details of it.
+In this example query:
+
+[cols="1,4"]
+|===
+| Unit name | Information shown when hovered over
+
+| Order
+a| ....
+{'#operator':'Order':'sort_terms':
+[{'expr':'(`travel-sample`.`name`)'}]}
+....
+
+| Project
+a| ....
+{'#operator':'InitialProject':'result_terms':
+[{'expr':'self','star':true}]}
+....
+
+| Filter
+a| ....
+{'#operator':'Filter','condition':'(((`travel-sample`.`type`) = \'landmark\') and
+((`travel-sample`.`city`) = \'San Francisco\'))'}
+....
+
+| Fetch
+a| ....
+{'#operator':'Fetch','keyspace':'travel-sample','namespace':'default'}
+....
+
+| IntersectScan
+| (none)
+
+| IndexScan2 (above)
+a| ....
+{'#operator':'IndexScan2','index':'def_city','index_id':'d51323973a9c8458','index_projection':
+{'primary_key':true},'keyspace':'travel-sample','namespace':'default','spans':
+[{'exact':true,'range':[{'high':'\San Francisco\'','inclusion':3,'low':'\'San Francisco\''}]}],'using':'gsi'}
+....
+
+| IndexScan2 (below)
+a| ....
+{'#operator':'IndexScan2','index':'def_city','index_id':'a11b1af8651888cf','index_projection':
+{'primary_key':true},'keyspace':'travel-sample','namespace':'default','spans':
+[{'exact':true,'range':[{'high':'\'landmark'\'','inclusion':3,'low':'\'landmark\''}]}],'using':'gsi'}
+....
+|===
+
+In general, the preference of scan is
+
+. Covering Index
+. Index Scan
+. Intersect Scan
+. Union Scan, and finally
+. Fetch
+
+[#results-plan-text]
+=== Plan Text
+
+The *Plan Text* tab shows the {explain}[EXPLAIN] query execution plan in JSON format.
+
+If you clicked btn:[Execute], a detailed query execution plan is shown, which includes information about how long each step in the plan took to execute.
+If you clicked btn:[Explain], the intended query execution plan is shown (minus the details that would be included if you actually executed the query).
+
+image::query-workbench-result-plan-text.png["The Query Results area with the 'Plan Text' tab selected.",500]
+
+== View Query History
+
+The Query Workbench maintains a history of all the queries executed.
+
+If you edit a previous query and execute it, the new query is stored at the end of the history.
+The history is persistent across browser sessions.
+The query history only saves queries; due to limited browser storage it does not save query results.
+Thus, when you restart the browser or reload the page, you can see your old queries, but you must re-execute the queries if you want to see their results.
+
+NOTE: Clearing the browser history clears the history maintained by the Query Editor as well.
+
+Clicking btn:[History] opens the *Query History* fly-out menu:
+
+image::query-workbench-query-history-flyout.png["The 'Query History' fly-out menu.",500]
+
+You can scroll through the entire query history, and click on an individual query to be taken to that particular point in the history.
+
+* *Search history* -- You can search the query history by entering text in the *Filter Queries* search box.
+All matching queries are displayed.
+
+* *Delete a specific entry* -- Click the Trash icon next to a particular query to delete it from the history.
++
+TIP: This can be useful if you want a more manicured history when you <<export-query,export the history>> for future use.
+
+* *Delete all entries* -- Click *Clear* to delete the entire query history.
+
+[#import-query]
+== Import Queries
+
+You can load a new query history into the Query Workbench from a JSON file.
+This can be the <<export-query,exported query history>> from a different cluster.
+
+CAUTION: Importing query history will overwrite your current query history.
+
+. From the cluster's *Tools > Query Workbench* tab, click btn:[History].
++
+This opens the *Query History* fly-out menu.
+
+. Click btn:[Import].
++
+This opens the *Import Query History* fly-out menu.
+
+. Click btn:[Import JSON] and select a local `.json` file that you wish to import.
+
+. Click btn:[Save].
++
+The preexisting query history is overwritten with the query history of the imported file.
+
+[#export-query]
+== Export Query History
+
+You can export the current query history to a JSON file.
+This file can be <<import-query,imported>> onto other clusters.
+
+. From the cluster's *Tools > Query Workbench* tab, click btn:[History].
++
+This opens the *Query History* fly-out menu.
+
+. Click btn:[Export].
++
+This opens the *Export Query History* fly-out menu.
+
+. (Optional) Use the *File Name* field to specify a name for the exported file.
+
+. Click btn:[Export].
++
+The fly-out menu closes and the file is downloaded onto your computer.
+
+[#query-settings]
+== Modify Query Settings
+
+You can specify various settings for the Query Workbench by clicking *Settings* near the top-left corner of the Query Editor.
+This opens the *Query Settings* fly-out menu.
+
+image::query-workbench-settings.png["The 'Query Settings' fly-out menu, showing the workbench settings.",500]
+
+Configure the following settings and click btn:[Submit] to save the configuration.
+
+[cols="1,4"]
+|===
+| Option | Description
+
+| Timeout
+a|
+The timeout parameter (specified in seconds) can be used to limit the running time of a query,
+up to a maximum of 1800 seconds
+
+| Scan Consistency
+a|
+This is a cbq-engine option.
+Select one of the following options:
+
+* *Not Bounded*
+* *Request Plus*
+* *Statement Plus*
+
+For more information, refer to {scan_consistency}[Settings and Parameters] in the Couchbase Server documentation.
+
+| Named Parameters
+| For the prepared queries, this option allows you to specify any number of named parameters.
+Click the btn:[+] button to add new named parameters, and the btn:[-] button to remove the parameters.
+Named parameters must start with the dollar sign ($) for use in prepared queries.
+Otherwise, they are interpreted as parameters to the Query REST API.
+
+| Positional Parameters
+| For the prepared queries, this option allows you to specify values for $1, $2, and so on up to as many positional parameters as you have.
+Click the btn:[+] button to add new positional parameters, and the btn:[-] button to remove the parameters.
+The parameters are automatically labelled as "$1", "$2", and so on.
+|===
+
+
+[#insights-sidebar]
+== Data / Bucket Insights
+[{tabs}] 
+==== 
+Couchbase 7.0+:: 
++ 
+-- 
+The *Data Insights* area displays the buckets, scopes, and collections in the current cluster. 
+These keyspaces are shown in a hierarchy that you can expand or collapse.
+
+* To expand a heading within the hierarchy, click the heading, or click the rightward-pointing arrowhead before the heading.
+* To collapse a heading within the hierarchy, click the heading again, or click the downward-pointing arrowhead before the heading.
+
+Buckets appear at the top level of the hierarchy. When you expand a bucket, the scopes within that bucket appear below it. 
+Similarly, when you expand a scope, the collections within that scope appear below it. 
+The number of collections within the bucket is displayed to the right of the bucket heading.
+
+image::query-workbench-data-insights.png["The 'Data Insights' panel.",399]
+--
+
+Couchbase 6.6::
++
+The *Bucket Insights* area displays all installed buckets in the cluster.
+By default, when the Query Workbench is first loaded, it retrieves a list of available buckets from the cluster.
+The *Bucket Insights* area is automatically refreshed when buckets or indexes are added or removed, but you can manually refresh it using the refresh button.
++
+image::query-workbench-bucket-insights.png["The 'Bucket Insights' panel.",399]
++
+The buckets are grouped into the following categories based on the indexes created for the bucket:
++
+* *Queryable Buckets* -- Contain a primary index or a primary index and secondary indexes.
+* *Queryable on Indexed Fields* -- Do not contain a primary index, but have one or more secondary indexes.
+* *Non-Indexed Buckets* -- Do not contain any indexes.
+These buckets do not support queries.
+You must first define an index before querying these buckets.
++
+You can expand any bucket to view the schema for that bucket: field names, types, and if you hover the mouse pointer over a field name, you can see example values for that field.
+Bucket analysis is based on the N1QL {infer}[INFER] statement, which you can run manually to get more detailed results.
+This command infers a schema for a bucket by examining a random sample of documents.
+Because the command is based on a random sample, the results may vary slightly from run to run.
+The default sample size is 1000 documents.
+The syntax of the command is:
++
+[source,n1ql]
+----
+INFER bucket-name [ WITH options ];
+----
++
+where [.var]`options` is a JSON object, specifying values for one or more of [.var]`sample_size`, [.var]`similarity_metric`, [.var]`num_sample_values`, or [.var]`dictionary_threshold`.
++
+For example, to increase the sample size to 3000, you could use the following query:
++
+[source,n1ql]
+----
+INFER `travel-sample` WITH {"sample_size":3000};
+----
+====
