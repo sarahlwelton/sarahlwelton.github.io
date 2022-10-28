@@ -1,0 +1,145 @@
+:page-aliases: security:allow-ip-address.adoc
+:description: Before a database can connect to a client, you must add the client's IP address to the database's Allowed IP list.
+
+
+= Configure Allowed IP Addresses
+
+[abstract]
+{description}
+
+== Overview
+
+Couchbase Capella only allows databases to connect to trusted IP addresses.
+Each database has a configurable _Allowed IP_ list that can include up to 75 entries.
+Each entry can be a single IP address or an IP address space.
+Any IP address you add to this list can have a user-specified expiration time for temporary access or be permanent.
+Capella automatically denies any connection attempts to and from an IP not in the allowed IP list.
+////
+[#reserved-ips]
+=== Reserved IP Addresses
+
+Couchbase Capella automatically allows a certain number of reserved IP addresses on every database.
+These IP addresses are reserved exclusively for communication with the Capella Control Plane for the purposes of managing the database.
+These IPs cannot be modified or disallowed.
+
+You can view which reserved IPs are currently being allowed on a database by going to the *Allowed IPs* fly-out menu that is described in the next section.
+////
+== Accessing Allowed IPs in the Capella UI
+
+Allowed IP addresses can be viewed by all project roles, but only those users with the xref:projects:project-roles.adoc#project-owner-role[`Project Owner`] or xref:projects:project-roles.adoc#project-cluster-manager-role[`Database Manager`] roles can configure them.
+
+NOTE: Users with the xref:organizations:organization-user-roles.adoc#organization-role-organization-owner[`Organization Owner`] role automatically have the xref:projects:project-roles.adoc#project-owner-role[`Project Owner`] role for all projects in their organization, so they can also configure allowed IPs.
+
+Allowed IPs can be viewed and managed from the database maintenance page:
+
+include::partial$common-steps.adoc[tag=navigate-to-database-networking-screen]
+
+This *Allowed IP* summary displays the following information about each IP:
+
+IP Address/CIDR block::
+The allowed IP address or address space.
+
+Status::
+The current status of the allowed IP, which can include the following:
+
+* *Active*: The allowed IP address is active.
+An IP with this status can connect to and from the current database.
+
+* *Pending*: The allowed IP address is not yet active.
+An IP with this status is in the process of becoming active.
+
+* *Failed*: The allowed IP address is in a failed state.
+An IP with this status failed to activate and needs to be deleted and recreated.
+
+* *Expired*: The allowed IP address was configured as temporary and has expired.
+An IP with this status is currently disallowed and needs to be deleted and recreated to be allowed again.
+
+Expiration::
+The expiration date and time of a temporary allowed IP.
+
+Type::
+The type of allowed IP, which is either *Temporary* or *Permanent*.
+
+Comment::
+The comment included with the allowed IP.
+If a comment exists for an allowed IP, a small comment icon is shown here.
+Hovering your mouse over this icon will reveal the text of the comment in a tooltip.
+
+A Trash icon displayed at the end of each row can <<delete-allowed-ip, delete an allowed IP>>.
+
+//You can click on any allowed IP address entry to expand it and view additional details.
+
+[#add-allowed-ip]
+== Add an Allowed IP Address
+
+To add an IP address to a database's list of up to 75 allowed IPs, you must have the xref:projects:project-roles.adoc#project-owner-role[`Project Owner`] or xref:projects:project-roles.adoc#project-cluster-manager-role[`Database Manager`] role for the project containing the database you are allowing the IP for.
+
+include::partial$common-steps.adoc[tag=navigate-to-database-networking-screen]
+. Click btn:[Manage Allowed IP].
++
+This opens the *Allowed IP* summary list.
+
+. Click btn:[Add Allowed IP].
++
+This opens the *Add Allows IP* page.
+
+. Add information about the allowed IP or address space.
++
+--
+.. Choose if the IP or address space is a temporary or permanent IP.
++
+Click on the *Add Temporary IP* or *Add Permanent IP* card.
+Temporary IPs are useful for development purposes and testing as they automatically expire after a duration that you specify.
+Permanent IPs are retained until you delete them.
++
+.. Specify the IP address or address space.
++
+In the *IP Address/CIDR* field, enter the IP or address space that you want to allow the database to communicate with.
++
+TIP: Clicking btn:[Add My IP] will automatically fill in this field with the IP address your computer is using to communicate with Couchbase Capella.
++
+.. (_Temporary IP Only_) Configure how long you want this allowed IP address to be retained.
++
+Use the *Hours/Days* drop-down menu to choose if you want to keep this allowed IP for hours or days.
+Use the associated *Time to Retain* field to enter the number of hours or days you want the database to accept connections from the IP address.
+After the configured duration of time has elapsed, the entry will expire, and the database will stop taking connections from the IP address.
++
+NOTE: A temporary IP must have a minimum retention period of one hour or one day.
++
+.. (_Optional_) Add a comment.
++
+Use the *Comment* field to enter a comment that will become available alongside the allowed IP address.
+This can help inform other users in your organization about why the IP address is being allowed.
++
+NOTE: Comments cannot exceed 128 characters.
+--
++
+. Once you're satisfied with the configuration, click btn:[Add IP].
++
+You can repeat the above steps to add more IPs as desired.
+
+Note that it takes a few minutes for the database to begin honoring newly allowed IPs.
+If you try to immediately connect to the database from a newly allowed IP, your connection may be blocked.
+
+== Modify an Allowed IP Address
+
+At this time, you cannot modify an existing allowed IP address.
+Instead, you'll need to <<delete-allowed-ip,delete>> the allowed IP and <<add-allowed-ip,add>> it again with the desired configuration changes.
+
+[#delete-allowed-ip]
+== Delete an Allowed IP Address
+
+To delete an IP address from a database's list of allowed IPs, you need the xref:projects:project-roles.adoc#project-owner-role[`Project Owner`] or xref:projects:project-roles.adoc#project-cluster-manager-role[`Database Manager`] roles for the project containing the database from which you are deleting the allowed IP.
+
+include::partial$common-steps.adoc[tags=navigate-to-database-networking-screen]
+. From the list of allowed IPs, click on the trashcan icon for the IP address you wish to delete.
+. Verify that the IP you chose is the one you want to delete from the allowed list.
+. Type `delete` into the provided field.
+. Click btn:[Delete] to remove the allowed IP from the database.
++
+When you delete an allowed IP, it can take a few minutes for the database to begin rejecting traffic from that address.
+
+== See Also
+
+* xref:get-started:connect-to-cluster.adoc[Connect to Your Database]
+* xref:clusters:manage-database-users.adoc[Configure Database Credentials]

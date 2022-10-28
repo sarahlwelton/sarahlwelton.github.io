@@ -8,7 +8,7 @@
 
 To get started, you can use a Couchbase Capella Free Trial.
 
-NOTE: If you have an Activation ID, after you <<sign-up-free-trial,>>, you can xref:billing:manage-billing.adoc#add-activation-id[Add your Activation ID] to your account.
+NOTE: If you have an Activation ID, after you <<sign-up-free-trial,>>, you can xref:manage-billing.adoc#add-activation-id[Add your Activation ID] to your account.
 
 [#sign-up-free-trial]
 == Create a Free Account
@@ -67,11 +67,11 @@ After you create your account, answer some questions to customize your Capella e
 * *AWS*
 * *Google Cloud*
 +
-For more information about the available cloud providers for Capella, see xref:reference:aws.adoc[] or xref:reference:gcp.adoc[].
+For more information about the available cloud providers for Capella, see xref:aws.adoc[] or xref:gcp.adoc[].
 
 . Select an available geographic region for your database or accept the default. 
 +
-For more information about the supported regions for Capella, see xref:reference:aws.adoc[] or xref:reference:gcp.adoc[].
+For more information about the supported regions for Capella, see xref:aws.adoc[] or xref:gcp.adoc[].
 
 . In the *CIDR Block* field, enter a range of IP addresses in CIDR notation for your database or accept the default. 
 
@@ -83,13 +83,13 @@ Capella deploys your database with your chosen settings.
 
 To connect to your database after it's deployed: 
 
-. xref:clusters:manage-database-users.adoc[]
-. xref:clusters:allow-ip-address.adoc[]
+. xref:manage-database-users.adoc[]
+. xref:allow-ip-address.adoc[]
 . Choose and install a xref:home:ROOT:sdk.adoc[Couchbase SDK]
 
 After you deploy your database, you can also: 
 
 - xref:query-workbench.adoc[Query the sample data] in your database
-- xref:clusters:data-service/import-data-documents.adoc[Import your own data] 
-- xref:app-services:deployment:creating-an-app-service.adoc[Add App Services to your database] for use with xref:couchbase-lite:ROOT:index.adoc[Couchbase Lite] and mobile applications
+- xref:import-data-documents.adoc[Import your own data] 
+- xref:creating-an-app-service.adoc[Add App Services to your database] for use with xref:couchbase-lite:ROOT:index.adoc[Couchbase Lite] and mobile applications
 

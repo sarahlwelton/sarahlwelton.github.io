@@ -1,0 +1,339 @@
+:page-aliases: security:manage-database-users.adoc
+
+= Configure Database Credentials
+
+[abstract]
+Database credentials provide programmatic and application-level access to data on a cluster. Only database credentials can access data.
+
+[#about-database-credentials]
+== About Database Credentials
+
+_Database credentials_ are separate from xref:organizations:organizations.adoc#roles[organization roles]. 
+While organization roles control what you can do within an organization, such as create clouds or manage projects, a database credential is still required to access data on a cluster. 
+Database credentials are also distinct from xref:projects:project-roles.adoc[project roles], but only project members with the xref:projects:project-roles.adoc#project-owner-role[`Project Owner`] role can create them. 
+
+A database credential is specific to a cluster and consists of a username, password, and a set of <<about-database-user-permissions,bucket or scope access levels>>. It is required for applications to remotely authenticate on a cluster and access bucket data. 
+
+[NOTE]
+====
+Database credentials are distinct and not associated with a particular user. 
+They do not control access to data tools like Query Workbench in the Capella UI. 
+Capella automatically manages this type of access based on a user's project role.   
+====
+
+[#about-database-user-permissions]
+=== Database Credentials and Access
+
+[{tabs}] 
+==== 
+Couchbase 7.0+:: 
++ 
+--
+You assign database credentials on a per bucket or per scope basis. 
+For example, you could assign a database credential access to all buckets and scopes in a cluster, assign different access levels to different buckets, or assign access to just a single scope. 
+This system allows you to mix and match access levels to different buckets and scopes in a cluster to satisfy your application and security requirements. 
+
+The following table describes the available bucket access options and their associated privileges.
+
+.Database Access Privileges Couchbase Server 7.0+
+[#table-database-user-permissions,cols="1,2",options="header"]    
+|===
+| Access
+| Description
+
+a|[#database-role-read]
+`*Read*`
+a|Grants the privileges of the following Couchbase roles:
+
+* xref:server:learn:security/roles.adoc#data-reader[`data_reader`]
+* xref:server:learn:security/roles.adoc#data-dcp-reader[`data_dcp_reader`]
+* xref:server:learn:security/roles.adoc#data_monitor[`data_monitoring`]
+* xref:server:learn:security/roles.adoc#search-reader[`fts_searcher`]
+* xref:server:learn:security/roles.adoc#query-select[`query_select`]
+* xref:server:learn:security/roles.adoc#analytics-reader[`analytics_reader`]
+* xref:server:learn:security/roles.adoc#execute-global-functions[`query_execute_global_functions`]
+* xref:server:learn:security/roles.adoc#execute-global-external-functions[`query_execute_global_external_functions`]
+* xref:server:learn:security/roles.adoc#analytics-select[`analytics_select`]
+* xref:server:learn:security/roles.adoc#external-stats-reader[`external_stats_reader`] footnote:fn-1[The `external_stats_reader` role is only granted when a database credential is given read access to _all_ buckets in a cluster.]
+* xref:server:learn:security/roles.adoc#execute-scope-functions[`query_execute_functions`]
+* xref:server:learn:security/roles.adoc#execute-scope-external-functions[`query_execute_external_functions`]
+
+
+a|[#database-role-write]
+`*Write*`
+a|Grants the privileges of the following Couchbase roles:
+
+* xref:server:learn:security/roles.adoc#data-writer[`data_writer`]
+* xref:server:learn:security/roles.adoc#search-admin[`fts_admin`]
+* xref:server:learn:security/roles.adoc#query-insert[`query_insert`]
+* xref:server:learn:security/roles.adoc#query-update[`query_update`]
+* xref:server:learn:security/roles.adoc#query-delete[`query_delete`]
+* xref:server:learn:security/roles.adoc#query-manage-index[`query_manage_index`]
+* xref:server:learn:security/roles.adoc#xdcr-inbound[`replication_target`]
+* xref:server:learn:security/roles.adoc#analytics-admin[`analytics_admin`]
+* xref:server:learn:security/roles.adoc#manage-global-functions[`query_manage_global_functions`]
+* xref:server:learn:security/roles.adoc#manage-global-external-functions[`query_manage_global_external_functions`]
+* xref:server:learn:security/roles.adoc#analytics-manager[`analytics_manager`]
+* xref:server:learn:security/roles.adoc#manage-scopes[`scope_admin`]
+* xref:server:learn:security/roles.adoc#manage-scope-functions[`query_manage_functions`]
+* xref:server:learn:security/roles.adoc#manage-scope-external-functions[`query_manage_external_functions`]
+
+a|[#database-role-read-write]
+`*Read/Write*`
+a|Grants the privileges of the following Couchbase roles:
+
+* All the privileges of <<#database-role-read,Read>>.
+* All the privileges of <<#database-role-write,Write>>. 
+
+|===
+--
+Couchbase 6.6::
++
+You assign database credentials on a per bucket basis. For example, you could assign a database credential `read/write` access to just one of three buckets in your cluster while not providing any access to the others. 
+This system allows you to mix and match access levels to different buckets in a cluster to satisfy your application and security requirements. 
++
+The following table describes the available bucket access levels and their associated privileges.
++
+.Database Access Privileges Couchbase Server 6.6
+[#table-database-user-permissions-cb6,cols="1,2",options="header"]    
+|===
+| Access
+| Description
+
+a|[#database-role-read-cb6]
+`*Read*`
+a|Grants the privileges of the following Couchbase roles:
+
+* xref:6.6@server:learn:security/roles.adoc#data-reader[`data_reader`]
+* xref:6.6@server:learn:security/roles.adoc#data-dcp-reader[`data_dcp_reader`]
+* xref:6.6@server:learn:security/roles.adoc#search-reader[`fts_searcher`]
+* xref:6.6@server:learn:security/roles.adoc#query-select[`query_select`]
+* xref:6.6@server:learn:security/roles.adoc#analytics-reader[`analytics_reader`]
+* xref:6.6@server:learn:security/roles.adoc#analytics-select[`analytics_select`]
+
+a|[#database-role-read-write-cb6]
+`*Read/Write*`
+a|Grants the privileges of the following Couchbase roles:
+
+* All roles granted by the <<database-role-read,`Database Read`>> role
+* xref:6.6@server:learn:security/roles.adoc#data-writer[`data_writer`]
+* xref:6.6@server:learn:security/roles.adoc#search-admin[`fts_admin`]
+* xref:6.6@server:learn:security/roles.adoc#query-insert[`query_insert`]
+* xref:6.6@server:learn:security/roles.adoc#query-update[`query_update`]
+* xref:6.6@server:learn:security/roles.adoc#query-delete[`query_delete`]
+* xref:6.6@server:learn:security/roles.adoc#query-manage-index[`query_manage_index`]
+* xref:6.6@server:learn:security/roles.adoc#xdcr-inbound[`replication_target`]
+* xref:6.6@server:learn:security/roles.adoc#analytics-admin[`analytics_admin`]
+* xref:6.6@server:learn:security/roles.adoc#analytics-manager[`analytics_manager`]
+
+|===
+====
+
+[#accessing-database-credentials]
+== Accessing Database Credentials
+
+.Permissions Required
+[IMPORTANT]
+====
+To access the database credentials for a cluster, you must have any one of the following roles for the project containing the cluster: 
+
+* xref:projects:project-roles.adoc#project-owner-role[`Project Owner`]
+* xref:projects:project-roles.adoc#project-cluster-viewer-role[`Cluster Viewer`]
+* xref:projects:project-roles.adoc#project-cluster-data-reader[`Cluster Data Reader`] 
+* xref:projects:project-roles.adoc#project-cluster-data-reader-writer[`Cluster Data Reader/Writer`]
+
+Note that only the `Project Owner` role allows you to create and modify database credentials.
+====
+
+. Go to the cluster's *Connect* tab.
++
+--
+.. Go to the *Clusters* tab in the main navigation.
+
+.. Find and click on the cluster that you wish to modify.
++
+This opens the cluster with its *Overview* tab selected.
+
+.. Click the *Connect* tab.
+--
+. Click btn:[Manage Credentials].
++
+This opens the *Database Credentials* screen, which lists any existing database credentials and allows you to create new ones. 
+
+// Add a screenshot of the DB Creds screen
+
+=== Database Credentials Summary 
+The database credentials summary is in a table format, with sortable columns and rows for each database credential. 
+This table is also paginated and can be adjusted to show more items on each page. 
+
+The database credentials list displays the following information about each credential: 
+
+Username::
+The name that identifies the database credential.
+
+Created By::
+The organization user that created the database credential. 
+
+Created On::
+The creation date of the database credential and its age. 
+The color-coded status indicator in this column is based on age to help identify older credentials that need rotation. 
+The colors indicate the following: 
+* Green: Under 90 days old
+* Yellow: 90 -- 180 days old 
+* Red: Over 180 days old
+
+A Trash icon shown at the end of each row can be used to <<delete-database-credentials,delete>> the corresponding database credential. 
+
+[#create-database-credentials]
+== Creating Database Credentials
+
+.Permissions Required
+[IMPORTANT]
+====
+To create a database credential, you must have the xref:projects:project-roles.adoc#project-owner-role[`Project Owner`] role for the project that contains the cluster where you want to create the credential.
+====
+
+. Go to the cluster's *Connect* tab.
++
+--
+.. Go to the *Clusters* tab in the main navigation.
+
+.. Find and click on the cluster where you want to create a database credential.
++
+This opens the cluster with its *Overview* tab selected.
+
+.. Click the *Connect* tab.
+--
+
+. Click btn:[Manage Credentials].
++
+This opens the *Database Credentials* screen which lists any existing database credentials and allows you to create new ones. 
+
+. Click btn:[Create Database Credential]
++
+This opens the *Create Database Credentials* fly-out menu. 
+
+. Specify the username and password.
++
+In the *Create Database Credentials* fly-out menu, complete the following fields:
++
+Username::
+Note that the username cannot exceed 128 UTF-8 characters in length and cannot contain the following characters: `( ) < > @ , ; : \ " / [ ]  ? = { }`
++
+Password::
+Note that passwords must be at least eight characters in length. 
+They must also include one or more uppercase letters, lowercase letters, numbers, and special characters: `@ % + \ \ / ' \ " ! # $ ^ ? : , ( ) { } [ ] ~ ` - _`
++ 
+[CAUTION]
+====
+You cannot change the password for a database credential after a database credential is created. This constraint prevents situations where the password for a credential is changed in Capella but not in an application. The best practice to follow when rotating credentials is to:
+
+. Create a new database credential in Capella 
+. Update your application to use the new database credential 
+. Delete the old database credential
+====
+// ^ Link out to the relevant security & best practices section when available.
++
+. Configure access
++
+.. Select bucket-level access.
++
+In the *Bucket Level Access* section, use the *Bucket* drop-down menu to specify a bucket you want this database credential to have access to. You also have the option to give access to all buckets in the cluster. 
++
+.. Select scope level access (Couchbase Server 7.0+ only)
++ 
+Use the *Scope* drop-down menu to specify a scope you want this database credential to have access to. You also have the option to provide access to all scopes within the current bucket. 
++ 
+.. Select access level.
++
+Use the *Access* drop-down menu to specify if you want this database credential to have `read`, `write`, or `read/write` access to the currently selected bucket and scope (Couchbase Server 7.0+ only). 
++
+. (Optional) Add another level of access.
++ 
+Database credentials can access multiple buckets and scopes (Couchbase Server 7.0+ only).
++
+.. Click btn:[Add Another].
++
+Another line is added to *Bucket Level Access* section where you can again select a bucket and scope (Couchbase Server 7.0+ only) that you want this database credential to access.
++ 
+. Once you've finished making the desired configurations, click btn:[Create].
++
+It’s important to remember that you can't use database credentials to log into the Couchbase Capella UI or manage Capella features. 
+You can only use database credentials for reading or writing bucket data using the Couchbase SDK and other supported tools. 
+
+[#modify-database-credentials]
+== Modify Database Credentials
+
+.Permissions Required
+[IMPORTANT]
+====
+To modify a database credential, you must have the xref:projects:project-roles.adoc#project-owner-role[`Project Owner`] role for the project that contains the database credential in question.
+====
+
+. Go to the cluster's *Connect* tab.
++
+--
+.. Go to the *Clusters* tab in the main navigation.
+
+.. Find and click on the cluster with the database credential that you wish to modify.
++
+This opens the cluster with its *Overview* tab selected.
+
+.. Click the *Connect* tab.
+--
+. Click btn:[Manage Credentials].
++
+This opens the *Database Credentials* screen that lists any existing database credentials. 
++
+. Look for the database credential whose access level you wish to modify, and then click on its name.
++
+This opens the database credential's fly-out menu.
++
+. In the *Bucket Level Access* section, change the access level(s).
++
+--
+.. To grant access to all current and future buckets on the cluster, use the *Bucket* drop-down menu to select the *All Buckets* option and use the *Access* drop-down menu to specify the level of <<about-database-user-permissions,access>> the database credential should have on those buckets.
+
+.. To grant granular access to individual buckets, use the *Bucket* drop-down menu to select which bucket the database user should have access to. Next, use the *Access* drop-down menu to specify the level of <<about-database-user-permissions,access>> it should have to the chosen bucket. 
+--
+. Once you've finished making the desired modifications, click btn:[Update].
+
+[#delete-database-credentials]
+== Deleting Database Credentials
+
+.Permissions Required
+[IMPORTANT]
+====
+To delete a database credential, you must have the xref:projects:project-roles.adoc#project-owner-role[`Project Owner`] role for the project that contains the database credential in question.
+====
+
+[WARNING]
+====
+Deleting a credential can cause an application that is actively using that credential to stop functioning. 
+Always ensure that you've updated your application to use new credentials before completing this action. 
+====
+
+. Go to the cluster's *Connect* tab.
++
+--
+.. Go to the *Clusters* tab in the main navigation.
+
+.. Find and click on the cluster with the database credential that you wish to delete.
++
+This opens the cluster with its *Overview* tab selected.
+
+.. Click the *Connect* tab.
+--
+. Click btn:[Manage Credentials].
++
+This opens the *Database Credentials* screen that lists any existing database credentials. 
++
+. Look for the database credential you want to delete, and then click the Trash icon at the far end of its row. 
++
+This opens the *Delete Database Credentials* fly-out menu.
+
+. Type `delete` into the provided field and click btn:[Delete]. 
++
+The database credential is deleted.
+
+You can also delete a database credential from within the credential's fly-out menu by clicking the Trash icon in the top-right corner.

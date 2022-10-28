@@ -1,0 +1,223 @@
+= Amazon Web Services (AWS)
+:description: Couchbase Capella supports deploying clusters onto Amazon Web Services (AWS).
+
+[abstract]
+{description}
+
+Couchbase Capella provides fully managed Couchbase Server clusters that can be deployed onto AWS.
+This page describes the various regions and configurations that are available to you when using Capella with AWS.
+
+
+== Supported Regions
+Couchbase Capella's fully managed DBaaS supports the following AWS regions.
+
+[{tabs}]
+====
+Americas::
++
+--
+[#supported-regions-americas,cols="1,1",options="header"]
+|===
+|AWS Region
+|Location
+
+|*`us-east-1`*
+|US East (N. Virginia)
+
+|*`us-east-2`*
+|US East (Ohio)
+
+|*`us-west-2`*
+|US West (Oregon)
+
+|*`ca-central-1`*
+|Canada (Central)
+
+|*`sa-east-1`*
+|Brazil (São Paulo)
+|===
+--
+
+Europe / Middle East::
++
+--
+[#supported-regions-europe,cols="1,1",options="header"]
+|===
+|AWS Region
+|Location
+
+|*`eu-central-1`*
+|EU (Frankfurt)
+
+|*`eu-west-1`*
+|EU (Ireland)
+
+|*`eu-west-2`*
+|EU (London)
+
+|*`eu-west-3`*
+|EU (Paris)
+
+|*`eu-north-1`*
+|EU (Stockholm)
+
+// Adding back in later?
+// |*`me-south-1`*
+// |Middle East (Bahrain)
+|===
+--
+Asia Pacific::
++
+--
+[#supported-regions-asia-pacific,cols="1,1",options="header"]
+|===
+|AWS Region
+|Location
+
+|*`ap-southeast-1`*
+|Asia Pacific (Singapore)
+
+|*`ap-southeast-2`*
+|Asia Pacific (Sydney)
+
+|*`ap-northeast-1`*
+|Asia Pacific (Tokyo)
+
+|*`ap-northeast-2`*
+|Asia Pacific (Seoul)
+
+|*`ap-south-1`*
+|Asia Pacific (Mumbai)
+
+|===
+--
+====
+
+NOTE: The above tables only show AWS region support for deploying clusters using  Capella's fully managed DBaaS option.
+If you are still using Couchbase Server 6.6, hosted in your own cloud provider's VPC, refer to the xref:clouds:cloud-providers.adoc[Cloud Provider Requirements] page.
+
+== Availability Zones
+Every AWS region includes a number of independent availability zones.
+These consist of one or more discrete data centers that are isolated from failures in other availability zones.
+Capella can automatically distribute cluster nodes across multiple availability zones in a region for the highest availability.
+Every cluster in Capella is deployed with a minimum of three <<nodes,nodes>>.
+
+The *Multiple Availability Zones* option is the default when creating clusters using the Developer Pro or Enterprise xref:billing:billing.adoc#support-plans[Service Plans].
+
+NOTE: The option to deploy across multiple AWS availability zones is only available for clusters that use the Developer Pro or Enterprise Service Plans.
+Clusters using the Basic service plan deploy all nodes to the same availability zone.
+
+
+== Configuration Options
+Clusters deployed onto AWS have several configuration options that allow you to customize clusters to fit your requirements.
+
+
+[#nodes]
+=== Nodes
+
+Clusters have a minimum of 3 nodes and a maximum of 27.
+
+Clusters consist of service groups that include the Couchbase services deployed and system resources.
+Each service group has a node quantity to represent the number of nodes in the cluster with that configuration.
+Individual service groups can have between 2 and 27 nodes but cannot collectively exceed 27.
+The service group that includes the xref:clusters:data-service/data-service.adoc[Data Service] requires at least 3 nodes.
+
+NOTE: As they're intended for evaluation purposes only, self-service trial clusters only include 1 node.
+
+
+=== Compute and Memory
+Capella provides the following compute configurations for clusters deployed onto AWS.
+
+.AWS compute configurations
+[#aws-configurations,cols="1,1",options="header"]
+|===
+|vCPU
+|Memory
+
+|<<footnote-1,icon:star[title="Available in self-service trials"]>> 2 vCPUs
+|8 GB
+
+|4 vCPUs
+|16 GB
+
+|4 vCPUs
+|32 GB
+
+|8 vCPUs
+|16 GB
+
+|8 vCPUs
+|32 GB
+
+|8 vCPUs
+|64 GB
+
+|16 vCPUs
+|32 GB
+
+|16 vCPUs
+|64 GB
+
+|16 vCPUs
+|128 GB
+
+|32 vCPUs
+|128 GB
+
+|32 vCPUs
+|256 GB
+
+|36 vCPUs
+|72 GB
+
+|48 vCPUs
+|96 GB
+
+|48 vCPUs
+|192 GB
+
+|48 vCPUs
+|384 GB
+
+|64 vCPUs
+|256 GB
+
+|72 vCPUs
+|144 GB
+
+|===
+
+[#footnote-1]
+icon:star[star] This configuration is only available for https://cloud.couchbase.com/sign-up[self-service trial] clusters in Capella.
+
+
+=== Storage Size
+
+Capella clusters deployed onto AWS use the SSDs in AWS EBS.
+You have the option to choose between the GP3 and IO2 volume types per service group.
+
+The amount of storage available per node in your cluster is configurable from a minimum of 50 GB to a maximum of 16 TB.
+
+
+=== Storage Speed
+
+Each cluster service group has a default input/output operations per second (IOPS) rate of 3000.
+The storage speed is configurable based on the volume type used:
+
+* *GP3*: 3000 to 16000 IOPS
+* *IO2*: 1000 to 64000 IOPS
+
+IMPORTANT: Adjusting the IOPS rate affects performance and cost.
+
+
+== See Also
+
+* https://aws.amazon.com/about-aws/global-infrastructure/regions_az/[AWS Regions and Availablity Zones]
+* https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-volume-types.html#solid-state-drives[Amazon EBS SSD-backed volumes]
+
+=== Next Steps
+
+To create or modify a Couchbase Capella cluster deployed onto AWS, see the following pages:
+
+* xref:clusters:create-database.adoc[Create a database]
+* xref:clusters:modify-database.adoc[Modify a database]

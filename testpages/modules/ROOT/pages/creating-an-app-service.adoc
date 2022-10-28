@@ -1,0 +1,88 @@
+= Creating {an-app-service}
+include::partial$tokens.adoc[]
+include::partial$preview.adoc[]
+:page-aliases: mobile:deployment/deployment.adoc
+:description: Creating {an-app-service}, using the Capella UI
+
+
+[abstract]
+{description}
+
+
+In this section, we'll show you how to create {an-app-service} for your mobile apps to connect to.
+
+== Basics
+
+include::partial$accessing-app-service.adoc[tags=navigate-to-app-services]
+. Click the btn:[{plus}Create {app-service}] button.
++
+.Creating an App Service
+image::app-service/create-app-service.png[creating the App Service]
++
+. Enter a name for the {app-service}.
+
+. Choose the database you want to connect to.
++
+[NOTE]
+--
+App Services are available on both xref:reference:aws.adoc[AWS] and xref:reference:gcp.adoc[GCP (supported regions)].
+The database you select:
+
+* MUST have Data, Index, and Query services running
+* MUST have at least one Bucket to connect an App Endpoint to
+* must NOT already have an App Service linked to it
+* must NOT have XDCR with another Cluster.
+
+You may subsequently enable XDCR on clusters linked with App Services,
+as long as:
+
+* you are setting up unidirectional XDCR between the clusters
+* the other cluster does not have App Services linked to it.
+--
++
+. Now click the btn:[Create {app-service}] button to instantiate the service.
+
+[#deployment-configuration]
+== Deployment Configuration
+
+The provided default should be fine to get you started for development.
+According to your requirements, you may customize the following parameters:
+
+.Number of nodes
+ * between 2 and 12 nodes (default 2)
+
+.Size of each node
+Choose the size of the node:
+The options offered vary depending on which cloud service you have chosen for the database.
+
+
+[#linked-database-plan]
+== Linked Database's Plan
+
+When deploying a new {app-service}, you are given confirmation of the Plan selected for the linked database,
+and the *increase* in cost after adding the new {app-service}.
+
+Learn more about xref:billing/billing.adoc[Billing of App Services].
+
+
+== Configuring a Deployed {app-service}
+
+By increasing the number and/or the specifications of the nodes, you can adjust the cost and performance of the {app-service}.
+
+include::partial$accessing-app-service.adoc[tags=navigate-to-app-service-settings]
+. Select menu:Configuration[] from the menu list on the left of the screen.
+
+image::image$deployment/configuration-screen.png[{app-service} configuration screen]
+
+From the `Deployment Configuration` you can adjust the number of nodes and the number of CPUs/amount of memory for each of those nodes.
+
+[NOTE]
+====
+There is no downtime associated with changing the configuration.
+The {app-service}s will continue to run while the system is reconfigured.
+
+Capella will also allow reconfiguration of  {app-services} while the host database is undergoing rescaling.
+====
+
+
+For more details on deployment configurations, see xref:./controlling-app-endpoints.adoc[]

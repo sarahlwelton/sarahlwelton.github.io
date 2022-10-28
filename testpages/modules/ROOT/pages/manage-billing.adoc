@@ -1,0 +1,389 @@
+= Manage Billing
+:description: Manage and audit billing information for your organization and clusters.
+
+
+[abstract]
+{description}
+
+
+== Accessing Billing Information in the Couchbase Capella UI
+
+An organization's billing information can be viewed and managed from the [.ui]*Billing* tab in the main navigation.
+Billing information can be viewed and managed by any user with xref:organizations:organization-user-roles.adoc#organization-role-organization-owner[`Organization Owner`] role.
+
+image::billing-tab-credits.png["The 'Billing' tab showing the 'Overview' sub-tab selected."]
+
+Billing information and controls are organized into the following tabs:
+
+* [.ui]*<<billing-overview-tab>>*
+* [.ui]*<<billing-projects-tab>>*
+* [.ui]*<<billing-usage-tab>>*
+
+[#billing-overview-tab]
+=== Overview
+
+[NOTE]
+====
+If an xref:billing:billing.adoc#activation-id[Activation ID] has yet to be added for your organization, the [.ui]*Overview* tab displays the [.ui]*Couchbase Capella Activation ID* section, along with buttons for requesting an Activation ID and <<add-activation-id,adding an Activation ID>> that has already been sent to you by Couchbase Sales.
+====
+
+Once an Activation ID has been added to your organization, the following sections are displayed.
+
+image::billing-overview-tab-up-front-credits.png["The Billing 'Overview' tab."]
+
+Summary::
+This section contains a [.ui]*Recent Usage* graph that displays the total number of credits and clusters that were used by your organization in recent usage periods. (Cluster usage is the total number of unique clusters across the organization that were ever in a billable state during the usage period.)
++
+Two stats boxes are also shown, [.ui]*Previous Period Usage* and [.ui]*Current Period Usage*, which respectively display the total number of credits used in the previous usage period and the total number of credits used so far in the current usage period.
++
+In addition, the current Activation ID is shown in the upper-right.
+
+Couchbase Capella Credits::
+If your organization is paying xref:billing:billing.adoc#up-front-payment[up-front] for Couchbase Capella Credits, or is on a Free Trial, this section will display information about your organization's credit purchases, as well as the remaining balance of available credits.
++
+If your organization is paying xref:billing:billing.adoc#on-demand-payment[on-demand] for Couchbase Capella Credits, then this section will simply display information about requesting a change to the up-front payment plan.
+
+[#billing-projects-tab]
+=== Projects
+
+The [.ui]*Projects* tab displays a list of all the projects in the organization.
+
+image::billing-projects-tab.png["The Billing 'Projects' tab."]
+
+Each project is represented by a row that contains the following summarized details:
+
+Name::
+The name of the project.
+
+Clusters::
+The number of clusters in the project.
+
+Plan::
+The xref:billing:billing.adoc#support-plans[Service Plan(s)] of the clusters in the project.
+
+A Trash icon is displayed at the end of each row, which can be used to delete the project.
+
+Clicking on a project row opens that project's billing fly-out menu.
+
+image::billing-project-flyout.png["The project's billing fly-out menu.",500]
+
+From this menu you can do the following:
+
+* <<modify-cluster-support-plan>>
+* <<modify-cluster-support-time-zone>>
+
+[#billing-usage-tab]
+=== Usage
+
+The [.ui]*Usage* tab displays a list of all the monthly xref:billing:billing.adoc#bill-calculation[usage periods] that have occurred since <<add-activation-id,adding an Activation ID>>.
+
+image::billing-usage-tab.png["The Billing 'Usage' tab."]
+
+Each usage period is represented by a row that contains the following summarized details:
+
+Usage Period::
+The range of dates that encompass the usage period.
+
+Projects::
+The total number of projects that contained at least one billable cluster during the usage period.
+
+Clusters::
+The total number of unique clusters across the organization that were ever in a billable state during the usage period.
+
+Credits Used::
+The total number of credits used across all clusters during the usage period.
+
+Clicking on a usage period row opens the <<usage-reports, Usage Summary>> fly-out menu for that usage period.
+
+== Activate a Free Trial
+
+If you have already signed up for a Couchbase Capella account and created an organization, refer to <<add-activation-id>> for instructions on adding or requesting a Trial Activation ID for your organization.
+
+If you already have a Trial Activation ID, but have not yet signed up for a Couchbase Capella account and created an organization, follow the xref:get-started:get-started.adoc[Getting Started instructions] from the beginning.
+
+[#upgrade-from-free-trial]
+== Upgrade a Free Trial to a Paid Plan
+
+A xref:billing:billing.adoc#free-trial-plan[Free Trial] comes with a limited number of Couchbase Capella Credits that can be spent on clusters.
+Once all of the Couchbase Capella Credits from a Trial xref:billing:billing.adoc#activation-id[Activation ID] have been exhausted -- or when any remaining credits expire (whichever happens first) -- all clusters currently on the Free Trial Service Plan will automatically be _suspended_.
+When a cluster is suspended, you will no longer be able to read or write data on it.
+You have the option of deleting suspended clusters, or re-enabling them by activating a Paid Activation ID.
+
+NOTE: Suspended clusters deployed using your own cloud will continue to accrue infrastructure cost with your connected cloud provider.
+
+To upgrade from a Free Trial to a xref:billing:billing.adoc#paid-plan[Paid Plan], you will need to request a Paid Activation ID from Couchbase Sales.
+You can use a Paid Activation ID to upgrade to a Paid Plan before or after the Free Trial ends -- just remember that any running clusters will automatically be suspended when the Free Trial period ends. 
+
+. (Optional) Request a Paid Activation ID.
++
+Go to the [.ui]*Billing* tab in the main navigation.
+Under the [.ui]*Overview* tab, click btn:[Contact Couchbase].
+A pre-populated fly-out menu will open, allowing you to request an Activation ID directly via xref:support:manage-support.adoc[Support ticket].
+
+. Replace your Activation ID.
++
+You will need to replace your Trial Activation ID with the Paid Activation ID that you received from Couchbase Sales.
++
+--
+.. If your Trial Activation ID has already expired, you can start by clicking the [.ui]*Upgrade Now* link in the trial expiration notification that appears at the top of every screen in Couchbase Capella UI.
++
+If you're upgrading, and the Free Trial period has not yet ended, go to the [.ui]*Billing* tab in the main navigation, and under the [.ui]*Overview* tab, click btn:[Upgrade Now].
++
+Both of these options open the [.ui]*Replace Activation ID* fly-out menu.
+
+.. In the [.ui]*Replace Activation ID* fly-out menu, you will see your Trial Activation ID, along with a field to enter your Paid Activation ID.
+Enter your Paid Activation ID in this field, and click btn:[Replace].
+--
++
+At this point, your organization has been successfully upgraded to a Paid Plan.
+
+. If you had any clusters deployed when you upgraded, the [.ui]*Trial Cluster(s)* fly-out will open, prompting you to determine what to do with any remaining clusters.
++
+Any clusters that were created during the Free Trial will still be on a Free Trial Service Plan, and thus will continue to be in a suspended state until you either delete them or upgrade them to a paid plan.
++
+In the [.ui]*Trial Cluster(s)* fly-out, you will see a list of all clusters that remain on a Free Trial Service Plan.
++
+--
+.. For the clusters that you wish to delete, click the Trash icon next to each one to mark them for deletion.
+
+.. For the clusters that you wish to upgrade to a Paid Service Plan, use the [.ui]*Plan* and [.ui]*Support Time Zone* drop-down menus next to each cluster to select the desired Paid Service Plan and xref:support:support.adoc#support-time-zones[Support Time Zone], respectively.
+
+.. (Optional) Use the [.ui]*Plan (Apply to All Clusters)* drop-down menu to apply the same Paid Service Plan to all clusters that haven't been marked for deletion.
+
+.. (Optional) Use the [.ui]*Time Zone (Apply to All Clusters)* drop-down menu to apply the same Support Time Zone to all clusters that haven't been marked for deletion.
+--
++
+You can click btn:[Cancel] at any time and the configuration will be saved.
+This can be helpful if you need to take time and check with any stakeholders to determine what to do with a particular trial cluster.
++
+Once you're satisfied with how each cluster is configured, click btn:[Save Configuration].
+Any clusters that were marked for deletion will begin to be deleted.
+Any clusters that were upgraded to a Paid Service Plan will no longer be in a suspended state and will begin consuming Couchbase Capella Credits.
+
+== End a Free Trial Without Upgrading
+
+[TIP]
+
+====
+This information in this section is for anyone still using Couchbase Server 6.6, hosted in their own cloud provider's VPC.
+It does not apply to Couchbase 7.0, hosted in Couchbase's VPC and fully managed for you.
+
+For further information https://www.couchbase.com/products/capella[contact Couchbase].
+
+The easiest way to get started with Capella, our fully managed DBaaS, is xref:get-started:get-started.adoc[hosting in Couchbase's Cloud].
+====
+
+
+If at the end of your Free Trial you choose not to <<upgrade-from-free-trial,upgrade to a Paid Plan>>, and your Capella Cluster is deployed in your own Public Cloud account, then it's important that you make sure to xref:clusters:delete-database.adoc[delete all remaining clusters] and xref:clouds:manage-clouds.adoc[delete all connected clouds].
+
+Suspended clusters and connected clouds will continue to accrue infrastructure cost with your connected cloud provider, so it's important that you delete them at the end of your Free Trial to avoid undesired charges to your cloud provider account.
+
+CAUTION: You should never directly delete cluster resources and connected cloud resources using your cloud provider console.
+You should only ever delete clusters and connected clouds using the Couchbase Capella UI.
+This ensures that all resources are properly removed from your cloud provider account.
+Manually deleting resources from your cloud provider account is *highly discouraged*.
+
+[#add-activation-id]
+== Add an Activation ID
+
+You must add an xref:billing:billing.adoc#activation-id[Activation ID] to your organization in order to start using xref:billing:billing.adoc#couchbase-cloud-credits[Couchbase Capella Credits] for Paid or Free Trial (in _Own Cloud Account_) clusters.
+
+NOTE: If you already have a Trial Activation ID, but have not yet signed up for a Couchbase Capella account and created an organization, you should follow the xref:get-started:get-started.adoc[Getting Started instructions] instead of this procedure.
+
+. Go to the [.ui]*Billing* tab in the main navigation.
++
+The [.ui]*Overview* tab is selected.
+If no Activation ID has previously been entered, you have the option to request an Activation ID or add an Activation ID that has been sent to you by Couchbase Sales.
+
+. (Optional) Request an Activation ID.
++
+If you don't have an Activation ID, you can click btn:[Contact Couchbase] to request one.
+A pre-populated fly-out menu will open, allowing you to request an Activation ID directly via xref:support:manage-support.adoc[Support ticket].
+
+. When you have your Activation ID ready, click btn:[Add Activation ID].
++
+Enter your Activation ID in the fly-out menu and click btn:[Activate].
+
+After adding your Activation ID, the [.ui]*Overview* tab will update according to the payment plan associated with your Activation ID.
+
+If you haven't connected a cloud or deployed a cluster yet, you can do so by referring to xref:get-started:deploy-first-cluster.adoc[Deploy Your First Cluster].
+
+[#modify-cluster-support-plan]
+== Modify a Cluster's Service Plan
+
+You can change the Service Plan of a cluster to change its level of support and capabilities.
+
+. Go to the [.ui]*Clusters* tab in the main navigation.
+
+. From the cluster list, find and click on the cluster with the Service Plan you want to modify.
++
+This opens the cluster with its *Metrics* tab selected.
+
+. Click the *Configuration* tab.
++
+At the top of the *Configuration* tab is the *Plan* area. 
+This area lists the current plan type and support time zone. 
+
+. Click btn:[Edit Plan].
++ 
+This opens the *Update Cluster Plan* fly-out menu. 
+
+. Find and click on the plan you want to apply to the current cluster.  
+
+. Use the *Support Time-Zone* drop-down menu to select an appropriate Support Time Zone for that cluster.
+
+. To confirm the changes click btn:[Update].
+
+Any modification to the Service Plan takes effect on the next clock hour.
+
+[#modify-cluster-support-time-zone]
+== Modify a Cluster's Support Time Zone
+
+You can change the xref:support:support.adoc#support-time-zones[Support Time Zone] of a cluster.
+
+. Go to the [.ui]*Clusters* tab in the main navigation.
+
+. From the cluster list, find and click on the cluster with the Service Plan you want to modify.
++
+This opens the cluster with its *Metrics* tab selected.
+
+. Click the *Configuration* tab.
++
+Near the top of the *Configuration* tab is the *Plan* area. 
+This area lists the current plan type and Support Time Zone. 
+
+. Click btn:[Edit Plan].
++ 
+This opens the *Update Cluster Plan* fly-out menu. 
+
+. Within the currently applied service plan, use the *Support Time-Zone* drop-down menu to select a new Support Time Zone for that cluster.
+
+. To confirm the changes click btn:[Update].
+
+Any modification to the Support Time Zone takes effect on the next clock hour.
+
+[#usage-reports]
+== View Usage Summaries
+
+Each monthly xref:billing:billing.adoc#bill-calculation[usage period] has a corresponding _Usage Summary_.
+The current and previous usage periods can be viewed under the <<billing-usage-tab,*Usage* tab>>.
+
+In the [.ui]*Usage Periods* section, clicking on a usage period row opens the [.ui]*Usage Summary* fly-out menu for that usage period.
+
+image::billing-usage-summary-flyout.png["The 'Usage Summary' fly-out menu.",550]
+
+=== Understanding the Usage Summary
+
+The top section of the [.ui]*Usage Summary* fly-out menu displays cumulative information about the credits used during the usage period.
+
+image::billing-usage-summary-flyout-top-section.png["The top section of the 'Usage Summary' fly-out menu.",550]
+
+Pre-Paid Credits Used::
+The number of pre-paid Couchbase Capella Credits used during the usage period.
++
+Only applies to organizations that pay xref:billing:billing.adoc#up-front-payment[up-front] for Couchbase Capella Credits.
+
+On-Demand Credits Used::
+The number of pre-paid Couchbase Capella Credits used during the usage period.
++
+Applies to organizations that pay xref:billing:billing.adoc#on-demand-payment[on-demand] for Couchbase Capella Credits.
+Can also apply to organizations that pay xref:billing:billing.adoc#up-front-payment[up-front] but have run out of pre-paid credits and have fallen back to paying on-demand.
+
+Total Credits Used::
+The sum of [.ui]*Pre-Paid Credits Used* and [.ui]*On-Demand Credits Used*.
+This value represents the sum total of all Couchbase Capella Credits used across the entire organization.
+
+Starting Credit Balance::
+The balance of pre-paid Couchbase Capella Credits available at the beginning of the usage period.
++
+Only applies to organizations that pay xref:billing:billing.adoc#up-front-payment[up-front] for Couchbase Capella Credits.
+
+Ending Credit Balance::
+The balance of pre-paid Couchbase Capella Credits available at the end of the usage period.
++
+Only applies to organizations that pay xref:billing:billing.adoc#up-front-payment[up-front] for Couchbase Capella Credits.
+
+==== Project Summary
+
+The [.ui]*Project Summary* section of the [.ui]*Usage Summary* fly-out menu displays a report of all usage, broken down by _project_ and _cluster_.
+Projects are expanded to show all of the billable clusters that they contain.
+
+image::billing-usage-summary-flyout-project-summary-section.png["The 'Project Summary' section of the 'Usage Summary' fly-out menu.",550]
+
+Each project and cluster is listed with the following values:
+
+Server Hours::
+The number of clock hours in which clusters ran.
+
+Credits Used::
+The number of credits used by a cluster or project.
+For a cluster, this value is derived from multiplying the number of [.ui]*Server Hours* by the cluster's individual rate.
+
+Note that the values for a project are the sum of the values of each cluster contained within the project.
+
+At the bottom of the [.ui]*Project Summary* section, totals are provided for [.ui]*Credits Used* and [.ui]*Server Hours* across the organization.
+
+==== Instance Summary
+
+The [.ui]*Instance Summary* section of the [.ui]*Usage Summary* fly-out menu displays a report of all usage, broken down by _cloud provider_ and _instance type_.
+Capella providers (if you use more than one), are expanded to show all of the instance types that were used by billable clusters during the usage period.
+
+image::billing-usage-summary-flyout-instance-summary-section.png["The 'Instance Summary' section of the 'Usage Summary' fly-out menu.",550]
+
+Each cloud provider and instance type is listed with the following values:
+
+////
+Credits per Hour::
+The average rate charged for the instance type across the organization.
++
+Since cluster rates can vary based on things like chosen xref:billing:billing.adoc#support-plans[Support Plan], there isn't a static rate for each instance type.
+Therefore, if you upgrade a test cluster to a production Support Plan, you may notice an increase in the [.ui]*Credits per Hour* for the instance types used in that cluster.
+////
+
+Server Hours::
+The total number of clock hours used by the instance type across the organization.
+
+Credits Used::
+The total amount of credits used by the instance type across the organization.
+//This value is derived from multiplying [.ui]*Credits per Hour* by [.ui]*Server Hours*.
+
+At the bottom of the [.ui]*Instance Summary* section, totals are provided for [.ui]*Server Hours* and [.ui]*Credits Used* across all connected cloud providers used by the organization.
+
+==== Daily Summary
+
+The [.ui]*Daily Summary* section of the [.ui]*Usage Summary* fly-out menu displays a report of all usage usage, broken down by each day in the usage period.
+Each day can be expanded to show all of the instance types that were used by billable clusters during those days.
+
+image::billing-usage-summary-flyout-daily-summary-section.png["The 'Daily Summary' section of the 'Usage Summary' fly-out menu.",550]
+
+Each day and instance type is listed with the following values:
+
+////
+Credits per Hour::
+The average rate charged for the instance type across the organization.
++
+Since cluster rates can vary based on things like chosen xref:billing:billing.adoc#support-plans[Support Plan], there isn't a static rate for each instance type.
+Therefore, if you upgrade a test cluster to a production Support Plan, you may notice an increase in the [.ui]*Credits per Hour* for the instance types used in that cluster.
+////
+
+Server Hours::
+The total number of clock hours used by the instance type across the organization.
+
+Credits Used::
+The total amount of credits used by the instance type across the organization.
+//This value is derived from multiplying [.ui]*Credits per Hour* by [.ui]*Server Hours*.
+
+At the bottom of the [.ui]*Daily Summary* section, totals are provided for [.ui]*Server Hours* and [.ui]*Credits Used* across the organization.
+
+////
+=== Download the Usage Summary
+
+At the top of the [.ui]*Usage Summary* fly-out menu, click btn:[Export].
+This will download a copy of the Usage Summary to your computer.
+////
+
+== Modify Your Billing Contact Information
+
+Your billing contact information is different than your xref:organizations:manage-organizations.adoc[organization owner information].
+Invoices and other billing-related communications are sent to the billing contact information associated with your organization.
+To modify your billing contact information, contact Couchbase Sales.

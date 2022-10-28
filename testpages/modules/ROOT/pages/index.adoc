@@ -1,0 +1,60 @@
+= {app-services}
+include::partial$preview.adoc[]
+include::partial$tokens.adoc[]
+:description: {app-services} synchronizes data between the Couchbase Capella database and your apps running on mobile applications.
+:page-aliases: mobile:index.adoc
+
+[abstract]
+{description}
+
+*{app-services}* is a fully managed application backend designed to provide data synchronization for mobile/IoT applications and the Capella Cloud Service. The service provides:
+
+* Responsive and reliable data synchronization between devices and the NoSQL Couchbase backend.
+Synchronization is handled automatically, without the need for developer or user intervention, ensuring low latency, data integrity and high availability for  mobile applications.
+
+* A mobile database (Couchbase Lite) that support the creation of off-line apps: users can work within a mobile applications, without the need for an always-available network connection. Changes to data stored with the app are synced with the Capella backend when the internet is available.
++
+image::cb-mobile-illustrations_2.png[, 800]
+* Automatic conflict resolution: concurrent changes across clients are handled through predefined policies, or custom conflict resolvers.
+* Seamless OIDC authentication support.
+* Peer-to-peer synchronization between mobile/IoT devices.
+* Development frameworks and tooling for:
+** xref:couchbase-lite:swift:gs-install.adoc[Swift (iOs, macOS)]
+** xref:couchbase-lite:android:kotlin.adoc[Kotlin (Android)]
+** xref:couchbase-lite:android:gs-install.adoc[Java (Android])
+** xref:couchbase-lite:csharp:gs-install.adoc[.Net (Desktop, Xamarin)]
+** xref:couchbase-lite:c:gs-install.adoc[C (Desktop, Mobile, Embedded)]
+** xref:couchbase-lite:java:gs-install.adoc[Java (Desktop)]
+** xref:couchbase-lite:objc:gs-install.adoc[Obj-C (iOS, macOS)]
+** xref:couchbase-lite:javascript:quickstart.adoc[Javascript]
+** xref:references/rest-api-introduction.adoc[A REST API] for commuting with the Couchbase engine across a secure web connection.
+
+// tag::intro[]
+{app-service}s is the synchronization service for Couchbase Capella, designed to provide data synchronization for large-scale interactive web, mobile, and IoT applications
+// end::intro[]
+
+{app-services} maintain secure access using:
+
+* **User authentication**, which ensures that only authorized users can connect to Sync Gateway.
+
+* *Data Routing*, which ensures that authorized users can only access documents in the channels assigned to them and only in accordance with their assigned privileges.
+
+
+////
+// In this section you'll find a number of guides to help you with the administration tasks common to running {app-services}.
+//
+// The guides listed below will show how to carry out the tasks necessary for the administration of the mobile synchronization service.
+
+// == {app-services} Guides
+
+// .🚧 Under Construction 🚧
+// [sidebar]
+// ****
+// Still to be defined
+// ***
+////
+
+
+== See Also
+
+NOTE: See more details about the underlying xref:sync-gateway::introduction.adoc[Couchbase Mobile Sync Gateway ] product.

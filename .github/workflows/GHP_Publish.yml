@@ -5,11 +5,11 @@ name: Publish to GitHub Pages
 on:
   # Triggers the workflow on push or pull request events but only for the "style-guide-site" branch
   push:
-    branches: [ "main" ]
+    branches: [ "getting-started-preview" ]
   pull_request:
     types: 
       - closed
-    branches: [ "main" ]
+    branches: [ "getting-started-preview" ]
   workflow_dispatch:
 
 jobs:

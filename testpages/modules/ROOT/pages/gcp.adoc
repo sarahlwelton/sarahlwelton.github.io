@@ -1,0 +1,319 @@
+= Google Cloud Platform (GCP)
+:description: Couchbase Capella supports deploying clusters onto Google Cloud Platform (GCP).
+
+[abstract]
+{description}
+
+Couchbase Capella provides fully managed Couchbase Server clusters that can be deployed onto GCP.
+This page describes the various regions and configurations that are available to you when using Capella with GCP.
+
+IMPORTANT: GCP is only supported in Capella's fully managed DBaaS option.
+For those still using Couchbase Server 6.6, hosted in their own cloud provider's VPC, refer to the xref:clouds:cloud-providers.adoc[].
+
+
+== Supported Regions
+Couchbase Capella's fully managed DBaaS supports the following GCP regions.
+
+* ✔ xref:app-services:index.adoc[App Services] are supported in this region.
+
+
+[{tabs}]
+====
+Americas::
++
+--
+[#supported-regions-americas,cols="2,1,1",options="header"]
+|===
+|GCP Region
+|App Services?
+|Location
+
+|*`us-east1`*
+|*✔*
+|US East (South Carolina)
+
+|*`us-east4`*
+|*✔*
+|US East (N. Virginia)
+
+|*`us-west1`*
+|*✔*
+|US West (Oregon)
+
+|*`us-west3`*
+|*✔*
+|US West (Utah)
+
+|*`us-west4`*
+|*✔*
+|US West (Nevada)
+
+|*`us-central1`*
+|*✔*
+|US Central (Iowa)
+
+|*`northamerica-northeast1`*
+|*✔*
+|Canada (Montréal)
+
+|*`northamerica-northeast2`*
+|
+|Canada (Toronto)
+
+|*`southamerica-east1`*
+|*✔*
+|Brazil (São Paulo)
+
+|*`southamerica-west1`*
+|
+|Chile (Santiago)
+
+
+|===
+--
+
+Europe::
++
+--
+[#supported-regions-europe,cols="2,1,2",options="header"]
+|===
+|GCP Region
+|App Services?
+|Location
+
+|*`europe-west1`*
+|*✔*
+|Belgium
+
+|*`europe-west2`*
+|*✔*
+|London
+
+|*`europe-west3`*
+|*✔*
+|Frankfurt
+
+|*`europe-west4`*
+|*✔*
+|Netherlands
+
+|*`europe-west6`*
+|*✔*
+|Zurich
+
+|*`europe-west8`*
+|
+|Milan
+
+|*`europe-central2`*
+|
+|Warsaw
+
+|*`europe-north1`*
+|*✔*
+|Finland
+
+|===
+--
+Asia Pacific::
++
+--
+[#supported-regions-asia-pacific,cols="2,1,2",options="header"]
+|===
+|GCP Region
+|App Services?
+|Location
+
+|*`asia-east1`*
+|*✔*
+|Taiwan
+
+|*`asia-east2`*
+|*✔*
+|Hong Kong
+
+|*`asia-northeast1`*
+|*✔*
+|Tokyo
+
+|*`asia-northeast2`*
+|
+|Osaka
+
+|*`asia-northeast3`*
+|*✔*
+|Seoul
+
+|*`asia-south1`*
+|*✔*
+|Mumbai
+
+|*`asia-south2`*
+|
+|Delhi
+
+|*`asia-southeast1`*
+|*✔*
+|Singapore
+
+|*`asia-southeast2`*
+|*✔*
+|Jakarta
+
+|*`australia-southeast1`*
+|*✔*
+|Sydney
+
+|*`australia-southeast2`*
+|
+|Melbourne
+
+|===
+--
+====
+
+
+== Zones
+Each Google Cloud region contains a number of independent zones.
+These consist of one or more discrete data centers that are isolated from failures in other zones.
+Capella can automatically distribute cluster nodes across multiple zones in a region for the highest availability.
+Every cluster in Capella is deployed with a minimum of three <<nodes,nodes>>.
+
+The *Multiple Zones* option is the default when creating clusters using the Developer Pro or Enterprise xref:billing:billing.adoc#support-plans[Service Plans].
+
+NOTE: The option to deploy across multiple Google Cloud zones is only available for clusters that use the Developer Pro or Enterprise Service Plans.
+Clusters using the Basic service plan deploy all nodes to the same zone.
+
+
+== Configuration Options
+Clusters deployed onto Google Cloud have several configuration options that allow you to customize clusters to fit your requirements.
+
+
+[#nodes]
+=== Nodes
+
+NOTE: As they're intended for evaluation purposes only, self-service trial clusters only include 1 node.
+
+Clusters have a minimum of 3 nodes and a maximum of 27.
+
+Clusters consist of service groups that include the Couchbase services deployed and system resources.
+Each service group has a node quantity to represent the number of nodes in the cluster with that configuration.
+Individual service groups can have between 2 and 27 nodes but cannot collectively exceed 27.
+The service group that includes the xref:clusters:data-service/data-service.adoc[Data Service] requires at least 3 nodes.
+
+
+=== Compute and Memory
+Capella provides the following compute configurations for clusters deployed onto Google Cloud.
+
+.Google Cloud Compute Engine configurations
+[#aws-configurations,cols="1,1",options="header"]
+|===
+|vCPU
+|Memory
+
+|<<footnote-1,icon:star[title="Available in self-service trials"]>> 2 vCPUs
+|8 GB
+
+|4 vCPUs
+|16 GB
+
+|4 vCPUs
+|32 GB
+
+|8 vCPUs
+|8 GB
+
+|8 vCPUs
+|16 GB
+
+|8 vCPUs
+|32 GB
+
+|8 vCPUs
+|64 GB
+
+|16 vCPUs
+|16 GB
+
+|16 vCPUs
+|32 GB
+
+|16 vCPUs
+|64 GB
+
+|16 vCPUs
+|128 GB
+
+|32 vCPUs
+|32 GB
+
+|32 vCPUs
+|128 GB
+
+|32 vCPUs
+|256 GB
+
+|36 vCPUs
+|72 GB
+
+|48 vCPUs
+|96 GB
+
+|64 vCPUs
+|64 GB
+
+|64 vCPUs
+|256 GB
+
+|64 vCPUs
+|512 GB
+
+|72 vCPUs
+|144 GB
+
+|80 vCPUs
+|80 GB
+
+|80 vCPUs
+|320 GB
+
+|80 vCPUs
+|640 GB
+
+|===
+
+[#footnote-1]
+icon:star[star] This configuration is only available for https://cloud.couchbase.com/sign-up[self-service trial] clusters in Capella.
+
+
+=== Storage Size
+
+Capella clusters deployed onto Google Cloud use SSD persistent disks (PD-SSD).
+These are suited for high-performance database needs that require lower latency and more IOPS than standard persistent disks provide.
+
+The amount of storage available per node in your cluster is configurable from a minimum of 50 GB (the maximum for self-service trials).
+
+
+=== Storage Speed
+
+Storage speed is measured in IOPS (input/output operations per second) that the cluster performs.
+Persistent disk speed is determined by the disk size and cannot be customized on its own.
+PD-SSDs receive 30 read and 30 write IOPS per GB provisioned, for an overall 60 IOPS per GB.
+
+To increase the read and write performance of the disk, increase the storage size.
+For example, the default 50 GB storage has a maximum read speed of 1500 IOPS and a maximum write speed of 1500 IOPS.
+Increasing the storage to 100 GB increases the maximum read speed to 3000 IOPS and the maximum write speed to 3000 IOPS.
+
+
+== See Also
+
+* https://cloud.google.com/compute/docs/regions-zones[GCP Regions and Zones]
+* https://cloud.google.com/compute/docs/disks/performance#performance_limits[GCP storage performance limits]
+
+
+=== Next Steps
+
+To create or modify a Couchbase Capella cluster deployed onto GCP, see the following pages:
+
+* xref:clusters:create-database.adoc[Create a database]
+* xref:clusters:modify-database.adoc[Modify a database]
