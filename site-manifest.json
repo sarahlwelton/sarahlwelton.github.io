@@ -1,0 +1,69 @@
+{
+  "version": 3,
+  "generated": 1668455160972,
+  "url": "https://labs.couchbase.com/style-guide-site",
+  "components": [
+    {
+      "name": "ROOT",
+      "title": "Home",
+      "latest": "",
+      "versions": [
+        {
+          "version": "",
+          "displayVersion": "default",
+          "url": "/index.html",
+          "pages": [
+            {
+              "module": "ROOT",
+              "path": "Formatting.adoc",
+              "url": "/Formatting.html",
+              "title": "Formatting"
+            },
+            {
+              "module": "ROOT",
+              "path": "General.adoc",
+              "url": "/General.html",
+              "title": "General Principles of Couchbase Style"
+            },
+            {
+              "module": "ROOT",
+              "path": "Headings.adoc",
+              "url": "/Headings.html",
+              "title": "Headings"
+            },
+            {
+              "module": "ROOT",
+              "path": "ImagesDiagrams.adoc",
+              "url": "/ImagesDiagrams.html",
+              "title": "Images and Diagrams"
+            },
+            {
+              "module": "ROOT",
+              "path": "index.adoc",
+              "url": "/index.html",
+              "title": "Introduction to Couchbase Style"
+            },
+            {
+              "module": "ROOT",
+              "path": "Links.adoc",
+              "url": "/Links.html",
+              "title": "Links"
+            },
+            {
+              "module": "ROOT",
+              "path": "Tables.adoc",
+              "url": "/Tables.html",
+              "title": "Tables"
+            },
+            {
+              "module": "ROOT",
+              "path": "Tone.adoc",
+              "url": "/Tone.html",
+              "title": "Voice and Tone"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
