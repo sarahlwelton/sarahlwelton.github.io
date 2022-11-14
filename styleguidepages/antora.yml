@@ -1,5 +1,5 @@
-name: test
-title: Test-Build
+name: styleguide
+title: Docs Style Guide
 version: ~
 nav:
   - modules/ROOT/nav.adoc

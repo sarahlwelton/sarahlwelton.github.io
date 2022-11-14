@@ -7,6 +7,12 @@ content:
   - url: .
     branches: HEAD
     start_path: testpages
+  - url: .
+    branches: HEAD
+    start_path: styleguidepages
+  - url: .
+    branches: HEAD
+    start_path: ui-ux
 ui:
   bundle:
     url: ./ui/build/ui-bundle.zip

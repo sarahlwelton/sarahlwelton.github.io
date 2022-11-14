@@ -1,0 +1,43 @@
+= General UI Copy Principles
+
+The following are some general principles for UI copy in the Couchbase Style: 
+
+* <<Write for the Lowest Common Denominator>>
+* <<critical,Explain What's Critical>>
+* <<Keep It Short and Simple>>
+* <<Keep It Consistent>>
+* <<numbers,Don't Write Out Numbers>>
+
+For an overview of voice and tone, see xref:styleguide:ROOT:tone.adoc[] in the Couchbase Documentation Style Guide.
+
+== Write for the Lowest Common Denominator 
+
+The golden rule for when to add UI copy or text is simple:
+
+If a lower-level user would struggle or the required action isn't obvious, add the text.
+
+We want our UI to be accessible to all users and should always aim to add text to reduce friction. 
+
+[#critical]
+== Explain What is Critical 
+
+Keep to the most critical and important information when adding UI copy. 
+
+Lengthy explanations or unusual situations should be explained in the documentation, not the UI. 
+
+== Keep It Short and Simple 
+
+Always write in full and complete sentences outside of headings. 
+
+Keep text short and to the point. 
+
+== Keep It Consistent 
+
+Keep the terminology that you use consistent across the UI. 
+
+What's called a cluster in one part of the UI shouldn't be called a database elsewhere. 
+
+[#numbers]
+== Don't Write Out Numbers 
+
+Unlike technical documentation, UI copy should always use numerals for ease of recognition. Use 3 over three. 
