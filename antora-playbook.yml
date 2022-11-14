@@ -1,6 +1,6 @@
 site:
   title: Couchbase Documentation Style Guide
-  url: https://labs.couchbase.com/docs-tooling
+  url: https://sarahlweton.github.io/style-guide/
   robots: disallow
 content:
   sources:
