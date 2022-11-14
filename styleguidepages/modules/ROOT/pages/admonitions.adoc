@@ -1,0 +1,86 @@
+= Admonitions 
+
+Antora has 5 admonition types: 
+
+. <<notes,Note>>
+. <<tips,Tip>>
+. <<warnings,Warning>>
+. <<cautions,Caution>>
+. <<importants,Important>> 
+
+Don't use more than two admonitions back-to-back on a page, and don't overuse them. 
+
+Remember: if everything is important, nothing is. 
+
+[#notes]
+== Notes
+
+Use a note when you:
+
+* Want to tell the user something that isn't critical. 
+* Want the user to keep something in mind while working through a procedure.
+* Want to highlight a specific point in a concept. 
+
+For example: 
+
+NOTE: If you used the default installation for Couchbase Server, you can find the command line clients inside your installation. 
+
+NOTE: The document key must be unique for each document you insert. 
+
+Use other admonition types, like <<cautions,cautions>> and <<warnings,warnings>> for critical information. 
+
+[#tips]
+== Tips 
+
+Use a tip when you: 
+
+* Want to tell the user about a shortcut or faster way of accomplishing a task. 
+* Want to tell the user about something optional. 
+* Want to let the user know something that is useful, but isn't considered that important. 
+
+For example: 
+
+TIP: The maximum allowed value is 2147483648 seconds (68.096 years). 
+
+TIP: You can also press kbd:[ENTER] to submit your query. 
+
+[#warnings]
+== Warnings 
+ 
+Use a warning when you: 
+
+* Need to tell the user about something that could cause data loss or irreversible damage. 
+* Need to tell the user about an irreversible action or critical piece of information. 
+
+For example:
+
+WARNING: Dropping a bucket is an irreversible action. You can't recover the data from a dropped bucket. 
+
+WARNING: A deleted repository and its back-up data can't be recovered.
+
+[#cautions]
+== Cautions
+
+Use a caution when you: 
+
+* Need to tell the user that the code described or provided hasn't been extensively tested.
+* Need to tell the user about something that might cause an error. 
+
+For example:
+
+CAUTION: *Memcached* buckets are deprecated. Use a *Couchbase* or *Ephemeral* bucket, instead.
+
+CAUTION: You must modify the default number of replicas for a bucket. Otherwise, all key-value writes with durability enabled will fail. 
+
+[#importants]
+== Important 
+
+Use an important when you: 
+
+* Need to tell the user about something that's changed across versions and doesn't work the same way.
+
+Try to use an important at the top of a page or section. 
+
+For example:
+
+IMPORTANT: In version 3.3 of the .NET SDK, `foo` no longer requires the `bar` parameter.

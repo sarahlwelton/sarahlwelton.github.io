@@ -1,0 +1,24 @@
+site:
+  title: Couchbase Documentation Style Guide
+  url: https://labs.couchbase.com/docs-tooling
+  robots: disallow
+content:
+  sources:
+  - url: .
+    branches: HEAD
+    start_path: styleguidepages
+  - url: .
+    branches: HEAD
+    start_path: ui-ux
+ui:
+  bundle:
+    url: ./ui/build/ui-bundle.zip
+  supplemental_files:
+  - path: ui.yml
+    contents: |
+      static_files:
+      - .nojekyll
+  - path: .nojekyll
+output: 
+  clean: true
+  dir: ./docs
