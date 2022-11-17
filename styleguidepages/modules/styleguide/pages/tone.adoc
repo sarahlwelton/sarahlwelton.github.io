@@ -18,15 +18,15 @@ To achieve these goals, there are certain things that the Couchbase Voice avoids
 | _It's not CRUDDY to use CRUD operations!_
 
 | *Avoid personal opinions*
-| Keep to accurate statements about the product and its capabilities. We can guide users towards the best way to use a product, but it needs to stay objective and accurate. Don't make a generalization on behalf of the company. 
-a | 
+| Keep to accurate statements about the product and its capabilities. We can guide users towards the best way to use a product, but it needs to stay objective and accurate. You can make a statement about a best practice recommendation with "Couchbase recommends...", but don't make a generalization on behalf of the company. 
+| 
     _Couchbase Server 7.1 is the best version of Couchbase Server. You shouldn't use any other version._ 
 
-    _Couchbase believes that Docker is the best way to get set up and get started with Couchbase Server._
+    _Couchbase believes that VSCode is the best text editor and IDE to use for all of your programming needs._
 
 | *Avoid colloquial language and topical expressions*
 | Colloquialisms are difficult to translate and usually culture-specific. Topical content can become outdated and its meaning can quickly change. Keep to writing that suits a global audience and is timeless. This also applies to xref:examples.adoc[code samples].
-a | 
+| 
     _It's lit!_
 
     _It's daft to set your database memory allotments too low._
@@ -36,4 +36,6 @@ a |
 | _Someday, Couchbase may support this feature._
 |===
 
-Aim to keep a neutral tone in the documentation. Think about what drove the user to the documentation and try to be as helpful and to-the-point as possible. Give them what they need to be successful.
+Aim to keep a neutral tone in the documentation. 
+Think about what drove the user to the documentation and try to be as helpful and to-the-point as possible. 
+Give them what they need to be successful without overwhelming them. 
