@@ -2,4 +2,4 @@ name: styleguide
 title: Docs Style Guide
 version: ~
 nav:
-  - modules/styleguide/nav.adoc
+  - modules/ROOT/nav.adoc

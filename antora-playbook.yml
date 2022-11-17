@@ -1,7 +1,6 @@
 site:
-  title: Couchbase Documentation and UI/UX Style Guide
+  title: Couchbase Documentation Test
   url: https://sarahlwelton.github.io/
-  start_page: styleguide:ROOT:index.adoc
   robots: disallow
 content:
   sources:
