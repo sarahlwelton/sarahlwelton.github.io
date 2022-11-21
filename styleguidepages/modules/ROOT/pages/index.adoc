@@ -2,6 +2,8 @@
 
 This guide outlines how to write in Couchbase style for all technical documentation of Couchbase products. 
 
+You can switch to the UX Style Guide with the toggle in the side navigation. 
+
 == How to Use This Guide 
 
 Use this guide as a reference for Couchbase style when you need to make style decisions in your writing. 
