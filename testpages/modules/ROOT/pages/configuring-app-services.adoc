@@ -1,6 +1,8 @@
 = Configure Your App Services Trial (Mobile sync)
+:description: Configure App Services to test out a mobile application with your trial database.
 
-NOTE: For a video walkthrough on how to get started with offline-first data syncing using App Services, see the xref:app-services-video-tutorial[App Services Video Tutorial] section.
+[abstract]
+{description}
 
 == About Capella App Services
 
@@ -135,7 +137,7 @@ To connect Couchbase Lite to your App Endpoint:
 . From the *Start* page, click *[ Linked App Service ]*. 
 . On the *App Endpoints* page, click your *travel-sample-appservice*.
 . Go to *Connect*.
-. Next to the *Public Connection* field, click *[ Create App User ]*.
+. Next to the *Public Connection* field, click *[ Copy to Clipboard ]*.
 . Use a Couchbase Lite sample application to connect to your App Service: 
 +
 * xref:couchbase-lite:swift:gs-install.adoc[Swift (iOS, macOS)]:
@@ -241,12 +243,6 @@ The POST request adds a new user, *demo2@example.com*.
 
 For more information about the Admin REST API, see xref:sync-gateway::rest-api-admin.adoc[].
 
-[#app-services-video-tutorial]
-== App Services Video Tutorial
-
-This video provides a walkthrough of Capella App Services capabilities by migrating an existing Couchbase Mobile app to Capella.
-
-video::ei2UYjxoqec[youtube, width=800, height=480, title=Offline first data sync using Capella App Services – Tutorial]
 
 
 
