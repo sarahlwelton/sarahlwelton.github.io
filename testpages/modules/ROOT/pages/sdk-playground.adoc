@@ -1,0 +1,54 @@
+= Explore the SDK Playground 
+:description: Use the SDK Playground to learn more about Couchbase's SDKs and SQL++.
+:page-topic-type: tutorial
+:page-pagination:
+
+[abstract]
+{description}
+
+The SDK Playground gives you interactive tutorials that let you try out Couchbase SDK and SQL++ code examples inside the Couchbase Capella UI. 
+
+[NOTE]
+====
+If you want to disable the SDK Playground: 
+
+. To return to your organization, click the Couchbase Capella logo. 
+
+. On the *Databases* tab, select the database where you want to disable the SDK Playground. 
+
+. Go to *Settings > General*.
+
+. Under *Playground*, select *Disable Playground*.
+
+. Click btn:[Save].
+====
+
+To use the SDK Playground:
+
+. From the *Start* page, click *[ Playground ]*.
+
+. Do any of the following: 
+
+.. To change the bucket targeted by the SDK Playground examples, in the *Bucket* list, select a bucket. 
+
+.. To change the scope targeted by the SDK Playground examples, in the *Scope* list, select a scope. 
+
+.. To change the programming language for the generated code samples, above the example code, select the *Node.js*, *Python*, *.NET*, or *Java* tab. 
+
+.. To view the full example code for an example, select the *Full Code* tab. 
+
+.. To run the example code in the SDK Playground, click *[ Run ]*.
++
+The SDK Playground returns a response to the code in the *Response* field.
+
+.. To go to the next part of the tutorial, click *[ Next ]*.
+
+.. To return to a previous tutorial, click *[ Previous ]*.
+
+.. To go to a specific tutorial, in the *Jump to Example* list, select a tutorial. 
+
+== Next Steps
+
+You can xref:import-data-documents.adoc[Import your own data] and xref:configuring-app-services.adoc[Configure App Services for your trial database].
+
+include::partial$connect-database-next-steps.adoc[]

@@ -1,0 +1,123 @@
+= Explore Sample Data with Data Tools
+:description: Use Couchbase Capella's Data Tools to explore and work with your data.
+:imagesdir: ../assets/images
+:tabs:
+:page-topic-type: tutorial
+:page-pagination:
+
+[abstract]
+{description}
+
+Your trial database comes with a sample dataset. You can use this data to try out Capella's Data Tools.
+
+To start exploring your data, you can: 
+
+* View and edit documents through the <<documents-viewer,Documents Viewer>>.
+* Run a SQL++ query through the <<first-query,Query Workbench>>. 
+* Speed up your queries with an <<index,index>>.
+
+
+[#documents-viewer]
+== View and Edit Documents with the Documents Viewer
+
+Documents in Capella are grouped through buckets. 
+You can add scopes and collections to a bucket to group related documents together.
+
+For more information about buckets, scopes, and collections, see xref:data-service.adoc[].
+
+To view and edit a document in your database: 
+
+. Do one of the following: 
+
+.. From the *Start* page, click *[ Query Sample Data ]*.
+
+.. Go to *Data Tools*.
+
+. Go to *Documents*.
+
+. In the *Collection* list, set the collection to *airport*. 
+
+. In the *Limit* field, enter `8`.
+
+. Click *airport_1261*. 
+
+. In the *Document* pane, change the airport's `city` from `"Amiens"` to `"Louen"`.
+
+. Click *Save*. 
+
+The document *airport_1261* now has its `city` set to `"Louen"`.
+
+[#first-query]
+== Run Your First Query with the Query Workbench
+
+To run your first query: 
+
+. Do one of the following: 
+
+.. From the *Start* page, click *[ Query Sample Data ]*.
+
+.. Go to *Data Tools > Query*.
+
+. In the *Query Editor*, paste the following query: 
++
+[source,n1ql]
+----
+SELECT route.airlineid, airline.name, route.sourceairport, route.destinationairport
+FROM `travel-sample` route
+INNER JOIN `travel-sample` airline
+ON route.airlineid = META(airline).id
+WHERE route.type = "route"
+AND route.destinationairport = "SFO"
+ORDER BY route.sourceairport;
+----
+
+. Press Enter or click *[ Execute ]*. 
++
+The results from the query are displayed in JSON format.
+
+[TIP]
+====
+To view how Capella executed the query in a graphical format, select the *Plan* tab.
+
+The Query Workbench shows a data-flow diagram with query operators. 
+The initial scans display on the right, and the final output of the query displays on the left. 
+
+The Query Workbench highlights any operators that might use a lot of resources. 
+For example, in this query, the *Fetch* operator takes almost 90% of the total time spent on the query. 
+====
+
+For more information about how to use the Query Workbench, see xref:query-workbench.adoc[].
+
+[#index]
+== Speed Up Your Query with an Index
+
+You can use the xref:index-service.adoc[Index Service] to improve query performance: 
+
+. With the same query in the *Query Editor*, click *[ Advise ]*.
+
+. In the query results, copy the recommended `CREATE INDEX` command from the `index_statement` attribute without the quotation marks:
++
+image::run-first-queries/get-started-advise-index-statement.png["The Couchbase Capella Query Workbench. The Advise results are shown for the previous sample query. The "index_statement" attribute is highlighted with a red box."]
+
+. Replace the query in the *Query Editor* with the `CREATE INDEX` command. 
+
+. To create the index, click *[ Execute ]*.
+
+. Click *[ History ]*.
+
+. To load the original query back into the Query Editor, in the list of queries, click the `SELECT` query. 
+
+. To run the query again, click *[ Execute ]*.
+
+With the index, the query execution time changes from around 172ms to 24ms. 
+
+For more information about indexes in Capella, see xref:index-service.adoc[].
+
+[#next-steps]
+== Next Steps
+
+After you query sample data, you can xref:sdk-playground.adoc[] to see how to access your data with the Couchbase SDKs. 
+
+You can also xref:import-data-documents.adoc[Import your own data] and xref:configuring-app-services.adoc[Configure App Services for your trial database].
+
+include::partial$connect-database-next-steps.adoc[]

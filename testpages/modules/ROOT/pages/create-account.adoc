@@ -1,14 +1,13 @@
 = Create a Free Account and Deploy Your Database
-:page-topic-type: guide
+:page-topic-type: tutorial
 :description: Create a Couchbase Capella account to start using Capella to manage your data.
 :page-aliases: create-app-services-account.adoc, get-started.adoc
+:page-pagination:
 
 [abstract]
 {description}
 
 To get started, you can use a Couchbase Capella Free Trial.
-
-NOTE: If you have an Activation ID, after you <<sign-up-free-trial,>>, you can xref:manage-billing.adoc#add-activation-id[Add your Activation ID] to your account.
 
 [#sign-up-free-trial]
 == Create a Free Account
@@ -32,7 +31,7 @@ Your password must:
 * Contain special characters, such as @, #, or $.
 ====
 
-. Select btn:[Get Started]. 
+. Click *[ Get Started ]*. 
 +
 Couchbase sends an email to your provided email address with a confirmation code for your account. 
 
@@ -40,9 +39,12 @@ Couchbase sends an email to your provided email address with a confirmation code
 
 . Review and agree to the https://www.couchbase.com/CapellaCSSA10192021[Terms of Service^] and https://www.couchbase.com/privacy-policy[Privacy Policy^]. 
 
-. (Optional) To subscribe to email updates from Couchbase, select *I agree to be updated on offers, products, and services from Couchbase*. 
+. (Optional) To subscribe to email updates from Couchbase, click *I agree to be updated on offers, products, and services from Couchbase*. 
 
-. Select btn:[Create Account].
+. Click *[ Create Account ]*.
+
+NOTE: After you <<sign-up-free-trial,>>, you can upgrade your account with an Activation ID from Couchbase Sales.
+To access all features of Couchbase Capella, xref:manage-billing.adoc#add-activation-id[Add an Activation ID] to your account.
 
 
 [#getting-started]
@@ -52,13 +54,13 @@ After you create your account, answer some questions to customize your Capella e
 
 . In the *Preferences* section, do one of the following: 
 +
-* To set your Preferences, select one or more options for your expected use of Capella and your experience level with Couchbase. Select btn:[Next].
-* To skip setting any Preferences, select btn:[Skip].
+* To set your Preferences, select one or more options for your expected use of Capella and your experience level with Couchbase. Click *[ Next ]*.
+* To skip setting any Preferences, click *[ Skip ]*.
 
 . In the *Languages* section, do one of the following: 
 +
-* To set a preferred programming language, select one or more of the programming languages you want to use with Capella. Select btn:[Next].
-* To skip selecting a preferred programming language, select btn:[Skip].
+* To set a preferred programming language, select one or more of the programming languages you want to use with Capella. Click *[ Next ]*.
+* To skip selecting a preferred programming language, click *[ Skip ]*.
 
 . In the *Database Name* field, enter a name for your database or accept the default. 
 
@@ -73,23 +75,33 @@ For more information about the available cloud providers for Capella, see xref:a
 +
 For more information about the supported regions for Capella, see xref:aws.adoc[] or xref:gcp.adoc[].
 
-. In the *CIDR Block* field, enter a range of IP addresses in CIDR notation for your database or accept the default. 
+. (Optional) In the *CIDR Block* field, enter a range of IP addresses in CIDR notation for your database or accept the default. 
 
-. Select btn:[Deploy Now].
+. Click *[ Deploy Now ]*.
 +
 Capella deploys your database with your chosen settings.
 
+[#app-services]
+== Deploy Your App Services Trial 
+
+You can use Capella App Services to sync data between Capella buckets and mobile or edge devices running xref:couchbase-lite:ROOT:index.adoc[Couchbase Lite]. 
+You can also use it to authenticate and manage mobile and edge users. 
+
+To deploy an App Services trial for mobile development: 
+
+. From the *Start* page, click *[ Link App Service ]*. 
++
+Capella starts to deploy your App Service. 
+The process takes a few minutes to complete.
+
+For more information about how to configure App Services, see xref:configuring-app-services.adoc[].
+
 == Next Steps
 
-To connect to your database after it's deployed: 
+After you deploy your database, you can xref:run-first-queries.adoc[] and xref:sdk-playground.adoc[].
 
-. xref:manage-database-users.adoc[]
-. xref:allow-ip-address.adoc[]
-. Choose and install a xref:home:ROOT:sdk.adoc[Couchbase SDK]
+You can also xref::import-data-documents.adoc[Import your own data] and xref:configuring-app-services.adoc[Configure App Services for your trial database].
 
-After you deploy your database, you can also: 
+include::partial$connect-database-next-steps.adoc[]
 
-- xref:query-workbench.adoc[Query the sample data] in your database
-- xref:import-data-documents.adoc[Import your own data] 
-- xref:creating-an-app-service.adoc[Add App Services to your database] for use with xref:couchbase-lite:ROOT:index.adoc[Couchbase Lite] and mobile applications
 

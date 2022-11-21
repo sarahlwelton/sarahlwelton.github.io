@@ -1,0 +1,10 @@
+If you want to connect to your database: 
+
+. Generate database credentials to securely connect and control access to your database. 
+For more information, see xref:manage-database-users.adoc[]
+. Add your current IP address as an allowed IP for your database. 
+For more information, see xref:allow-ip-address.adoc[]
+. Choose and install a xref:home:ROOT:sdk.adoc[Couchbase SDK]
+. (Optional) Download the security certificate for your database and add it to your application's server machine or IDE:
+.. From the *Start* page, go to *Settings > Security Certificate*.
+.. Click *[ Download ]*.

@@ -1,17 +1,74 @@
-.Get Started
-* xref:create-account.adoc[]
+.xref:index.adoc[Couchbase Capella Home]
 
-////
-// Removed from nav, but content to temporarily remain
-* xref:get-started:own-account.adoc[Hosted in Your Cloud Account]
-** xref:get-started:deploy-first-cluster.adoc[Deploy Your First Cluster]
-*** xref:azure-cloud:azure-cloud-connection-prerequisites.adoc[Azure Cloud Connection Prerequisites]
-** xref:get-started:configure-cluster-access.adoc[Configure Access to Your Cluster]
-** xref:get-started:connect-to-cluster.adoc[Connect to Your Cluster]
-** xref:get-started:load-data.adoc[Interact with Data in Your Cluster]
-// * xref:get-started:explore.adoc[Explore]
-** xref:get-started:decommission-resources.adoc[Remove Cloud Resources and Close Your Account]
-////
+//* xref:reference:glossary.adoc[Glossary]
+//* https://www.couchbase.com/products/cloud/faq[FAQ^, role="add-ext-icon"]
+
+.Get Started
+* https://cloud.couchbase.com/sign-up[Sign up^]
+* xref:create-account.adoc[]
+* xref:run-first-queries.adoc[]
+* xref:sdk-playground.adoc[]
+* xref:configuring-app-services.adoc[]
+* xref:clouds:get-capella-host-name.adoc[]
+
+.Connect an App
+* xref:clouds:connect-an-sdk.adoc[Connect an App -- SDKs]
+* xref:clouds:private-network.adoc[Configure Private Networking to Speed up Your App]
+* xref:public-api-guide:introducing-public-api.adoc[Public API]
+** xref:public-api-guide:using-cloud-public-api.adoc[How to use the API]
+
+.Your Data
+* xref:clusters:data-service/data-service.adoc[Data Service]
+** xref:clusters:data-service/manage-buckets.adoc[Manage Buckets]
+** xref:clusters:data-service/scopes-collections.adoc[Manage Scopes & Collections]
+** xref:clusters:data-service/manage-documents.adoc[Manage Documents]
+** xref:clusters:data-service/import-data-documents.adoc[Import Data]
+** xref:clusters:data-service/storage-engines.adoc[Storage Engines]
+* xref:clusters:query-service/query-service.adoc[{sqlpp} Query Service]
+** xref:clusters:query-service/query-workbench.adoc[Query Workbench]
+* xref:clusters:index-service/index-service.adoc[Index Service]
+** xref:clusters:index-service/manage-indexes.adoc[Manage Indexes]
+* xref:clusters:search-service/search-service.adoc[Search Service]
+** xref:clusters:search-service/create-full-text-indexes.adoc[Create Full Text Indexes]
+** xref:clusters:search-service/manage-full-text-indexes.adoc[Manage Full Text Indexes]
+** xref:clusters:search-service/perform-full-text-searches.adoc[Perform Full Text Searches]
+//** xref:clusters:search-service/perform-full-text-searches.adoc[Perform Full Text Searches]
+* xref:clusters:analytics-service/analytics-service.adoc[Analytics Service]
+** xref:clusters:analytics-service/analytics-workbench.adoc[Analytics Workbench]
+** xref:clusters:analytics-service/analytics-links.adoc[Analytics Links]
+** xref:clusters:analytics-service/analytics-monitor.adoc[Analytics Monitor]
+* xref:clusters:eventing-service/eventing-service.adoc[Eventing Service]
+** xref:clusters:eventing-service/manage-functions.adoc[Manage Functions]
+* xref:clusters:backup-restore.adoc[Backup & Restore]
+** xref:clusters:manage-backup.adoc[Manage Backups]
+** xref:clusters:manage-restore.adoc[Restore a Backup]
+
+.App Services
+* xref:app-services:index.adoc[Overview]
+* Working with App Services
+** xref:app-services:deployment/creating-an-app-service.adoc[]
+** xref:app-services:deployment/scaling-a-deployed-app-service.adoc[]
+** xref:app-services:monitoring/monitoring-app-services.adoc[]
+** xref:app-services:deployment/accessing-admin-apis.adoc[]
+* Application Endpoints
+** xref:app-services:deployment/creating-an-app-endpoint.adoc[]
+** xref:app-services:deployment/configuring-app-endpoints.adoc[]
+** xref:app-services:deployment/access-control-data-validation.adoc[]
+** xref:app-services:monitoring/monitoring-app-endpoints.adoc[]
+* User Administration
+** xref:app-services:user-management/create-user.adoc[]
+** xref:app-services:user-management/create-app-role.adoc[]
+** xref:app-services:user-management/set-up-authentication-provider.adoc[]
+* xref:app-services:connect/connect-apps-to-endpoint.adoc[]
+* xref:app-services:billing/billing.adoc[Billing]
+* Migrating
+** xref:app-services:migrating/on-prem-to-capella.adoc[From Self-Managed Servers]
+* References
+** xref:app-services:channels/channels.adoc[]
+** xref:app-services:references/rest-api-introduction.adoc[REST API]
+*** xref:app-services:references/rest_api_public_static.adoc[]
+*** xref:app-services:references/rest_api_metrics_static.adoc[]
+*** xref:app-services:references/rest_api_admin_static.adoc[]
 
 .Organizations & Access
 * xref:organizations:organization-projects-overview.adoc[Overview]
@@ -31,16 +88,11 @@
 ** xref:organizations:ui-auth/sign-in-with-sso.adoc[Sign in with SSO]
 ** xref:organizations:ui-auth/mfa.adoc[Manage Multi-Factor Authentication (MFA)]
 * xref:organizations:manage-account.adoc[Manage Your Couchbase Capella Account]
+* xref:security:security.adoc[Security Best Practices]
+* xref:security:auditing.adoc[Auditing]
+** xref:security:audit-management.adoc[Audit Management]
 
-.Clouds Management
-* xref:clouds:clouds.adoc[Overview]
-* xref:clouds:cloud-providers.adoc[Cloud Provider Requirements]
-* xref:clouds:manage-clouds.adoc[Connect & Manage Clouds]
-* xref:clouds:private-network.adoc[Configure Private Network]
-//* xref:clouds:network-vpc-peering.adoc[Configure Network Peering]
-* xref:clouds:get-capella-host-name.adoc[]
-
-.Database Management
+.Configure Database
 * xref:clusters:databases.adoc[Overview]
 * Manage Databases
 ** xref:clusters:create-database.adoc[Create a Database]
@@ -50,97 +102,22 @@
 ** xref:clusters:upgrade-database.adoc[Upgrade a Database]
 * xref:clusters:sizing.adoc[Database Sizing]
 * xref:clusters:scale-database.adoc[Database Scaling]
-* xref:allow-ip-address.adoc[Configure Allowed IPs]
-* xref:manage-database-users.adoc[Configure Database Credentials]
+* xref:clusters:allow-ip-address.adoc[Configure Allowed IPs]
+* xref:clusters:manage-database-users.adoc[Configure Database Credentials]
 * xref:clusters:monitoring/monitoring.adoc[Monitoring]
-** xref:clusters:monitoring/activity-explorer.adoc[Activity Explorer]
+** xref:clusters:monitoring/activity-log.adoc[Activity Log]
 ** xref:clusters:monitoring/metrics-dashboard.adoc[Metrics Dashboard]
 ** xref:clusters:monitoring/alerts.adoc[Alerts & Notifications]
 * xref:clusters:xdcr/xdcr.adoc[Replication (XDCR)]
 ** xref:clusters:xdcr/manage-xdcr-replications.adoc[Manage Replications]
-* xref:clusters:backup-restore.adoc[Backup & Restore]
-** xref:clusters:manage-backup.adoc[Manage Backups]
-** xref:clusters:manage-restore.adoc[Restore a Backup]
-//* xref:clusters:migrate.adoc[Migrate Data]
 
-.Data Management
-* xref:clusters:data-service/data-service.adoc[Data Service]
-** xref:clusters:data-service/manage-buckets.adoc[Manage Buckets]
-** xref:clusters:data-service/scopes-collections.adoc[Manage Scopes & Collections]
-** xref:clusters:data-service/manage-documents.adoc[Manage Documents]
-** xref:import-data-documents.adoc[Import Data]
-** xref:clusters:data-service/storage-engines.adoc[Storage Engines]
-* xref:clusters:query-service/query-service.adoc[Query Service]
-** xref:query-workbench.adoc[Query Workbench]
-* xref:clusters:index-service/index-service.adoc[Index Service]
-** xref:clusters:index-service/manage-indexes.adoc[Manage Indexes]
-* xref:clusters:search-service/search-service.adoc[Search Service]
-** xref:clusters:search-service/create-full-text-indexes.adoc[Create Full Text Indexes]
-** xref:clusters:search-service/manage-full-text-indexes.adoc[Manage Full Text Indexes]
-** xref:clusters:search-service/perform-full-text-searches.adoc[Perform Full Text Searches]
-//** xref:clusters:search-service/perform-full-text-searches.adoc[Perform Full Text Searches]
-* xref:clusters:analytics-service/analytics-service.adoc[Analytics Service]
-** xref:clusters:analytics-service/analytics-workbench.adoc[Analytics Workbench]
-** xref:clusters:analytics-service/analytics-links.adoc[Analytics Links]
-** xref:clusters:analytics-service/analytics-monitor.adoc[Analytics Monitor]
-* xref:clusters:eventing-service/eventing-service.adoc[Eventing Service]
-** xref:clusters:eventing-service/manage-functions.adoc[Manage Functions]
-
-.App Services
-* xref:index.adoc[Overview]
-* Working with App Services
-** xref:creating-an-app-service.adoc[]
-** xref:app-services:monitoring/monitoring-app-services.adoc[]
-* Application Endpoints
-** xref:app-services:deployment/creating-an-app-endpoint.adoc[]
-** xref:app-services:deployment/controlling-app-endpoints.adoc[]
-** xref:app-services:deployment/access-control-data-validation.adoc[]
-** xref:app-services:monitoring/monitoring-app-endpoints.adoc[]
-* User Administration
-** xref:app-services:user-management/create-user.adoc[]
-** xref:app-services:user-management/create-app-role.adoc[]
-** xref:app-services:user-management/set-up-authentication-provider.adoc[]
-* xref:app-services:connect/connect-apps-to-endpoint.adoc[]
-* xref:app-services:billing/billing.adoc[Billing]
-* Migrating
-** xref:app-services:migrating/on-prem-to-capella.adoc[From Self-Managed Servers]
-* References
-** xref:app-services:channels/channels.adoc[]
-** xref:app-services:references/rest-api-introduction.adoc[REST API]
-*** xref:app-services:references/rest_api_public_static.adoc[]
-*** xref:app-services:references/rest_api_metrics_static.adoc[]
-*** xref:app-services:deployment/accessing-admin-apis.adoc[]
-*** xref:app-services:references/rest_api_admin_static.adoc[]
-
-.Security
-* xref:security:security.adoc[Security Best Practices]
-* xref:security:auditing.adoc[Auditing]
-** xref:security:audit-management.adoc[Audit Management]
-
-//* xref:security:network-peering.adoc[Configure Network Peering]
-
-//.Monitoring
-//* xref:monitor:dashboard.adoc[Dashboard]
-//* xref:organizations:monitor.adoc[Monitor Organizations]
-//* xref:clusters:monitor.adoc[Monitor Clusters]
-
-.Billing
+.Billing & Support
 * xref:billing:billing.adoc[Overview]
-* xref:manage-billing.adoc[Manage Billing]
+* xref:billing:manage-billing.adoc[Manage Billing]
 * https://www.couchbase.com/pricing[Pricing Page^, role="add-ext-icon"]
-
-.Public API
-* xref:public-api-guide:introducing-public-api.adoc[Overview]
-* xref:public-api-guide:using-cloud-public-api.adoc[How to use the API]
-// ** xref:public-api-guide:.adoc[Python Code Example]
-* xref:reference:rest-endpoints-all.adoc[Public API Reference]
-//* Couchbase Capella API
-//** API Resources
-//* Couchbase Capella Limits
-//* xref:reference:unsupported-server-commands.adoc[Unsupported Commands and Functionality]
-
-.Release Notes
-* xref:release-notes:release-notes.adoc[Capella Release Notes]
+* xref:support:support.adoc[Overview]
+* xref:support:manage-support.adoc[Request Support]
+* xref:support:feedback.adoc[Provide Feedback]
 
 .Reference
 //* xref:reference:alerts.adoc[Alerts]
@@ -151,7 +128,15 @@
 * xref:reference:sdk-compatibility.adoc[SDK Compatibility]
 * xref:reference:browser-compatibility.adoc[Supported Browsers]
 * xref:reference:user-management-migration.adoc[User Management Migration]
+* xref:reference:rest-endpoints-all.adoc[Public API Reference]
+* xref:release-notes:release-notes.adoc[Capella Release Notes]
 
+
+
+
+
+
+//* xref:clusters:migrate.adoc[Migrate Data]
 
 
 // removing for now - will review if any are being updated, or removal is permanent
@@ -164,10 +149,6 @@
 ** xref:tutorials:cbc-self-service-trials:eventing-with-couchbase-cloud.adoc[Eventing with Couchbase Capella]
 ////
 
-.Support
-* xref:support:support.adoc[Overview]
-* xref:support:manage-support.adoc[Request Support]
-* xref:support:feedback.adoc[Provide Feedback]
 
 ////
 .xref:connect:overview.adoc[Connect & Develop]
@@ -176,3 +157,40 @@
 * xref:connect:configure-api-access.adoc[Configure API Access]
 * Use Couchbase Connectors
 ////
+
+
+////
+// Removed from nav, but content to temporarily remain
+* xref:get-started:own-account.adoc[Hosted in Your Cloud Account]
+** xref:get-started:deploy-first-cluster.adoc[Deploy Your First Cluster]
+*** xref:azure-cloud:azure-cloud-connection-prerequisites.adoc[Azure Cloud Connection Prerequisites]
+** xref:get-started:configure-cluster-access.adoc[Configure Access to Your Cluster]
+** xref:get-started:connect-to-cluster.adoc[Connect to Your Cluster]
+** xref:get-started:load-data.adoc[Interact with Data in Your Cluster]
+// * xref:get-started:explore.adoc[Explore]
+** xref:get-started:decommission-resources.adoc[Remove Cloud Resources and Close Your Account]
+
+
+//* xref:security:network-peering.adoc[Configure Network Peering]
+
+
+
+// * xref:clouds:clouds.adoc[Overview]
+// * xref:clouds:cloud-providers.adoc[Cloud Provider Requirements]
+// * xref:clouds:manage-clouds.adoc[Connect & Manage Clouds]
+//* xref:clouds:network-vpc-peering.adoc[Configure Network Peering]
+
+////
+
+
+//.Monitoring
+//* xref:monitor:dashboard.adoc[Dashboard]
+//* xref:organizations:monitor.adoc[Monitor Organizations]
+//* xref:clusters:monitor.adoc[Monitor Clusters]
+
+
+// ** xref:public-api-guide:.adoc[Python Code Example]
+//* Couchbase Capella API
+//** API Resources
+//* Couchbase Capella Limits
+//* xref:reference:unsupported-server-commands.adoc[Unsupported Commands and Functionality]

@@ -1,0 +1,256 @@
+= Configure Your App Services Trial (Mobile sync)
+
+NOTE: For a video walkthrough on how to get started with offline-first data syncing using App Services, see the xref:app-services-video-tutorial[App Services Video Tutorial] section.
+
+== About Capella App Services
+
+Capella App Services is a fully-managed application backend designed for mobile and edge applications.
+Use Capella App Services with an embedded xref:couchbase-lite::index.adoc[Couchbase Lite] database in your applications.
+
+Capella App Services syncs data between your buckets in Capella and any mobile or edge devices.
+An app that uses Couchbase Lite can directly sync data between devices with xref:couchbase-lite:android:p2psync-websocket.adoc[Peer-to-Peer], even without a network connection to Capella App Services.
+
+You can also authenticate and manage mobile and edge users through App Services Endpoints.  
+
+== Prerequisites
+
+* You deployed a Couchbase Capella free trial database.
+For more information, see xref:create-account.adoc#getting-started[Deploy Your Database].
+
+* Your trial database has the `travel-sample` bucket. 
+For more information about how to add the `travel-sample` bucket, see xref:import-data-documents.adoc[].
+
+* You deployed your App Services trial. 
+For more information, see xref:create-account.adoc#app-services[Deploy Your App Services Trial].
+
+* You have a REST Client, such as https://www.postman.com/[Postman^] or https://httpie.io/[HTTPie^] installed and configured. 
+
+== Configure App Services 
+
+To configure your App Services trial with your trial database: 
+
+. <<create-app-endpoint,Create an App Endpoint with your trial App Service>>
+. <<configure-app-access,Configure the App Endpoint with an Access Control Policy>>
+. <<create-app-role,Create an App Role for the App Endpoint with the Capella UI>>
+. <<create-app-user,Create an App User for the App Endpoint with the Capella UI>>
+. <<access-endpoint,Access the App Endpoint through the Public REST API>> 
+. <<connect-couchbase-lite,Connect a Couchbase Lite app to the Capella App Endpoint>>
+. <<admin-api,(Optional) Access the App Endpoint through the Admin REST API>>
+
+[#create-app-endpoint]
+== Create An App Endpoint For Your Trial App Service
+
+To create an App Endpoint: 
+
+. From the *Start* page, click *[ Linked App Service ]*. 
+. On the *App Endpoints* page, click *[ Create App Endpoint ]*. 
+. In the *App Endpoint Name* field, enter `travel-sample-appservice`.
+. In the *Linked Bucket* list, select *travel-sample*. 
+. Click *[ Create App Endpoint ]*.
+
+The App Endpoint takes a few minutes to deploy.
+Until it deploys, the App Endpoint's status shows as *Offline*.
+
+[#configure-app-access]
+== Configure The App Endpoint With An Access Control Policy
+
+To configure access control for your new App Endpoint: 
+
+. From the *App Endpoints* page, click your *travel-sample-appservice*. 
+. Go to *Security > Access and Validation*.
+. In the text editor, paste the following JavaScript code: 
++
+[source,javascript]
+----
+function (doc, oldDoc, meta) {
+  if (doc.channels) {
+      // If channels list is specified in document, assign doc to the channels
+     channel(doc.channels);
+  }
+  else {
+    // assign to public channel (which is accessible to all users)
+    channel ("!")
+  }
+}
+----
+. Click *[ Apply ]*.
+. Click *[ Resume app endpoint ]*.
+
+[#create-app-role]
+== Create An App Role For The App Endpoint
+
+To add an App Role for the App Endpoint: 
+
+. From the *Security* tab, go to *App Roles*. 
+. Click *[ Create App Role ]*.
+. Do the following: 
+.. In the *App Role Name* field, enter `admin`. 
+.. In the *Admin Channels* field, enter an asterix (*) and press Enter.
+. Click *[ Create App Role ]*.
+
+[#create-app-user]
+== Create An App User For The App Endpoint 
+
+To create a user for the App Endpoint: 
+
+. From the *Security* tab, go to *App Users*. 
+. Click *[ Create App User ]*.
+. Do the following: 
+.. In the *App Username* field, enter a username for the app user.
+.. In the *Password* field, enter a password for the app user.
+.. In the *Admin Channels* field, enter an asterix (*) and press Enter.
+.. In the *Admin App Roles* field, enter `admin` and press Enter.
+. Click *[ Create App User ]*.
+
+[#access-endpoint]
+== Access The App Endpoint With The Public REST API
+You can use a REST client to connect to the Public REST endpoint.
+
+To retrieve a document from the travel-sample bucket via the Public REST endpoint:
+
+. Go to *Connect*.
+. Next to the *Public Connection* field, click *[ Copy to Clipboard ]*.
+. In your REST Client, create a GET request. 
+. Paste the Public Connection URL and change the `wss` to `https`.
+. Add `/airline_10` to the end of the URL. 
++
+Your URL should look similar to https://123456789.apps.capella.com:4984/travel-sample-appservice/airline_10
+. Choose *Basic Authentication*.
+. Enter the username and password for the <<create-app-user,App User you created>>. 
+. Send the GET request. 
++
+You should see the contents of the document `airline_10`. 
+
+For more information about the Public REST API, see xref:sync-gateway::rest-api.adoc[].
+
+[#connect-couchbase-lite]
+== Connect a Couchbase Lite App to the Capella App Service Endpoint
+Couchbase Lite is an embedded database. 
+Use it to embed data processing and storage in applications that run on mobile and IoT devices, allowing apps to locally store and access data without an Internet connection. 
+
+Couchbase Lite embedded apps can connect to App Endpoints and sync data with each other and the Couchbase Capella backend over a websockets-based data sync protocol.
+
+To connect Couchbase Lite to your App Endpoint: 
+
+. From the *Start* page, click *[ Linked App Service ]*. 
+. On the *App Endpoints* page, click your *travel-sample-appservice*.
+. Go to *Connect*.
+. Next to the *Public Connection* field, click *[ Create App User ]*.
+. Use a Couchbase Lite sample application to connect to your App Service: 
++
+* xref:couchbase-lite:swift:gs-install.adoc[Swift (iOS, macOS)]:
+Replace the `URLEndpoint` in the sample code with your App Endpoint Public Connection URL.
+
+* xref:couchbase-lite:android:gs-install.adoc[Kotlin (Android)]:
+Replace the `URLEndpoint` in the sample code with your App Endpoint Public Connection URL.
+
+* xref:couchbase-lite:android:gs-install.adoc[Java (Android)]:
+Replace the `URLEndpoint` in the sample code with your App Endpoint Public Connection URL.
+
+* xref:couchbase-lite:csharp:gs-install.adoc[.Net (Desktop, Xamarin)]:
+Replace the `URLEndpoint` in the sample code with your App Endpoint Public Connection URL.
+
+* xref:couchbase-lite:java:gs-install.adoc[Java (Desktop)]:
+Replace the `URLEndpoint` in the sample code with your App Endpoint Public Connection URL.
+
+* xref:couchbase-lite:c:gs-install.adoc[C (Desktop, Mobile, Embedded)]:
+Replace the `CBLEndpoint_CreateWithURL` in the sample code with your App Endpoint Public Connection URL.
+
+[#admin-api]
+== (Optional) Administer App Users With The Admin REST API
+
+You can administer users with the Admin REST endpoint.
+You can use the REST API to return a list of users and add a new user.
+
+To use the Admin REST API, you need to <<allowed-ip-admin-cred,>>.
+
+[#allowed-ip-admin-cred]
+=== Add An Allowed IP and Create An Admin Credential
+
+To add an allowed IP address and create an admin credential: 
+
+. From the *Start* page, click *[ Linked App Service ]*. 
+. On the *App Endpoints* page, click your *travel-sample-appservice*.
+. Go to *Connect*.
+. Under *Allowed IP Addresses*, click *[ Go to Allowed IP Addresses ]*.
+. Click *[ Add Allow IP Address ]*.
+. Do one of the following: 
+.. Click *[ Add Current IP Address ]*.
+.. In the *IP Address/CIDR Block* field, enter an IP address or IP address range in CIDR notation. 
+. Click *[ Add IP ]*.
+. Go to *App Endpoints*.
+. On the *App Endpoints* page, click your *travel-sample-appservice*.
+. Go to menu:Connect[].
+. Under *Admin and Metrics Credentials*, click *[ Manage Credentials ]*.
+. Click *[ Create Admin Credential ]*.
+. Do the following: 
+.. In the *Username* field, enter `admin`.
+.. In the *Password* field, enter a password for the admin credential.
+. Click *[ Create Admin Credential ]*.
+
+=== Connect to The Admin REST Endpoint 
+
+You can use a REST client to connect to the Admin REST endpoint: 
+
+. From the *Start* page, click *[ Linked App Service ]*. 
+. On the *App Endpoints* page, click your *travel-sample-appservice*.
+. Go to *Connect*.
+. Next to the *Admin Connection* field, click *[ Copy to Clipboard ]*.
+. In your REST client, create a GET request. 
+. Paste the Admin Connection URL. 
+. Add `/_user` to the end of the URL. 
++
+Your URL should look similar to https://123456789.apps.capella.com:4985/travel-sample-appservice/_user/
+. Select Basic Authentication. 
+. Enter the <<allowed-ip-admin-cred,Admin Credential you created>>.
+. Send the GET request. 
++
+The request returns the <<create-app-user,user you created through the Capella UI>>. 
+
+=== Add An App Services User 
+
+To add a new App Services User with the Admin REST endpoint: 
+
+. In your REST client, create a POST request. 
+. Paste the Admin Connection URL. 
+. Add `/_user` to the end of the URL. 
++
+Your URL should look similar to https://123456789.apps.capella.com:4985/travel-sample-appservice/_user/
+. Select Basic Authentication. 
+. Enter the <<allowed-ip-admin-cred,Admin Credential you created>>.
+. In the request body, add the following JSON code: 
++
+[source,JSON]
+----
+{
+  "name": "demo2@example.com",
+  "password": "password",
+  "admin_channels": [
+    "string"
+  ],
+  "disabled": false
+}
+----
+
+. Send the POST request. 
+. In the Capella UI, return to the *App Endpoints* page. 
+. Click your *travel-sample-appservice*. 
+. Go to *Security > App Users*. 
++
+The POST request adds a new user, *demo2@example.com*. 
+
+For more information about the Admin REST API, see xref:sync-gateway::rest-api-admin.adoc[].
+
+[#app-services-video-tutorial]
+== App Services Video Tutorial
+
+This video provides a walkthrough of Capella App Services capabilities by migrating an existing Couchbase Mobile app to Capella.
+
+video::ei2UYjxoqec[youtube, width=800, height=480, title=Offline first data sync using Capella App Services – Tutorial]
+
+
+
+
+
+
+

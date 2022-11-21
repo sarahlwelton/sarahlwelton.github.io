@@ -1,0 +1,48 @@
+= Index Service
+:storage-modes: xref:server:learn:services-and-indexes/indexes/storage-modes.adoc
+:drop-index: xref:server:n1ql:n1ql-language-reference/dropindex.adoc
+:drop-primary-index: xref:server:n1ql:n1ql-language-reference/dropprimaryindex.adoc
+:createprimaryindex: xref:server:n1ql:n1ql-language-reference/createprimaryindex.adoc
+:createindex: xref:server:n1ql:n1ql-language-reference/createindex.adoc
+:alterindex:  xref:server:n1ql:n1ql-language-reference/alterindex.adoc
+:dropindex: xref:server:n1ql:n1ql-language-reference/dropindex.adoc
+:description: The Index Service supports the creation of primary and secondary indexes on items stored within Couchbase databases.
+
+[abstract]
+The Index Service supports the creation of primary and secondary indexes on items stored within Couchbase databases.
+Indexes enable and enhance the performance of query operations.
+
+== About the Index Service
+
+The Index Service creates indexes from predefined subsets of bucket data.
+The Query Service relies on indexes provided by the Index Service.
+
+The {sqlpp} query language instructs the Index Service to create indexes.
+The Index Service can create two types of indexes:
+
+Secondary:: Based on an attribute within a document.
+The value associated with the attribute can be of any type: scalar, object, or array.
++
+A Secondary Index is often called a Global Secondary Index, or GSI.
+This index is used frequently in Couchbase Server for queries performed with the {sqlpp} query language.
+The {createindex}[CREATE INDEX] statement creates secondary indexes.
+
+Primary:: Based on the unique key of every item in a specified bucket or collection.
+Every primary index is maintained asynchronously.
++
+A primary index is for simple queries that have no filters or predicates.
+The {createprimaryindex}[CREATE PRIMARY INDEX] statement creates primary indexes.
+
+Couchbase Capella supports xref:server:learn:services-and-indexes/indexes/storage-modes.adoc#standard-index-storage[standard index storage] for saving indexes.
+By default, an index is saved on the node where it's created.
+Each index is created on one keyspace--a bucket or collection.
+Multiple indexes can be created on a single keyspace.
+
+== Using the Index Service
+
+Like the other Couchbase services, you can deploy the Index Service during xref:clusters:create-database.adoc[database creation] or by xref:clusters:scale-database.adoc[adding it to an existing database].
+The Index Service depends on the xref:clusters:data-service/data-service.adoc[Data Service] for underlying functionality and the xref:clusters:query-service/query-service.adoc[Query Service] for creating and managing indexes using the {sqlpp} query language.
+For more information about how these services interact, see xref:server:learn:services-and-indexes/services/index-service.adoc[Couchbase Server | Indexes].
+
+If a database has both the Index Service and Query Service, you can manage and monitor indexes using the xref:clusters:index-service/manage-indexes.adoc[Couchbase Capella UI].
+You can also use the xref:clusters:query-service/query-workbench.adoc[Query Workbench] to {createindex}[create], {alterindex}[modify], and {dropindex}[drop] indexes using {sqlpp} statements.
