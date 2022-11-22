@@ -1,8 +1,5 @@
 .xref:index.adoc[Couchbase Capella Home]
 
-//* xref:reference:glossary.adoc[Glossary]
-//* https://www.couchbase.com/products/cloud/faq[FAQ^, role="add-ext-icon"]
-
 .Get Started
 * https://cloud.couchbase.com/sign-up[Sign up^]
 * xref:create-account.adoc[]
@@ -97,7 +94,6 @@
 * Manage Databases
 ** xref:clusters:create-database.adoc[Create a Database]
 ** xref:clusters:modify-database.adoc[Modify a Database]
-//** xref:clusters:connect-self-managed-cluster.adoc[Connect a Self-Managed Cluster]
 ** xref:clusters:delete-database.adoc[Delete a Database]
 ** xref:clusters:upgrade-database.adoc[Upgrade a Database]
 * xref:clusters:sizing.adoc[Database Sizing]
