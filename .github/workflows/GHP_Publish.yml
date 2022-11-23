@@ -1,56 +1,56 @@
 # This is a workflow to publish the Style Guide site to GitHub Pages
 
-name: Publish to GitHub Pages
+# name: Publish to GitHub Pages
 
-on:
-  # Triggers the workflow on push or pull request events but only for the "main" branch
-  push:
-    branches: [ "main" ]
-  pull_request:
-    types: 
-      - closed
-    branches: [ "main" ]
-  workflow_dispatch:
+# on:
+#   # Triggers the workflow on push or pull request events but only for the "main" branch
+#   push:
+#     branches: [ "main" ]
+#   pull_request:
+#     types: 
+#       - closed
+#     branches: [ "main" ]
+#   workflow_dispatch:
 
-jobs:
-  if_merged_or_push:
-    runs-on: ubuntu-latest
-    if: github.event.pull_request.merged == true || github.event_name == 'push'
-    steps: 
-      - run: |
-          echo A PR has been merged or a push has occurred.
-  build:
-    needs: if_merged_or_push
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-      - name: Install Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '16'
-      - name: Install Antora 
-        run: npm i -global @antora/cli@3.1
-      - name: Install Antora Site Generator
-        run: npm i -global @antora/site-generator@3.1
-      - name: Generate Site
-        run: npx antora antora-playbook.yml
-      - name: Setup Pages
-        uses: actions/configure-pages@v2
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
-        with: 
-          path: ./docs
-  deploy:
-    needs: build
-    permissions: 
-      pages: write
-      id-token: write
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v1
+# jobs:
+#   if_merged_or_push:
+#     runs-on: ubuntu-latest
+#     if: github.event.pull_request.merged == true || github.event_name == 'push'
+#     steps: 
+#       - run: |
+#           echo A PR has been merged or a push has occurred.
+#   build:
+#     needs: if_merged_or_push
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout repository
+#         uses: actions/checkout@v3
+#       - name: Install Node.js
+#         uses: actions/setup-node@v3
+#         with:
+#           node-version: '16'
+#       - name: Install Antora 
+#         run: npm i -global @antora/cli@3.1
+#       - name: Install Antora Site Generator
+#         run: npm i -global @antora/site-generator@3.1
+#       - name: Generate Site
+#         run: npx antora antora-playbook.yml
+#       - name: Setup Pages
+#         uses: actions/configure-pages@v2
+#       - name: Upload artifact
+#         uses: actions/upload-pages-artifact@v1
+#         with: 
+#           path: ./docs
+#   deploy:
+#     needs: build
+#     permissions: 
+#       pages: write
+#       id-token: write
+#     environment:
+#       name: github-pages
+#       url: ${{ steps.deployment.outputs.page_url }}
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Deploy to GitHub Pages
+#         id: deployment
+#         uses: actions/deploy-pages@v1
