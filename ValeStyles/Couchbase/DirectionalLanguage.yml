@@ -1,0 +1,11 @@
+extends: existence
+message: Avoid directional language like '%s'.
+level: warning 
+
+tokens: 
+  - left
+  - right
+  - up
+  - down
+  - below
+  - above
