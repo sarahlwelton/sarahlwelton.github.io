@@ -9,6 +9,8 @@ The following are some general principles of writing in the Couchbase Style:
 * <<Use Plain Language and Contractions>>
 * <<Use Simple Sentences and Short Paragraphs>>
 
+You should also aim to write based on xref:accessibility.adoc[accessibility best practices].
+
 == Write in American English
 
 Use American English spelling, not British or Canadian English. The Vale automated spellcheck uses an American English dictionary. 

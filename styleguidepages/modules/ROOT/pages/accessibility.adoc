@@ -1,0 +1,40 @@
+= Writing for Accessibility 
+
+Couchbase Documentation needs to be accessible for all audiences. 
+
+Follow the https://developers.google.com/style/accessibility[Google Developer Style Guide]'s information on accessibility, and keep the following in mind: 
+
+* <<directional,>>
+* <<short,>>
+* <<scan,>>
+
+[#directional]
+== Don't Use Directional Language 
+
+When referring to UI elements, don't use language like "left," "right," "above," or "below." 
+
+This not only helps future-proof our docs, in case UI elements move, but keeps our writing accessible to those who might be using assistive devices for navigation. 
+
+But, it's okay to orient a user by saying that an item is next to another element on the screen - especially if it's an unlabelled button, or there's multiple of that button on the page. 
+
+[#short]
+== Keep Pages Short and Focused 
+
+You should be able to describe the purpose of a page in a single sentence. 
+
+Our goal is to have a sentence like this as the first thing on every page. 
+
+The goal for every page should be to have a clear focus and purpose, and not be trying to do too much with a single page. 
+
+Break your pages down into meaningful, logical chunks. 
+
+Add links to related content when you do need to split content across pages. 
+Always make it obvious where a user can go to learn more, do more, or follow a next step. 
+
+[#scan]
+== Make Content Easy To Scan 
+
+Avoid large huge chunks of text on your pages. 
+
+Break things up with headings, lists, tables, or other visual elements that introduce whitespace and are easy to scan. 
+

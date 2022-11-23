@@ -1,0 +1,67 @@
+= Lists, Boxes, and Fields
+
+Lists, boxes, and fields are three distinct UI elements that can appear in Couchbase products: 
+
+* <<lists,>> only allow selections. 
+* <<fields,>> only allow text input. 
+* <<boxes,>> allow text input and selections. 
+
+[#lists]
+== Lists
+
+A list is a UI element that allows a user to select from a finite list of options. 
+
+A user usually selects a single option from a list. 
+
+For example, the user selects a bucket or a scope from the *Bucket* or *Scope* list: 
+
+====
+image::lists-example.png[]
+====
+
+When you need to describe a list in the UI: 
+
+* Refer to the list by its name. For example, the *Bucket* list. 
+* Bold the list name. 
+* Don't bold or capitalize the word "list."
+* Describe the action the user takes as "selecting" from the list. For example, in the *Bucket* list, select a bucket. 
+
+[#fields]
+== Fields 
+
+A field is a UI element that allows a user to enter text or other values with their keyboard. 
+
+A user enters a value in a field. 
+
+For example, the user enters a document ID or a SQL++ clause in the *Document ID* or *N1QL Where* fields: 
+
+====
+image::field-example.png[]
+====
+
+When you need to describe a field in the UI: 
+
+* Refer to a field by its name. For example, the *Document ID* field. 
+* Bold the field name. 
+* Don't bold or capitalize the word "field."
+* Describe the action the user takes as "entering" a value into the field. For example, in the *Document ID* field, enter a document ID. 
+
+[#boxes]
+== Boxes 
+
+A box is a UI element that allows a user to enter a value by clicking arrows, typing, or making a selection. 
+
+A user enters a value or makes a selection in a box. 
+
+For example, the user enters a value in the *Skip* and *Limit* boxes: 
+
+====
+image::spin-box-example.png[]
+====
+
+When you need to describe a box in the UI: 
+
+* Refer to a box by its name. For example, the *Limit* box. 
+* Bold the box name. 
+* Don't bold or capitalize the word "box." 
+* Describe the action the user takes as "entering" a value into the box, or "selecting." For example, in the *Limit* box, enter the number of documents you want to return. 

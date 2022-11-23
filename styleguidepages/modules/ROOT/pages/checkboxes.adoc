@@ -1,0 +1,18 @@
+= Checkboxes 
+
+A checkbox is a UI element that a user can "enable" or "disable" by clicking the same box. 
+
+For example, the user can enable or disable the SDK Playground with the *Disable Playground* checkbox:
+
+====
+image::checkbox-example.png[]
+====
+
+When you need to describe a checkbox in the UI: 
+
+* Refer to the checkbox by its name. For example, *Disable Playground*. 
+* Bold the checkbox name. 
+* Don't use the word "checkbox" or "box."
+* Describe the action the user takes as "selecting" or "clearing" the checkbox. For example, to turn off the SDK Playground, select *Disable Playground*. To enable the SDK Playground, clear *Disable Playground*. 
+
+NOTE: If the user can select multiple checkboxes, you should still use "select" and "clear" to describe the interaction. For example, select all the roles you want to add to the user. 

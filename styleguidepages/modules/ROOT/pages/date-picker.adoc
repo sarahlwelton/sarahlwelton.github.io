@@ -1,0 +1,16 @@
+= Date Picker 
+
+A date picker is a UI element that allows a user to use a calendar to select a date. 
+
+For example, the user can use a calendar to select a *From* and *To* date for the Activity Log: 
+
+====
+image::date-picker-example.png[]
+====
+
+When you need to describe a date picker in the UI: 
+
+* Refer to the date picker by its name. For example, the *From* date picker. 
+* Bold the date picker's name. 
+* Don't bold or capitalize "date picker."
+* Describe the action the user takes as "using" the date picker. For example, to select a start date for the Activity Log, use the *From* date picker. 

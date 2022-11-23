@@ -1,6 +1,7 @@
 * xref:index.adoc[]
 * xref:general.adoc[]
 * xref:tone.adoc[]
+* xref:accessibility.adoc[]
 * Language and Grammar
 ** xref:articles.adoc[]
 ** xref:capitalization.adoc[]
@@ -30,8 +31,11 @@
 * xref:links.adoc[]
 * xref:examples.adoc[]
 * UI Elements
+** xref:checkboxes.adoc[]
+** xref:date-picker.adoc[]
 ** xref:dialogs.adoc[]
 ** xref:ui-links.adoc[]
+** xref:lists-boxes-fields.adoc[]
 ** xref:menus.adoc[]
 ** xref:more-options.adoc[]
 ** xref:options.adoc[]
