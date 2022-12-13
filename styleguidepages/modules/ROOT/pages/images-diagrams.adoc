@@ -44,4 +44,29 @@ For more information on how to specify the format and add an image in Antora, se
 
 Use https://kroki.io/[Kroki^] to generate all diagrams. Save diagrams in SVG format. 
 
-Use the https://github.com/plantuml/plantuml[PlantUML^] language to generate your diagrams.
+Use the https://plantuml.com/[PlantUML^] language to generate your diagrams.
+
+For example: 
+
+----
+//The title for the diagram
+.Covering index   
+
+//Specifies the diagram language, an optional anchor, 
+//the name for the generated file, and the file type
+[plantuml#optional_anchor,file-name,svg] 
+
+//Indicates the start of the diagram
+....
+@startuml
+
+//The content of the diagram goes here
+
+//Indicates the end of the diagram
+@enduml
+....
+----
+
+If you want to use an external file and include the diagram with a partial, save the file with the `.puml` file type. 
+
+Save external files in a `diagrams` subfolder inside the `partials` folder. 
