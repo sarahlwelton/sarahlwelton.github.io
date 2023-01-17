@@ -78,7 +78,7 @@ brew install asciidoctor
 
 #### GNU/Linux 
 
-Consult https://asciidoctor.org/#linux-package-managers for details based on your specific distribution's package manager.
+Consult [the AsciiDoctor Docs](https://asciidoctor.org/#linux-package-managers) for details based on your specific distribution's package manager.
 
 ## Lint a File 
 
