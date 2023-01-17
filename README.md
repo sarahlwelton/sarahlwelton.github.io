@@ -23,9 +23,9 @@ To install Vale:
 
 3. Follow the instructions at [Vale.sh](https://vale.sh/docs/vale-cli/installation/) for your platform. 
 
-The package manager does all of the heavy lifting to install Vale. If you receive a prompt to "run additional scripts" from the terminal, approve it. 
+The package manager does all of the heavy lifting to install Vale. If you receive a prompt to run additional scripts from your terminal, approve it. 
 
-### Set up a .vale.ini file 
+### Set Up a .vale.ini File 
 
 This repository contains a `.vale.ini` file that contains everything you need to get started. This file contains all of the necessary configuration for Vale to lint your text files.
 
@@ -34,13 +34,14 @@ Make a couple changes to make sure your Vale installation pulls your styles from
 1. In your file explorer, move the `.vale.ini` from this repository to your `$HOME` directory: 
     - On Windows: `C:\Users\<yourusername>`
     - On Mac: `/Users/<yourusername>`
-
-    On Linux, the location of the `$HOME` directory varies based on your specific Linux distribution. 
+    - On Linux: the location of the `$HOME` directory varies based on your specific Linux distribution. 
 
 2. Open the `.vale.ini` file in a text editor. 
 
 3. Set the `StylesPath` to the location of the `ValeStyles` folder in this repository. 
     For example, `C:\Users\<yourusername>\GitHub\cb-vale-style-guide\ValeStyles`
+
+<!-- I'm commenting this out as recent changes to the Spelling rules in Vale have made this redundant! -SW
 
 ### Configure your dicpath for `Couchbase.Spelling`
 
@@ -48,15 +49,46 @@ Unfortunately, the Spelling rule for the spellcheck searches for the path to the
 
 Set the location of the dictionary file:
 
-1. Replace the `$REPO` in the `dicpath` attribute to the location of the `ValeStyles` folder in your local copy of this repository. 
+1. Replace the `$REPO` in the `dicpath` attribute to the location of the `ValeStyles` folder in your local copy of this repository. --> 
 
-## Lint a file 
+### Install AsciiDoctor
 
-After you've done all the set up, you're ready to lint some files! 
+To use Vale with AsciiDoc on Windows, you need to install Ruby before you can install AsciiDoctor. 
+
+For all other systems, you can just install the AsciiDoctor package on your computer. 
+
+#### Windows  
+
+1. In a terminal window, run: 
+```
+choco install ruby
+```
+
+2. Then: 
+```
+gem install asciidoctor
+```
+
+#### MacOS 
+
+1. In a terminal window, run: 
+```
+brew install asciidoctor
+```
+
+#### GNU/Linux 
+
+Consult https://asciidoctor.org/#linux-package-managers for details based on your specific distribution's package manager.
+
+## Lint a File 
+
+After you've done all the setup, you're ready to lint some files! 
 
 1. Open the file or folder's location on your filesystem in a terminal window. 
 
 2. Run `vale <FileName>` or `vale <FolderName>`. 
+
+**TIP**: If you want Vale to print to a file that you can review later, add `> <outputFileName>.txt` to the end of your Vale command. 
 
 Vale generates a report that provides the following information: 
 
@@ -73,7 +105,8 @@ If you run into issues linting a folder:
 - Check your `.vale.ini` to see what file types Vale lints. If you see a [*] above the `BasedOnStyles` setting, Vale lints all file types. Enter a file type (`.adoc`, for example) to change the scope. 
 - Change the folder to limit the scope of the files you want Vale to lint.
 
-## Tweak styles 
+
+## Tweak Styles 
 
 To tweak the existing styles, open any `.yml` file in a text editor and make your changes. 
 

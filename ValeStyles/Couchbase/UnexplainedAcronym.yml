@@ -29,6 +29,7 @@ exceptions:
   - GDB
   - GET
   - GIF
+  - GNU
   - GPU
   - GTK
   - GUI
@@ -68,6 +69,7 @@ exceptions:
   - SSL
   - SVG
   - TBD
+  - TIP
   - TCP
   - TODO
   - URI

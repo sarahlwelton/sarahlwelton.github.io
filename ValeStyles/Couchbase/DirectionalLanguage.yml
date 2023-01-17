@@ -9,3 +9,5 @@ tokens:
   - down
   - below
   - above
+exceptions:
+  - set up
