@@ -106,7 +106,7 @@ For terms not covered here, see the https://developers.google.com/style/word-lis
 | Couchbase Server n.n | Write as *Couchbase Server n.n* for the first use on a page. Use *Server n.n* afterwards. Don't refer to as *the Couchbase Server*. 
 | Couchstore | Follow the official capitalization as set by Couchbase. For more information, see xref:capitalization.adoc[].
 | cross datacenter replication (XDCR) | Write out for the first use on a page. Don't capitalize. Don't add a hyphen. 
-| cURL | Write with a lowercase c and uppercase U, R, and L. Write as `curl` for the command line. 
+| curl | Write in all lowercase, including on the command line. 
 |===
 
 [#d]
