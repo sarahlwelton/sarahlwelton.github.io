@@ -25,7 +25,7 @@ To install Vale:
 
 The package manager does all of the heavy lifting to install Vale. If you receive a prompt to run additional scripts from your terminal, approve it. 
 
-### Set Up a .vale.ini File 
+### Set Up A .vale.ini File 
 
 This repository contains a `.vale.ini` file that contains everything you need to get started. This file contains all of the necessary configuration for Vale to lint your text files.
 
