@@ -32,7 +32,7 @@ Couchbase Monitoring and Observability Stack
 Couchbase Server
 Couchbase
 Couchstore
-cURL
+curl
 Database Change Protocol
 DataOps
 DCP
