@@ -1,0 +1,20 @@
+= Reference Title - Noun Phrase 
+:page-topic-type: reference
+:description: Enter a quick description of the reference content on this page. Try to keep it to 1-2 sentences. 
+
+{description}
+// Use the description you provided as a quick introduction to the page.
+
+// Then, if necessary, describe what information is provided in the following table.
+
+// Try to keep tables to Property + Description, but add columns and change column names as necessary. 
+
+|====
+| Property | Description
+
+| Property Name 
+a| Long description 
+
+That spans multiple lines and includes block content 
+
+|====

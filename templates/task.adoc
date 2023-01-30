@@ -1,0 +1,43 @@
+= Task Title - Short, Imperative Phrase
+:page-topic-type: guide
+:description: Enter a quick description of the goal of the task for this page. Try to keep it to 1-2 sentences. 
+
+{description}
+// Use the description you provided as a quick introduction to the page. 
+
+== Prerequisites 
+
+// Provide an unordered list, with items in past tense, to explain what a user needs to do/must have done before they can proceed with the tasks in your procedure. There will almost always be something you can tell the user to do. 
+
+// Provide links wherever you can. 
+
+// For example: 
+
+// * You've foo'd the bar in your database. For more information, see xref:[]
+
+*
+*
+
+== Procedure
+
+// Provide a short, introductory phrase that reiterates the end goal of the procedure. 
+
+// For example: 
+
+// To foo the bar: 
+
+// Then, start your ordered list of steps: 
+
+. 
+. 
+
+
+== Next Steps 
+
+// Provide some context about the next steps that a user can take once they've completed your procedure. 
+
+// Is there another procedure in a set of procedures that they should follow? 
+
+// Is there somewhere they can go to read more information? 
+
+// Use an unordered list, a plain paragraph, or an ordered list, as appropriate. 

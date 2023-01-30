@@ -1,0 +1,28 @@
+= Concept Title - A Noun or Noun Phrase
+:page-topic-type: concept
+:description: Enter a quick description of the content of the page. Try to keep it to 1-2 sentences. 
+
+{description}
+// Use the description you provided as a quick introduction to the page. 
+
+== Secondary Heading 
+
+// Use headings to break up content and make it easier to scan for users. Add a heading when you're making a significant deviation in what you're explaining to the user. 
+
+// In general, use your own discretion and be smart about when to add a heading.
+
+// Don't go beyond an H4-level heading. 
+
+// Use title case, and keep headings as short and to the point as you can.
+
+// Use paragraphs and unordered lists under headings to keep content easy to read and scan. Small tables are also acceptable.
+
+
+== See Also 
+
+// Use the See Also section to add links to related procedures, concepts, or reference information. 
+
+// Use an unordered list to organize the xrefs. 
+
+* xref:[]
+* xref:[]
