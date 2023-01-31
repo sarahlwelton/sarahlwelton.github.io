@@ -1,5 +1,6 @@
 extends: occurrence
-message: This might be a run-on sentence (more than 2 commas)
+message: This might be a run-on sentence (more than 2 commas).
+link: https://sarahlwelton.github.io/styleguide/commas.html
 level: warning
 scope: sentence
 ignorecase: false

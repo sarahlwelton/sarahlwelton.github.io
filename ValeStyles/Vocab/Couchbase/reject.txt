@@ -1,5 +1,7 @@
 and\/or
 (C\+\+)
+checkbox
+checkboxes
 Couchbase managed cloud
 mapreduce views
 map reduce views
