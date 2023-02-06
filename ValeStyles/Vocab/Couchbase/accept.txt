@@ -11,8 +11,8 @@ Availability Zone
 BI
 bootstrap
 CAS
-callout
-callouts
+[Cc]allout
+[Cc]allouts
 cbbackupmgr
 cbcollect
 cbtransfer
@@ -37,9 +37,9 @@ Database Change Protocol
 DataOps
 DCP
 DDL
-deduplicate
+[Dd]eduplicate
 DevOps
-digitization
+[Dd]igitization
 DML
 Elasticsearch
 EMEA
@@ -86,6 +86,7 @@ Memcached bucket
 Memcached
 Node\.js
 npm
+nvm
 MongoDB™
 Multi-Dimensional Scaling
 MDS
@@ -111,8 +112,8 @@ rack awareness
 RA
 RBAC
 Read Committed
-rebase
-repositories
+[Rr]ebase
+[Rr]epositories
 Role-Based Access Control
 RYOW
 RxJava
@@ -132,7 +133,7 @@ targetNozzlePerNode
 tcpdump
 THP
 time to live
-toolchain
+[Tt]oolchain
 TTL
 Ubuntu
 UNNEST

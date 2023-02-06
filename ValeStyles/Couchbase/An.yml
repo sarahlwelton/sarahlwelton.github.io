@@ -1,0 +1,15 @@
+extends: existence
+message: Use "an," not "a."
+link: https://sarahlwelton.github.io/styleguide/articles.html
+level: error 
+
+tokens:
+  - '[Aa] \b[aAeEiIoOuUhH].+\b'
+
+exceptions: 
+  - '[Aa] [Hh]and'
+  - '[Aa] [Hh]ash'
+  - '[Aa] [Hh]ead[ing|er]'
+  - '[Aa] [Hh]otel'
+  - '[Aa] [Uu]nion'
+  - '[Aa] URL'

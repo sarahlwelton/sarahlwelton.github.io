@@ -5,9 +5,9 @@ Use articles like *a*, *an*, and *the* in your writing.
 As stated in the https://developers.google.com/style/articles[Google Developer's Style Guide^]: 
 
 ====
-A and an are indefinite articles and are used before a singular noun. They refer to any member of a group.
+*A* and *an* are indefinite articles and are used before a singular noun. They refer to any member of a group.
 
-The is a definite article. It is used before singular and plural nouns and refers to one or more particular members of a group.
+*The* is a definite article. It is used before singular and plural nouns and refers to one or more particular members of a group.
 
 Whether to use a or an depends on the pronunciation of the word that follows it. Use a before any consonant sound; use an before any vowel sound, as in the following examples:
 

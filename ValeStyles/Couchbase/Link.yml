@@ -4,4 +4,4 @@ level: error
 link: https://sarahlwelton.github.io/styleguide/ui-links.html
 
 tokens: 
-  - [Cc]lick the .+ link .+
+  - '[Cc]lick the .+ link .+'
