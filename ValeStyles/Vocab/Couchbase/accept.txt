@@ -119,6 +119,9 @@ RYOW
 RxJava
 SDK
 SDKs
+Search index
+Search indexes
+Search quer[y|ies]
 Search Service
 SGCollect
 Spark Datasets
@@ -133,6 +136,8 @@ targetNozzlePerNode
 tcpdump
 THP
 time to live
+[Tt]okenizer
+[Tt]okenizers
 [Tt]oolchain
 TTL
 Ubuntu
