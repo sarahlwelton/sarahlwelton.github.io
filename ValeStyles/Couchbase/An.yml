@@ -10,3 +10,4 @@ tokens:
 exceptions: 
   - '[Aa] [Uu]nion'
   - '[Aa] URL'
+  - '[Aa] UUID'
