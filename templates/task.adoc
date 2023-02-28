@@ -2,6 +2,7 @@
 :page-topic-type: guide
 :description: Enter a quick description of the goal of the task for this page. Try to keep it to 1-2 sentences. 
 
+[abstract]
 {description}
 // Use the description you provided as a quick introduction to the page. 
 
@@ -72,3 +73,22 @@
 // Is there somewhere they can go to read more information? 
 
 // Use an unordered list, a plain paragraph, or an ordered list, as appropriate. 
+
+// For example: 
+
+// The structure of this xref is: 
+// * Component name (server:)
+// * Module name (learn:)
+// * Family name (services-and-indexes/)
+// * Subfolder name (indexes/)
+// * File name (indexes.adoc)
+
+//* xref:server:learn:services-and-indexes/indexes/indexes.adoc[]
+
+// The structure of this xref is: 
+// * Component name (cloud:)
+// * Module name (organizations:)
+// * Family name (ui-auth/)
+// * File name (add-sso-auth.adoc)
+
+// * xref:cloud:organizations:ui-auth/add-sso-auth.adoc[]
