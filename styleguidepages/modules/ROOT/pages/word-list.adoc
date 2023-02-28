@@ -327,6 +327,7 @@ For terms not covered here, see the https://developers.google.com/style/word-lis
 |===
 | Term | Notes
 
+| [[n1ql]]N1QL | The old term for <<sqlpp,SQL++>>. Don't use, except in legacy documentation. 
 | nameservers | Don't add a hyphen.
 | nginx | Follow the official capitalization. For more information, see xref:capitalization.adoc[].
 | Node.js | Follow the official capitalization. For more information, see xref:capitalization.adoc[].
@@ -438,6 +439,11 @@ For more information, see xref:pages.adoc[].
 | single node | Use single node as the noun. Use single-node as the adjective.
 | Spark | Don't specify as Apache Spark. Capitalize Spark and Datasets. 
 Follow the official capitalization as set by Apache. For more information, see xref:capitalization.adoc[].
+| [[sqlpp]]SQL++ a| 
+
+The Couchbase query language. Pronounced as *sequel plus plus*. 
+
+Write in documentation as *a SQL++*. For more information, see xref:articles.adoc[].
 | startup | Use startup as the noun. 
 | Structured Streaming | Write out as Structured Streaming API for the first use on a page. 
 | Storm | Don't specify as Apache Storm. Follow the official capitalization as set by Apache. For more information, see xref:capitalization.adoc[].
