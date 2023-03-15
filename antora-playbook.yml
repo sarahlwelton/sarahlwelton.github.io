@@ -2,6 +2,7 @@ site:
   title: Couchbase Documentation Style Guide
   url: https://sarahlweton.github.io/style-guide/
   robots: disallow
+  start_page: styleguide:ROOT:index.adoc
 content:
   sources:
   - url: .
