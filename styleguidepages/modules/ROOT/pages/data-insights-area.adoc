@@ -1,4 +1,4 @@
-= The Data Insights Area
+= Data Insights Area
 
 The Data Insights area appears to the left of the controls for the different *Data Tools* in the Couchbase Capella UI. 
 
