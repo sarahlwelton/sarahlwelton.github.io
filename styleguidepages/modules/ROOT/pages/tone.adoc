@@ -34,6 +34,14 @@ a |
 | *Avoid aspirational statements* 
 | Write about what the product does, not about what it can or may do in the future. Stick to what's in the product. 
 | _Someday, Couchbase may support this feature._
+
+| *Avoid marketing or selling the product*
+| Write about how a user can use a feature to accomplish a task that might be important to them. You don't need to sell the product to the user. We're aiming to show the user how to use and best use the features, not market to them.
+| _Couchbase's Storage Auto-Expansion is designed to handle your ever-growing data needs._
+
+| *Avoid only describing features* 
+| Write about what the user can do and how they can accomplish their goals - don't just describe features of the product and how they work. 
+| _A Full Text Search Response Object is itself composed of multiple child-objects, each of which provides important information._
 |===
 
 Aim to keep a neutral tone in the documentation. Think about what drove the user to the documentation and try to be as helpful and to-the-point as possible. Give them what they need to be successful.

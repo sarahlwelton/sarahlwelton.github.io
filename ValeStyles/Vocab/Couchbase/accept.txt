@@ -123,6 +123,8 @@ Search index
 Search indexes
 Search quer[y|ies]
 Search Service
+Service Group
+Service Groups
 SGCollect
 Spark Datasets
 [Ss]tartup

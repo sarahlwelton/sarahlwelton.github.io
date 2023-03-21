@@ -433,6 +433,7 @@ For more information, see xref:pages.adoc[].
 | SDKs | Treat acronyms as regular words when making them plural. For more information, see the https://developers.google.com/style/abbreviations#making-abbreviations-plural[Google Developer Style Guide^].
 | Search Service | When referring to Couchbase Services, use title case. 
 | [[see]]see | Use instead of <<refer,refer to>> for introducing links.
+| Service Group | When referring to Service Groups, capitalize Service and Groups. 
 | setup | Use setup as the noun. Use set-up as the adjective. Use set up as the verb.
 | sgcollect | Write as all one word in lowercase, as per the code for the sgcollect utility.
 | sign up | Use sign up as the verb. Use sign-up as the adjective.
