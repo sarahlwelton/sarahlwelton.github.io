@@ -137,6 +137,7 @@ tar
 targetNozzlePerNode
 tcpdump
 THP
+[Tt]ime series
 time to live
 [Tt]okenizer
 [Tt]okenizers

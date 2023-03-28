@@ -468,6 +468,7 @@ Write in documentation as *a SQL++*. For more information, see xref:articles.ado
 | targetNozzlePerNode | Use camelcase, as per the code. 
 | tcpdump | The command-line packet analyzer. Follow the official capitalization as set by Tcpdump Team. For more information, see xref:capitalization.adoc[].
 | THP | 
+| time series | Write as two words, in sentence case. Don't capitalize, don't add a hyphen. 
 | time to live (TTL) | Don't capitalize time to live. Spell out the acronym the first time you use it on a page. 
 | touchpoint(s) | Write as one word. Don't add a hyphen.
 | topology aware | Add the hyphen when used as an adjective.
