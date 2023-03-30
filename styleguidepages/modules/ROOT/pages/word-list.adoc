@@ -177,6 +177,7 @@ For terms not covered here, see the https://developers.google.com/style/word-lis
 
 | failover | Write as one word for the noun. Write as two words for the verb. 
 | FAQ | Write as a proper acronym. For more information, see xref:capitalization.adoc[].
+| [[fewer]]fewer | Use for countable nouns or to describe a noun that's plural. For example, fewer databases. Otherwise, use <<less,less>>.
 | filename | Write as one word. Don't add a hyphen. 
 | file system | Write as two words. Don't add a hyphen. 
 | fine-grained | Add the hyphen. 
@@ -281,6 +282,7 @@ For terms not covered here, see the https://developers.google.com/style/word-lis
 | Term | Notes
 
 | Last Write Wins (LWW) | Write out for the first use on a page. 
+| [[less]]less | Use less for items that are measured, can't be easily quantified or counted, or mass singular nouns. For example, less trouble, less time, less effort. For nouns that can be counted, use <<fewer,fewer>>.
 | libcouchbase (LCB) | Write out for first use on a page.
 | LDAP | Lightweight Directory Access Protocol. Don't write out for the first use on a page. 
 | livestream | Don't add a hyphen or space. 

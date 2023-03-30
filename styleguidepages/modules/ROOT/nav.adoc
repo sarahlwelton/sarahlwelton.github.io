@@ -4,6 +4,9 @@
 * Language and Grammar
 ** xref:articles.adoc[]
 ** xref:capitalization.adoc[]
+** xref:less-fewer.adoc[]
+** xref:only.adoc[]
+** xref:which-that.adoc[]
 * Formatting
 ** xref:headings.adoc[]
 ** xref:ordered-list.adoc[]
