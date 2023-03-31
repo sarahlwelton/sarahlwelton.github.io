@@ -12,4 +12,5 @@ exceptions:
   - '[Aa] URL'
   - '[Aa] UUID'
   - '[Aa] [Uu]ser'
+  - '[Aa] UI'
   - '[Aa] <<[BbCcDdFfGgHhJjKkLlMmNnPpQqRrSsTtVvWwXxYyZz].+>>'

@@ -31,6 +31,9 @@ Keep the language literal and descriptive.
 For example, if a user tries to remove a user, the question should be *Remove this user?* and the decision button should say *Remove* or *Remove User*. 
 The decision button shouldn't say *Yes* or *Sure*. 
 
+If the user is making a change that they need to save or cancel, the confirmation button should be *Save*, not *Apply* or *Update*. 
+Ideally, try to make the action button match the title of the dialog or what the user is actually doing. 
+
 == Put Primary or Positive Actions on the Right
 
 The primary, positive, or confirming action for a decision dialog should be on the right. 
@@ -38,3 +41,5 @@ The primary, positive, or confirming action for a decision dialog should be on t
 The dismissive or secondary actions for a decision dialog should be on the left. 
 
 For example, the dialog to remove a user should have the *Remove* or *Remove User* action on the right of the dialog, and the *Cancel* action on the left. 
+
+If one button in a decision dialog has a border, both buttons should have borders. 

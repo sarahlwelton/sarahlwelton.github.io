@@ -42,6 +42,7 @@
 ** xref:options.adoc[]
 ** xref:pages.adoc[]
 ** xref:tabs.adoc[]
+** xref:toggles.adoc[]
 * xref:word-list.adoc[]
 ** xref:word-list.adoc#num[Numbers and Symbols]
 ** xref:word-list.adoc#a[A]

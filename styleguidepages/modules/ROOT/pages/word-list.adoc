@@ -12,6 +12,7 @@ For terms not covered here, see the https://developers.google.com/style/word-lis
 |.NET | Add a period at the start of the acronym. Follow the official capitalization as set by Microsoft. For more information, see xref:capitalization.adoc[].
 | 1; 1,000; 1,000,000 | Write all numbers as numerals, regardless of size. Use commas to separate every group of three digits in a large number. For more information about how to format numbers, see the https://developers.google.com/style/numbers#commas-and-decimal-points-in-numbers[Google Developer Style Guide].
 | `\->` | If you want a `\->`, this will be fine inside a code block. Outside of a code block, Antora/AsciiDoc will convert it to `→` or `\&#8594;`. To avoid this, escape the hyphen: `\\->`
+| % (UI Only) | Never write out "percent" or "percentage" in the UI. Use the % symbol, and put it in brackets next to the name of the measurement. For example, *Index Fragmentation (%)*.
 |===
 
 [#a]

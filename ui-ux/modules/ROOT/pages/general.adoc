@@ -41,3 +41,5 @@ What's called a cluster in one part of the UI shouldn't be called a database els
 == Don't Write Out Numbers 
 
 Unlike technical documentation, UI copy should always use numerals for ease of recognition. Use 3 over three. 
+
+Also aim to add units of measurement for numbers, where applicable. 

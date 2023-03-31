@@ -32,3 +32,5 @@ This includes giving the user valid examples for the information and its formatt
 Don't use the same text for the label on the field and the hint text. 
 
 Put the hint text outside of the field itself, so it can be accessed by a screen reader. 
+
+For more information about formatting fields, see xref:text-input-fields.adoc[].

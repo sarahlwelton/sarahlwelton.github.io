@@ -2,7 +2,7 @@
 
 Instruction text appears in the UI to tell the user what they can do and how to do it. 
 
-It can appear above buttons or other UI elements to provide context or explanations. 
+It can appear around buttons or other UI elements to provide context or explanations. 
 
 == Tell the User What They Need to Succeed
 

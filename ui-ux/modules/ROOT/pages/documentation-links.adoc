@@ -1,0 +1,10 @@
+= Documentation Links
+
+To link out to documentation or external resources from inside the UI: 
+
+* Provide a brief sentence to explain or introduce the concept. 
+* Add a blue link with the text *Learn More*. 
+* Add an external link icon at the end of *Learn More* to show that the user will navigate out of the UI. 
+* Don't put a period at the end of *Learn More*. 
+
+image::LearnMoreLink.png["Image of text that says Couchbase Capella manages and configures the link with your Identity Provider for Single-Sign On (SSO) with a realm. Each organization can have one realm. Learn More",align="center"]
