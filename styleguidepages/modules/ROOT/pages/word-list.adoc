@@ -23,7 +23,7 @@ For terms not covered here, see the https://developers.google.com/style/word-lis
 | Term | Notes
 
 | a / an | See xref:articles.adoc[].
-| about | When introducing a xref:links.adoc[], use information *about*, not information *on*.
+| [[about]]about | When introducing a xref:links.adoc[], use information *about*, not information *on*.
 | Access List | Use <<allowlist, allowlist>>.
 | ACID Transactions | See <<transactions,Transactions>>.
 | adapter | Always use *adapter*, not *adaptor*.
@@ -239,6 +239,7 @@ For terms not covered here, see the https://developers.google.com/style/word-lis
 | indexes | Don't use indices. 
 | IndexScan | Write as one word. Capitalize Index and Scan.
 | industry standard | Don't add a hyphen.
+| information about / information on | See <<about,about>>.
 | `initargs` | Write out in all lowercase as in the code. 
 | in-memory | Add the hyphen. 
 | install | Use install for the verb. Use installation for the noun.
