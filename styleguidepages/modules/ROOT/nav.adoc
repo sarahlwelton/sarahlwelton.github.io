@@ -1,5 +1,6 @@
 * xref:index.adoc[]
 * xref:general.adoc[]
+** xref:writing-procedures.adoc[]
 * xref:tone.adoc[]
 * Language and Grammar
 ** xref:articles.adoc[]
@@ -7,16 +8,17 @@
 ** xref:less-fewer.adoc[]
 ** xref:only.adoc[]
 ** xref:which-that.adoc[]
-* Formatting
+* Formatting Elements
+** xref:admonitions.adoc[]
+** xref:anchor-links.adoc[]
 ** xref:headings.adoc[]
+** xref:filenames.adoc[]
+** xref:images-diagrams.adoc[]
 ** xref:ordered-list.adoc[]
 ** xref:unordered-list.adoc[]
-** xref:images-diagrams.adoc[]
-** xref:admonitions.adoc[]
 ** xref:sidebars.adoc[]
 ** xref:tables.adoc[]
-** xref:filenames.adoc[]
-** Inline Formatting
+* Inline Formatting
 *** xref:bold.adoc[]
 *** xref:button-macro.adoc[]
 *** xref:keyboard-macro.adoc[]

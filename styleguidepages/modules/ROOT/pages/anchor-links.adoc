@@ -1,0 +1,21 @@
+= Anchor Links
+
+If you need to link to a specific place in a page, whether from another page or on the same page, use an anchor link. 
+
+NOTE: Don't rely on Antora's automatically generated anchor links. 
+If you need to use an anchor link, create your own. 
+This prevents broken links if header content changes. 
+
+When creating an anchor link:
+
+* Keep the anchor link short and descriptive. 
+Aim for no more than 3-5 words maximum.
++
+For example, an anchor link for the heading *Generate API Keys* could be `[#generate-api-keys]`.
+* Make sure that your anchor links are unique across the page. 
+* Use the right anchor link style for the content you want to assign an anchor to: 
+** For headers, full tables, lists, and other block elements: `[#anchor-link]`
+** For table entries and other in-line text: `[[anchor-link]]`
+* Use the right link style for your link: 
+** For linking to an anchor from another page: `xref:name-of-page.adoc#anchor-link`
+** For linking to an anchor on the same page: `\<<anchor-link,Link Text>>`
