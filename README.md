@@ -17,7 +17,7 @@ To install Vale:
 1. Install a package manager: 
     - On Windows: [Chocolatey](https://chocolatey.org/install)
     - On Mac: [Homebrew](https://brew.sh/)
-    - On GNU/Linux: [Snap](https://snapcraft.io/install/vale/ubuntu)
+    - On GNU/Linux: Don't use the Snap paackage manager. [Download the precompiled binary of Vale](https://vale.sh/docs/vale-cli/installation/#github-releases).
 
 2. Open a terminal application with administrator permissions. 
 
