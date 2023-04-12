@@ -2,14 +2,16 @@
 
 The following are some general principles for UI copy in the Couchbase Style: 
 
-* <<Write for the Lowest Common Denominator>>
+* <<lowest,Write for the Lowest Common Denominator>>
 * <<critical,Explain What's Critical>>
-* <<Keep It Short and Simple>>
-* <<Keep It Consistent>>
+* <<short,Keep It Short and Simple>>
+* <<consistent,Keep It Consistent>>
 * <<numbers,Don't Write Out Numbers>>
+* <<sentence,Use Sentence Case>>
 
 For an overview of voice and tone, see xref:styleguide:ROOT:tone.adoc[] in the Couchbase Documentation Style Guide.
 
+[#lowest]
 == Write for the Lowest Common Denominator 
 
 The golden rule for when to add UI copy or text is simple:
@@ -25,12 +27,14 @@ Keep to the most critical and important information when adding UI copy.
 
 Lengthy explanations or unusual situations should be explained in the documentation, not the UI. 
 
+[#short]
 == Keep It Short and Simple 
 
 Always write in full and complete sentences outside of headings. 
 
 Keep text short and to the point. 
 
+[#consistent]
 == Keep It Consistent 
 
 Keep the terminology that you use consistent across the UI. 
@@ -43,3 +47,11 @@ What's called a cluster in one part of the UI shouldn't be called a database els
 Unlike technical documentation, UI copy should always use numerals for ease of recognition. Use 3 over three. 
 
 Also aim to add units of measurement for numbers, where applicable. 
+
+[#sentence]
+== Use Sentence Case
+
+Use sentence case capitalization for all UI text.
+
+Don't use title case, even for headings and buttons. 
+Find another visual way to add emphasis to text.
