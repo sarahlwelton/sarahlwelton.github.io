@@ -15,6 +15,8 @@ Length:: Try to keep headings as short and to-the-point as possible. Try to fit 
 Frequency:: Use a heading whenever it makes sense to do so. Add a heading when you're starting a new thought or need to highlight something new and important to the user. Keep headings useful, and make sure that you always have content in between two headings. Vale flags any headings that appear directly on top of each other with no content in between. 
 Depth:: Don't go past an H4 heading. You don't need to have more than 4 levels of headings in your text. 
 
+NOTE: Don't add xref:parentheses.adoc[] to headings.
+
 The content of your H1 heading also needs to match the type of topic you're writing: 
 
 |===

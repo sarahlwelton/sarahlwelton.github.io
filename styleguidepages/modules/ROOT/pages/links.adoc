@@ -2,6 +2,8 @@
 
 Follow the https://developers.google.com/style/link-text[Google Developer Style Guide^]'s guidance on how to write link text. In general, make it clear where a user ends up after they click a link. 
 
+NOTE: This doesn't mean to just use the URL as the displayed link text. Try to write effective and useful link text for all links.
+
 Keep the following formatting and conventions in mind for <<internal>> and <<external>> in the Couchbase Documentation. 
 
 [#internal]
