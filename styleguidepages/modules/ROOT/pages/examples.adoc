@@ -9,6 +9,7 @@ Do::
 * Make it relevant and applicable to your explanation. 
 * Make sure it is a working code sample that the user could use in their own projects. 
 * Put the code example in its own separate file.
+* Use the correct format for xref:placeholders.adoc[].
 Don't::
 + 
 * Include cultural references. 
