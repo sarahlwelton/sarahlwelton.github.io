@@ -1,6 +1,8 @@
 * xref:index.adoc[]
 * xref:general.adoc[]
+** xref:writing-concepts.adoc[]
 ** xref:writing-procedures.adoc[]
+** xref:writing-references.adoc[]
 * xref:tone.adoc[]
 * Language and Grammar
 ** xref:articles.adoc[]
