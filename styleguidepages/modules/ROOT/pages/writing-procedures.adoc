@@ -39,6 +39,13 @@ This could be the start of the step, or the start of the procedure itself, with 
 * Use xref:monospace-highlight.adoc[monospace font] for all code outside of code blocks, SQL++ commands, function names, file paths, filenames, and text the user must input.
 * Use xref:bold.adoc[] for single menu items, tab names, and dialog names.
 
+Steps in a *Procedure* section shouldn't: 
+
+* List the result of an action, if the result is obvious.
+For example, the *Create Project* window appears after you click *Create Project*. 
+* Contain lengthy explanations for the reason behind a step. 
+Link to explanatory documentation, such as a concept, where necessary. 
+
 [#next-steps]
 == Next Steps 
 
