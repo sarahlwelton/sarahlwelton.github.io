@@ -1,0 +1,7 @@
+extends: substitution
+message: Use '%s', not '%s', unless you're working on Mobile documentation.
+level: warning 
+ignorecase: true 
+
+swap: 
+  app: application

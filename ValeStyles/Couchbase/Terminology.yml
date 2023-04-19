@@ -9,7 +9,6 @@ swap:
   adaptor: adapter 
   ad-hoc: adhoc|ad hoc
   afterward: afterwards
-  app: application
   (?:automatic-schema discovery|automatic-schema-discovery)': automatic schema discovery
   '(?:auto sharding|autosharding)': auto-sharding
   availability-zone: Availability Zone
