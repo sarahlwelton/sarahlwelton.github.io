@@ -51,7 +51,10 @@ Also aim to add units of measurement for numbers, where applicable.
 [#sentence]
 == Use Sentence Case
 
-Use sentence case capitalization for all UI text.
+Use sentence case capitalization for UI text.
 
-Don't use title case, even for headings and buttons. 
-Find another visual way to add emphasis to text.
+Use title case only for xref:actions-buttons.adoc[buttons].
+
+Headings should be in sentence case. 
+
+In general, find another visual way to add emphasis to text.

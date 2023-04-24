@@ -2,7 +2,9 @@
 
 Instruction text appears in the UI to tell the user what they can do and how to do it. 
 
-It can appear around buttons or other UI elements to provide context or explanations. 
+It can appear around buttons or other UI elements to provide context or explanations: 
+
+image::InstructionText.png["An image from the Create a Database screen for Provisioned Capella. It instructs the user to select a Couchbase Server version, then tells them about Service Groups: You may want to customize resources for your Couchbase database. You can add nodes, select compute resources, and customize storage below. This configuration can be changed at anytime and may require a period of rebalancing to take effect. Normal operations are never affected.", align=center]
 
 == Tell the User What They Need to Succeed
 

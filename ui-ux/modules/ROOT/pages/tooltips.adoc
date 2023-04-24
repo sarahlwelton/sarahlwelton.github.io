@@ -11,12 +11,12 @@ A tooltip can come in two styles:
 
 == Don't Overuse Tooltips 
 
-Too many tooltips can cause a user to ignore them or become "blind" to them in the UI. 
+Tooltip overuse can cause a user to ignore tooltips in the UI. 
 
-Don't use a tooltip just to keep instruction text off of the screen. 
+Don't use a tooltip just to keep xref:instruction-text.adoc[instruction text] off of the screen. 
 
 == Keep to Critical Information 
 
 Keep tooltips as short as possible and only include the most critical information. 
 
-If you need to, include a link for the user so they can read and learn more. 
+If you need to, include a link for the user so they can read and xref:documentation-links.adoc[learn more]. 

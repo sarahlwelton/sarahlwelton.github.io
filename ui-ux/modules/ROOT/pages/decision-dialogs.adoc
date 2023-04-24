@@ -3,6 +3,8 @@
 A decision dialog is a window that appears when a user needs to confirm an action in the UI. 
 They're given a choice to confirm or cancel that action. 
 
+image::DecisionDialog.png["An image of the Delete API Key decision dialog. The user is prompted to type delete in a text field, and warned that the action can't be undone. They can click Delete API Key or Cancel.", align=center]
+
 == Add a Title That's a Question 
 
 A decision dialog has a title that's a specific question that ends in a question mark.
@@ -31,8 +33,11 @@ Keep the language literal and descriptive.
 For example, if a user tries to remove a user, the question should be *Remove this user?* and the decision button should say *Remove* or *Remove User*. 
 The decision button shouldn't say *Yes* or *Sure*. 
 
+=== Save vs. Apply vs. Update
+
 If the user is making a change that they need to save or cancel, the confirmation button should be *Save*, not *Apply* or *Update*. 
-Ideally, try to make the action button match the title of the dialog or what the user is actually doing. 
+
+Ideally, try to make the xref:action-buttons.adoc[action button] match the title of the dialog or what the user is actually doing. 
 
 == Put Primary or Positive Actions on the Right
 

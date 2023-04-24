@@ -3,7 +3,9 @@
 An action button is anything the user clicks that causes something to happen in the UI. 
 
 Never surprise the user with what happens after they click a button. 
-The result should be obvious from the button's text. 
+The result should be obvious from the button's text.
+
+image::CreateProjectButton.png["A blue button that says + Create Project",align="center"]
 
 == Start with an Action Verb 
 

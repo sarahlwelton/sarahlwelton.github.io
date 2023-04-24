@@ -11,18 +11,18 @@ Both types of error message should follow the same general guidance.
 
 Clearly and concisely tell the user exactly what happened. 
 
-For example, an error message that appears if the system failed to delete a user could say "The system couldn't create the user <USER_NAME>."
+For example, an error message that appears if the system failed to delete a user could say `The system couldn't create the user <USER_NAME>.`
 
 == Say How to Fix It 
 
 Tell the user exactly what they can do to fix what happened, or otherwise move on from the error. 
 
-For example, an error message that appears if the system failed to delete a user could say "Please try to create the user again, or contact support if the issue continues."
+For example, an error message that appears if the system failed to delete a user could say `Please try to create the user again, or contact support if the issue continues.`
 
 == Be Diplomatic and Avoid Blame 
 
 State the facts diplomatically and avoid any bias. 
 
-Don't call out the user or place any blame on their actions for an error. Don't use "you" or "your." 
+Don't call out the user or place any blame on their actions for an error. Don't use *you* or *your*.
 
 Avoid causing any worry or panic for the user, and don't make jokes to put them at ease.

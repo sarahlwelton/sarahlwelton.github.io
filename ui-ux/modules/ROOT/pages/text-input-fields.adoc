@@ -1,6 +1,6 @@
 = Text Input Fields
 
-A text input field is any field in the UI that a user can click into to enter text. 
+A text input field is any field in the UI that a user can click into to enter text.
 
 * Put a clear label above all text fields.
 +

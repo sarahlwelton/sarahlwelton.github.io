@@ -2,7 +2,7 @@
 
 Any button that creates or adds a new component to a user's database should: 
 
-* Use the verb *Create*, preceded by a `+`. 
+* Start with a plus sign (+), followed by the verb *Create*. 
 * Clearly state the component that the user will create. 
 * Appear only in the top-right, above the area of the UI that lists any previously created components.
 * Use title case.
