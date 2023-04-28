@@ -166,8 +166,8 @@ For terms not covered here, see the https://developers.google.com/style/word-lis
 | etc. | Don't use Latin abbreviations. Use *and so on*, instead.
 | Event-Condition-Action model | Add the hyphens. Capitalize Event, Condition, and Action.
 | Eventing Service | When referring to Couchbase Services, use title case. 
-| eviction, ejection, expiration a| 
-
+| eviction, ejection, expiration 
+a| 
 * Use *eviction* to refer to removing a record entirely from any system or cache. Items are evicted from ephemeral buckets when RAM is full. 
 * Use *ejection* to refer to removing a record from one layer, but still keeping it in a system. Items are ejected from Couchstore or Magma buckets when they are removed from RAM, but still stored on disk. 
 * Use *expiration* to refer to a record being deleted after a specific time period. Items are expired when their time to live (TTL) is greater than 0, and that time has passed. 
