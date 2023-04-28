@@ -13,5 +13,6 @@ Spark Apache
 Kafka Apache
 Storm Apache
 weblog
+whilst
 wip
 work in progress
