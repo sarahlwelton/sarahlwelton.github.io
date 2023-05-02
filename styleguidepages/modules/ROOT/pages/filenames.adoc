@@ -25,10 +25,15 @@ CAUTION: Don't retroactively change filenames for published topics. This causes 
 
 All image files should use the `.png` file extension, as mentioned in xref:images-diagrams.adoc[].
 
-Include the product name in the image filename. 
+For image files, try to include the following:
+
+. Start with the product name.
+. Add a brief description of what the image shows - a concept? A screenshot? A specific feature?
+.. If the image is a screenshot, try to include the name of the page in the UI. 
+. Add the Server version. 
 
 For example: 
 
-* `server-cluster-manager-architecture.png`
-* `capella-billing-usage-summary.png`
-* `couchbaselite-replicator-states.png`
+* `server-cluster-manager-architecture-7.1.png`
+* `capella-billing-usage-summary-7.0.png`
+* `couchbaselite-replicator-states-3.0.png`

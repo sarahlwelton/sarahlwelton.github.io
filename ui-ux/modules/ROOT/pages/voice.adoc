@@ -1,0 +1,27 @@
+= Couchbase UI Voice
+
+The Couchbase UI voice should try to meet the following guidelines: 
+
+|====
+| Voice Characteristic | Description | Do | Don't 
+
+| Approachable 
+| We know databases are complicated, but we're going to show users the way and make it easy. 
+a| 
+* Use active voice. 
+* Use simple, clear words to get the point across.
+* Be more casual in tone. 
+a|
+* Be overly stiff and formal. 
+* Use passive voice.
+
+|====
+
+
+In practice, this should look like: 
+
+|====
+| Instead of this... | Use this
+
+|Before creating a database, you must first create a project. |It looks like you don't have any projects. Before creating a database, create a project.
+|====

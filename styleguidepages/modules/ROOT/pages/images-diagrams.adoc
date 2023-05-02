@@ -2,6 +2,8 @@
 
 In general, try to limit the number of images you add to the documentation. 
 
+For guidance on image file naming conventions, see xref:filenames.adoc[].
+
 == Screenshots 
 
 Use the PNG file format for screenshots, when possible. 
