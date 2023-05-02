@@ -4,6 +4,7 @@ The following are some general principles for UI copy in the Couchbase Style:
 
 * <<lowest,Write for the Lowest Common Denominator>>
 * <<critical,Explain What's Critical>>
+* <<can-do,Focus on What the User Can Do>>
 * <<short,Keep It Short and Simple>>
 * <<consistent,Keep It Consistent>>
 * <<numbers,Don't Write Out Numbers>>
@@ -26,6 +27,13 @@ We want our UI to be accessible to all users and should always aim to add text t
 Keep to the most critical and important information when adding UI copy. 
 
 Lengthy explanations or unusual situations should be explained in the documentation, not the UI. 
+
+[#can-do]
+== Focus on What the User Can Do 
+
+When writing an xref:error-messages.adoc[error message] or any kind of text guiding a user away from an action, don't reveal or focus on their lack of permissions. 
+
+Focus on what the user can do in their current situation, unless there's no other option than to ask an administrator about their permissions.
 
 [#short]
 == Keep It Short and Simple 

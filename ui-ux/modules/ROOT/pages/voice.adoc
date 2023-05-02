@@ -23,5 +23,5 @@ In practice, this should look like:
 |====
 | Instead of this... | Use this
 
-|Before creating a database, you must first create a project. |It looks like you don't have any projects. Before creating a database, create a project.
+|It looks like you don't have any projects you can create a database in. Start by creating a new project. |There are no projects where you can create a database. Create a project from the Projects tab.
 |====
