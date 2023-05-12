@@ -1,5 +1,4 @@
 :root {
-  /* colors */
   /* NOTE tint colors are 15% transparent */
   /* primary */
   --color-brand-primary: #262626;
@@ -47,12 +46,10 @@
   --color-code: var(--color-brand-pink);
   --color-border: var(--color-brand-silver);
   --checkbox-border-color: var(--color-brand-gray9);
-
   /* Color for URL */
   --color-link: var(--color-brand-blue-secondary);
   --color-link-active: var(--color-brand-blue-secondary-light);
   --color-link-hover: var(--color-brand-blue-secondary-extra-light);
-
   /* --color-border-table: #666; */
   --color-border-table: #dadada;
   --color-shade: #f3f3f3;
@@ -61,7 +58,6 @@
   --color-footer-bg: var(--color-shade);
   --color-footer-bg-gray: var(--color-brand-black);
   --color-footer-text: var(--color-text);
-
   /* Color for code block  */
   --hljs-attr: #407787;
   --hljs-string: #295d1e;
@@ -86,6 +82,7 @@
   --color-black: #000;
   /* fonts */
   --rem-base: 18; /* used to compute rem value from desired pixel value (e.g., calc(18 / var(--rem-base) * 1rem) = 18px) */
+  --rem-base-small: 14;
   --body-font-size: 1.0625em; /* 17px */
   --body-font-size--desktop: 1.125em; /* 18px */
   --body-font-size--print: 0.9375em; /* 15px */
@@ -165,6 +162,7 @@
   --admonition-background: var(--color-white);
   --admonition-label-font-weight: var(--body-font-weight-bold);
   --caption-font-color: var(--color-gray-70);
+  --caption-font-style: italic;
   --caption-font-weight: var(--body-font-weight-bold);
   --code-background: var(--panel-background);
   --code-font-color: var(--body-font-color);
@@ -209,7 +207,7 @@
   --toc-width: calc(162 / var(--rem-base) * 1rem);
   --toc-width--widescreen: calc(216 / var(--rem-base) * 1rem);
   --doc-max-width: calc(720 / var(--rem-base) * 1rem);
-  --doc-max-width--desktop: calc(828 / var(--rem-base) * 1rem);
+  --doc-max-width--desktop: calc(828 / var(--rem-base-small) * 1rem);
   /* Spacing variables */
   --base-space: 1rem; /* ~ 16px */
   --base-small-space: 0.75rem; /* ~ 12px */

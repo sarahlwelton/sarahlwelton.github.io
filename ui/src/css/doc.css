@@ -206,6 +206,7 @@
 .doc .imageblock,
 .doc .listingblock,
 .doc .literalblock,
+.doc .tabs,
 .doc .sidebarblock,
 .doc .verseblock,
 .doc .videoblock,
@@ -216,17 +217,18 @@
   margin: 1rem 0 0;
 }
 
-.doc table.tableblock {
+/* .doc table.tableblock {
   font-size: calc(15 / var(--rem-base) * 1rem);
-  margin: 1.5rem 0 0;
 }
 
-.doc table.spread,
-.doc table.stretch {
-  width: 100%;
-}
+.doc table.tableblock > div.content > .admonitionblock {
+  font-size: calc(15 / var(--rem-base) * 1rem);
+} */
 
-.doc table.tableblock + * {
+.doc .tablecontainer,
+.doc .tablecontainer + *,
+.doc :not(.tablecontainer) > table.tableblock,
+.doc :not(.tablecontainer) > table.tableblock + * {
   margin-top: 1.5rem;
 }
 
@@ -238,7 +240,13 @@
   margin-top: 0;
 }
 
+.doc table.tableblock th,
 .doc table.tableblock td {
+  padding: 0.5rem;
+}
+
+.doc table.tableblock,
+.doc table.tableblock > * > tr > * {
   padding: 0.5rem;
   border-bottom: 1px solid var(--color-brand-gray8);
   padding-left: 0.75rem;
@@ -251,6 +259,14 @@
   border-width: 1px;
 }
 
+.doc table.grid-cols > * > tr > * {
+  border-width: 0 1px;
+}
+
+.doc table.grid-rows > * > tr > * {
+  border-width: 1px 0;
+}
+
 .doc table.grid-all > thead th,
 .doc table.grid-rows > thead th {
   padding-left: 0.75rem;
@@ -259,6 +275,10 @@
   border-bottom: 2px solid var(--table-border-color);
   font-weight: var(--weight-semibold);
   min-width: 5rem;
+}
+
+.doc table.frame-all {
+  border-width: 1px;
 }
 
 .doc table.frame-ends {
@@ -289,34 +309,15 @@
   border-right-width: 0;
 }
 
+.doc table.stripes-all > tbody > tr,
+.doc table.stripes-odd > tbody > tr:nth-of-type(odd),
+.doc table.stripes-even > tbody > tr:nth-of-type(even),
+.doc table.stripes-hover > tbody > tr:hover {
+  background: var(--table-stripe-background);
+}
+
 .doc table.tableblock > tfoot {
   background: var(--table-footer-background);
-}
-
-.doc table.spread > tbody > tr > *,
-.doc table.stretch > tbody > tr > * {
-  /* NOTE setting max-width reactivates overflow-wrap behavior on the table cell */
-  max-width: 0;
-}
-
-.doc table.layout,
-.doc table.layout th.tableblock,
-.doc table.layout td.tableblock {
-  border: 0;
-}
-
-.doc table.layout > tbody > tr:nth-of-type(even) {
-  background-color: transparent;
-}
-
-.hdlist table tr .hdlist1,
-.hdlist table tr .hdlist2 {
-  padding: var(--base-small-space) 0;
-}
-
-.doc .dlist dt,
-.doc .hdlist table tr .hdlist1 {
-  font-weight: var(--weight-semibold);
 }
 
 .doc .halign-left {
@@ -386,7 +387,6 @@
 .doc .colist .admonitionblock td.content {
   font-family: var(--body-font-family);
   flex: 1;
-  font-size: 0.9375rem;
   hyphens: auto;
   line-height: 1.6;
   min-width: 0;
@@ -609,15 +609,21 @@
 }
 
 .doc ul.circle {
-  list-style-type: square;
+  list-style-type: circle;
 }
 
 .doc ul.disc {
-  list-style-type: square;
+  list-style-type: disc;
 }
 
 .doc ul.square {
   list-style-type: square;
+}
+
+.doc ul.circle ul:not([class]),
+.doc ul.disc ul:not([class]),
+.doc ul.square ul:not([class]) {
+  list-style: inherit;
 }
 
 .doc ol.arabic {
@@ -691,6 +697,7 @@
   padding: 0;
 }
 
+.doc .admonitionblock .title,
 .doc .exampleblock .title,
 .doc .imageblock .title,
 .doc .literalblock .title,
@@ -700,12 +707,22 @@
 .doc .tableblock caption {
   color: var(--caption-font-color);
   font-size: calc(16 / var(--rem-base) * 1rem);
+  font-style: var(--caption-font-style);
   font-weight: var(--caption-font-weight);
-  font-style: italic;
   hyphens: none;
   letter-spacing: 0.01em;
   padding-bottom: 0.075rem;
+}
+
+.doc .tableblock caption {
   text-align: left;
+}
+
+.doc .ulist .title,
+.doc .olist .title {
+  font-style: var(--caption-font-style);
+  font-weight: var(--caption-font-weight);
+  margin-bottom: 0.25rem;
 }
 
 .doc .imageblock .title {
@@ -819,10 +836,10 @@
   box-shadow: inset 0 0 1.75px var(--pre-border-color);
   display: block;
   overflow-x: auto;
-  padding: 0.75rem;
+  padding: 0.875em;
 }
 
-.doc pre.highlight {
+.doc .listingblock > .content {
   position: relative;
 }
 
@@ -834,8 +851,10 @@
   right: 0.5rem;
   color: var(--pre-annotation-font-color);
   font-family: var(--body-font-family);
-  font-size: calc(13.5 / var(--rem-base) * 1rem);
+  font-size: calc(13 / var(--rem-base) * 1rem);
   line-height: 1;
+  white-space: nowrap;
+  z-index: 1;
 }
 
 .doc .listingblock:hover .source-toolbox {
@@ -845,8 +864,6 @@
 .doc .source-toolbox .source-lang {
   text-transform: uppercase;
   letter-spacing: 0.075em;
-  font-size: 0.96em;
-  line-height: 1.0425;
 }
 
 .doc .source-toolbox > :not(:last-child)::after {
@@ -859,7 +876,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: transparent;
+  background: none;
   border: none;
   color: inherit;
   outline: none;
@@ -918,6 +935,10 @@
 
 .doc .language-console .hljs-meta {
   user-select: none;
+}
+
+.doc .dlist dt {
+  font-style: italic;
 }
 
 .doc .dlist dd {
