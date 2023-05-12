@@ -61,7 +61,7 @@ Also aim to add units of measurement for numbers, where applicable.
 
 Use sentence case capitalization for UI text.
 
-Use title case only for xref:actions-buttons.adoc[buttons].
+Use title case only for xref:action-buttons.adoc[buttons].
 
 Headings should be in sentence case. 
 

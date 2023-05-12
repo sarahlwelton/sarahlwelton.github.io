@@ -1,6 +1,6 @@
 = Writing Concepts 
 
-A concept explains to the user the why behind a xref:writing-procedures.adoc[procedure] or piece of xref:wrwiting-references.adoc[reference material]. 
+A concept explains to the user the why behind a xref:writing-procedures.adoc[procedure] or piece of xref:writing-references.adoc[reference material]. 
 It explains what things are and introduces the things a user needs to know to be successful at completing a procedure or understanding references. 
 
 == Description Attribute 

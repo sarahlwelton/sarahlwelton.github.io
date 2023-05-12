@@ -1,4 +1,4 @@
-= No Component Found Pages
+= No Component Found Pages / Empty States
 
 When the user hasn't yet created a database component, such as an index or a bucket, the UI should display a message stating *No <components> found*: 
 
