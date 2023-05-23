@@ -18,6 +18,7 @@
 ** xref:headings.adoc[]
 ** xref:filenames.adoc[]
 ** xref:images-diagrams.adoc[]
+*** xref:alt-text.adoc[]
 ** xref:links.adoc[]
 ** xref:ordered-list.adoc[]
 ** xref:unordered-list.adoc[]
