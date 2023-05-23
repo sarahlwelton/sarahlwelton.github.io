@@ -11,6 +11,9 @@ content:
   - url: .
     branches: HEAD
     start_path: ui-ux
+  - url: .
+    branches: HEAD
+    start_path: pendo
 ui:
   bundle:
     url: ./ui/build/ui-bundle.zip

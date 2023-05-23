@@ -1,0 +1,127 @@
+= Task Walkthrough Guides
+
+Use the following guidance to write text for a Task Walkthrough Guide. 
+
+A Task Walkthrough takes a user through a series of steps to complete a specific task in the UI: 
+
+image::walkthrough-guide.png["An image of the Task Walkthrough Guide template from the Pendo Designer. The top of the dialog has the template text 'STEP X OF Y'. The title is 'Target/Task name'. The body text states 'Provide a brief instruction or explanation about this step or feature in the walkthrough. What can the user do or achieve with this?' The bottom of the dialog contains the standard Next and Back buttons.",align=center]
+
+== Progress Tracker 
+
+Every Task Walkthrough Guide should contain a progress tracker at the top of the Guide dialog. 
+
+TIP: Finalize the progress tracker when you're finished designing the rest of your guide. 
+
+Fill in the template with the step number the user is currently on, out of the total number of steps, for each step: 
+
+== Titles
+
+The content style for a title changes based on whether you're writing for the first step in a Task Walkthrough, or a subsequent step. 
+
+=== First Steps
+
+|====
+| Description | Do | Don't
+
+| Write the title as a question. 
+Try to make the question specific to the goal of the Task Walkthrough. 
+a| Want some help creating credentials?
+
+Want some help creating a database?
+a| Want help?
+
+Need help getting started with this?
+
+| Write in sentence case. 
+| Want some help creating a project?
+| Want Some Help Creating a Project?
+
+| Don't use any other punctuation aside from a question mark. 
+| Want some help adding an allowed IP address?
+a| Want some help adding an allowed IP address, database access credentials, and connecting to your database?
+
+Want some help to get this done?!
+|====
+
+=== Subsequent Steps
+
+|====
+| Description | Do | Don't
+
+| Write the title as an imperative phrase, starting with an action verb. 
+| Set bucket, scope, and access
+a| Want help?
+
+Need to change your project name?
+
+| Write in sentence case, but capitalize named UI elements. 
+a| Set Query Context
+Set database password
+| Add Your IP Address
+
+| Don't use any other punctuation aside from commas, where needed. 
+a| Set bucket, scope, and access
+
+Set document limit
+a| Add an allowed IP address.
+
+Change your password!
+|====
+
+== Body Text 
+
+The body text goals for a Task Walkthrough step change based on whether you're writing for the first step or a subsequent step. 
+
+=== First Steps
+
+|====
+| Description | Do | Don't
+
+| Clearly state what the user will learn after they complete the Task Walkthrough.
+| Follow along with a brief tutorial to create database access credentials for your Capella database.
+| Follow along with this brief tutorial to get started.
+
+| Avoid writing more than 1 sentence.
+Keep the goal brief and straightforward. 
+| Follow along with a brief tutorial to add an allowed IP address for your Capella database. 
+| Follow along with a brief tutorial to create an API Key for your Capella database.
+You can use an API Key to connect to your database with the Data API. 
+Use the Data API to work with scopes and collections, documents, and SQL++ queries.
+|====
+
+=== Subsequent Steps
+
+|====
+| Description | Do | Don't
+
+| Avoid lengthy explanations about the how and why for the step.
+Stick to 1 or 2 sentences.
+| To create a database, you need to create a project.
+Go to the *Projects* tab.
+| You need to create a project before you can create a database. 
+All databases and App Services in Capella need to exist inside a project. 
+Projects exist at the organization level.
+Go to the *Projects* tab to create a new project. 
+
+a| If the step requires the user to interact with the UI, remove the Next and Back buttons from the step. 
+Make it clear that the user needs to interact with the UI to advance the guide.
+
+NOTE: If the interaction you need the user to take requires their keyboard, keep the Next and Back buttons.
+Don't let the guide advance when the user clicks the element, so they can type the required text. 
+| Go to *Database Access*.
+| The *Database Access* page lets you add database access credentials.
+
+| Don't mention the Next and Back buttons in your step text. 
+| Click *Create Database*. 
+a| Click *Next* to go to the next step in this guide.
+
+Click *Back* to go to the previous step.
+
+| Use *Learn More* links to give the user additional context and explanation through the documentation. 
+| To create an App Service, create a compatible database. xref:[Learn More]
+| You don't have any compatible databases where you can create an App Service. You need to create a database to create an App Service. The database must have the Data, Index, and Query services. It must have at least one bucket, and not have an App Service currently linked to it. 
+
+| Use *bold* to emphasize UI element names. 
+| *Database Access*
+| _Database Access_
+|====

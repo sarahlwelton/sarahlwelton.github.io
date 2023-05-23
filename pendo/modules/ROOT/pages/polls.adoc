@@ -1,0 +1,46 @@
+= Poll Guides
+
+Use the following guidance to write text for a Poll Guide. 
+
+A Poll asks a user for feedback on a numeric scale or with an open-ended text field. 
+
+== Titles
+
+The main title for a Poll can be either *How did we do?* or *What do you think?*. 
+
+== Subtitles
+
+|====
+| Description | Do | Don't 
+
+| Write the subtitle as a specific question, asking the user to rate or provide specific feedback.
+a| How would you rate the Playground?
+
+What did you think of the new Import experience?
+
+a| Please provide a rating.
+
+Let us know how we did. 
+
+Rate your experience?
+
+| Write in sentence case. 
+| What did you think of the new Query Workbench?
+| How Would You Rate The New Data Tools?
+
+| Don't use any other punctuation aside from a question mark. 
+| How would you rate the new Connect page?
+a| How would you rate the new Connect page for SDKs, Couchbase Shell, and Import and Export tools?
+
+We want to hear from you!
+|====
+
+== Hint Text
+
+Hint text provides guidance on what the user needs to enter or what they're selecting on a Poll. 
+
+Don't change the default hint text for a Poll guide. 
+
+== Action Button 
+
+The action button for a Poll guide should always be *Submit Feedback*.

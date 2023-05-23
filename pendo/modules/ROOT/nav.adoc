@@ -1,0 +1,6 @@
+* xref:index.adoc[]
+* xref:voice.adoc[]
+* Guide Types 
+** xref:polls.adoc[]
+** xref:tooltips.adoc[]
+** xref:walkthroughs.adoc[]
