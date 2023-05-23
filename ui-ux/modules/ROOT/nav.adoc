@@ -12,7 +12,7 @@
 * xref:no-component-found.adoc[]
 * xref:text-input-fields.adoc[]
 * xref:tooltips.adoc[]
-* xref:styleguide:ROOT:word-list.adoc[]
+* xref:styleguide:ROOT:word-list.adoc[Docs A-Z Wordlist]
 ** xref:styleguide:ROOT:word-list.adoc#num[Numbers and Symbols]
 ** xref:styleguide:ROOT:word-list.adoc#a[A]
 ** xref:styleguide:ROOT:word-list.adoc#b[B]
