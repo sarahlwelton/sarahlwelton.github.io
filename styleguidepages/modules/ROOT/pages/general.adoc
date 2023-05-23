@@ -40,7 +40,9 @@ For more information, see https://developers.google.com/style/tense[Present tens
 
 You can address the user as "you." 
 
-Don't use the first person. Vale flags the use of any first person plurals (we, our, us, let's) in your text. Don't use any third person gendered pronouns.
+Don't use the first person.
+Vale flags the use of any first person plurals (we, our, us, let's) in your text. 
+Don't use any third person gendered pronouns.
 
 For more information, see https://developers.google.com/style/person[Second person^] in the Google Developer Style Guide.
 
@@ -57,15 +59,20 @@ Let's change our cluster's description.
 | A *Project Owner* can create, modify, and delete buckets. You can create a maximum of 30 buckets.
 a |
 
-A *Project Owner* can create, modify, and delete buckets. He can create a maximum of 30 buckets.
+A *Project Owner* can create, modify, and delete buckets.
+He can create a maximum of 30 buckets.
 
-A *Project Owner* can create, modify, and delete buckets. He/she can create a maximum of 30 buckets.
+A *Project Owner* can create, modify, and delete buckets. 
+He/she can create a maximum of 30 buckets.
 
 |===
 
 == Use Active Voice 
 
-Passive voice weakens your writing and can make it harder to parse meaning. Stick to the active voice as much as you can. 
+Passive voice weakens your writing and can make it harder to parse meaning. 
+Stick to the active voice as much as you can. 
+
+Start sentences with verbs, or directly address the user to avoid passive voice.
 
 |===
 | Acceptable | Not Acceptable

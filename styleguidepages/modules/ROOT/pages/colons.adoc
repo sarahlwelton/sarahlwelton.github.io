@@ -1,4 +1,4 @@
-= Colons and Semi-colons
+= Colons and Semi-Colons
 
 Use the following guidance for when to add a colon or semi-colon to your text. 
 
@@ -8,7 +8,7 @@ Use colons to introduce examples, such as an image or a code block, in your text
 
 Use a colon to introduce an ordered or unordered list. 
 
-== Semi-colons
+== Semi-Colons
 
 Try to avoid using a semi-colon. In most cases, a period and a pair of shorter sentences is fine. 
 

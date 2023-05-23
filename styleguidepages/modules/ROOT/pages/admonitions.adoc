@@ -36,7 +36,7 @@ Use a tip when you:
 
 * Want to tell the user about a shortcut or faster way of accomplishing a task. 
 * Want to tell the user about something optional. 
-* Want to let the user know something that is useful, but isn't considered that important. 
+* Want to let the user know something that's useful, but isn't considered that important. 
 
 For example: 
 
@@ -70,7 +70,8 @@ For example:
 
 CAUTION: *Memcached* buckets are deprecated. Use a *Couchbase* or *Ephemeral* bucket, instead.
 
-CAUTION: You must modify the default number of replicas for a bucket. Otherwise, all key-value writes with durability enabled will fail. 
+CAUTION: You must modify the default number of replicas for a bucket. 
+Otherwise, all key-value writes with durability enabled will fail. 
 
 [#importants]
 == Important 

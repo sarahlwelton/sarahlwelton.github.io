@@ -19,7 +19,8 @@ Don't::
 
 Use the following guidelines for adding an example into your documentation: 
 
-* Don't use directional language to describe where in the text your example is, like "above" or "below." Use "preceding," "previous," or "following."
+* Don't use directional language to describe where in the text your example is, like "above" or "below." 
+Use "preceding," "previous," or "following."
 
 * Similar to xref:links.adoc[links], use "see."
 

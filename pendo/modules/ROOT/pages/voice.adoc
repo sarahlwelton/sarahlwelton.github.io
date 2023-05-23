@@ -1,4 +1,4 @@
-= Pendo Voice 
+= The Couchbase Pendo Voice 
 
 When writing in-app guidance through Pendo, aim for the following voice characteristics: 
 

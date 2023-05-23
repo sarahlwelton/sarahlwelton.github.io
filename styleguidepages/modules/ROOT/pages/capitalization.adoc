@@ -14,9 +14,10 @@ Capitalize the following:
 
 * SQL and SQL++ clauses. 
 
-Follow the official capitalization for brand names, companies, software, products, services, features and other terms defined by companies or open-source communities. 
+Follow the official capitalization for brand names, companies, software, products, services, features, and other terms defined by companies or open-source communities. 
 
-Don't use unnecessary capitalization. Don't use all-uppercase letters except for official names, abbreviations, or referencing code that uses all caps. 
+Don't use unnecessary capitalization. 
+Don't use all-uppercase letters except for official names, abbreviations, or referencing code that uses all caps. 
 
 Don't use camel case, unless the name or code you're referencing uses it. 
 

@@ -2,4 +2,4 @@ extends: existence
 message: Use ventilated prose. Start every sentence on a new line. 
 level: warning
 tokens: 
-  - '\b\.\s[A-Z]'
+  - '\w\.\s[A-Z]'
