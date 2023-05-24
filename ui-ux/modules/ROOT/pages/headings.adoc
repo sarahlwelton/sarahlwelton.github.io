@@ -1,0 +1,26 @@
+= Headings 
+
+Headings mark off areas of xref:instruction-text.adoc[] or other components in the UI. 
+
+To write headings in UI copy: 
+
+* <<sentence,>>
+* <<punctuation,>>
+
+[#sentence]
+== Use Sentence Case 
+
+Write headings in sentence case.
+Capitalize proper nouns or other terms that are capitalized elsewhere in the UI. 
+
+[#punctuation]
+== Do Not Use Punctuation - Except For Commas and Question Marks
+
+Do not add any end punctuation to headings.
+Do not add periods (.) or exclamation marks (!). 
+
+Try to avoid adding commas (,), unless you need to list multiple items. 
+
+Make sure to use the Oxford comma. 
+
+Use question marks (?) if a heading is a question. 

@@ -9,11 +9,11 @@ A tooltip can come in two styles:
 .. Text that was too long to fit in the UI. 
 .. A link to documentation for further reading or instructions. 
 
-== Don't Overuse Tooltips 
+== Do Not Overuse Tooltips 
 
 Tooltip overuse can cause a user to ignore tooltips in the UI. 
 
-Don't use a tooltip just to keep xref:instruction-text.adoc[instruction text] off of the screen. 
+Do not use a tooltip just to keep xref:instruction-text.adoc[instruction text] off of the screen. 
 
 == Keep to Critical Information 
 

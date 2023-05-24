@@ -4,7 +4,7 @@ Use the following guidance to write text for a Task Walkthrough Guide.
 
 A Task Walkthrough takes a user through a series of steps to complete a specific task in the UI: 
 
-image::walkthrough-guide.png["An image of the Task Walkthrough Guide template from the Pendo Designer. The top of the dialog has the template text 'STEP X OF Y'. The title is 'Target/Task name'. The body text states 'Provide a brief instruction or explanation about this step or feature in the walkthrough. What can the user do or achieve with this?' The bottom of the dialog contains the standard Next and Back buttons.",align=center]
+image::walkthrough-guide.png["The Task Walkthrough Guide template from the Pendo Designer. The top of the dialog has the template text 'STEP X OF Y'. The title is 'Target/Task name'. The body text states 'Provide a brief instruction or explanation about this step or feature in the walkthrough. What can the user do or achieve with this?' The bottom of the dialog contains the standard Next and Back buttons.",align=center]
 
 == Progress Tracker 
 

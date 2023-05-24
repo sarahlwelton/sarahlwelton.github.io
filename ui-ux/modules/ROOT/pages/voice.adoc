@@ -3,7 +3,7 @@
 The Couchbase UI voice should try to meet the following guidelines: 
 
 |====
-| Voice Characteristic | Description | Do | Don't 
+| Voice Characteristic | Description | Do | Do Not 
 
 | Passionate
 | We're passionate about our work and we want to help developers get things done.
@@ -42,11 +42,12 @@ a| * Be too casual or informal.
 
 |====
 
+== What Does This Look Like In Practice? 
 
-In practice, this should look like: 
+To write in the Couchbase voice for UI copy: 
 
 |====
-| Instead of this... | Use this
+| Instead of this... | Try this...
 
 |It looks like you don't have any projects you can create a database in. Start by creating a new project. |There are no projects where you can create a database. Create a project from the Projects tab.
 |====

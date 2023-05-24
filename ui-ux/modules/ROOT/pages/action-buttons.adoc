@@ -23,11 +23,11 @@ For example, if the preceding text tells the user that they can delete their org
 
 == Keep It Between 3-5 Words
 
-Don't add a lot of words to a single button, or it might not be obvious that it's a button to the user. 
+Do not add a lot of words to a single button, or it might not be obvious that it's a button to the user. 
 
 Try to stick to 3-5 words. 
 
 == Write Buttons in Title Case
 
-Use title case for all button text.
+Use title case for all button text. 
 Capitalize nouns and verbs, but not prepositions and conjunctions. 

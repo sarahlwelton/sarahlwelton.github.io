@@ -23,6 +23,7 @@ For example, an error message that appears if the system failed to delete a user
 
 State the facts diplomatically and avoid any bias. 
 
-Don't call out the user or place any blame on their actions for an error. Don't use *you* or *your*.
+Do not call out the user or place any blame on their actions for an error. 
+Do not use *you* or *your*.
 
-Avoid causing any worry or panic for the user, and don't make jokes to put them at ease.
+Avoid causing any worry or panic for the user, and do not make jokes to put them at ease.

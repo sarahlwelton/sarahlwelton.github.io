@@ -15,7 +15,7 @@ For example, with address information, a user would expect to input:
 . Their country
 . Their postal or zip code 
 
-Don't violate the user's expectations with the form order. 
+Do not violate the user's expectations with the form order. 
 
 == Use Section Titles to Shorten Field Names 
 
@@ -29,7 +29,7 @@ Aim to remove uncertainty about what information you're requesting and how the u
 
 This includes giving the user valid examples for the information and its formatting.
 
-Don't use the same text for the label on the field and the hint text. 
+Do not use the same text for the label on the field and the hint text. 
 
 Put the hint text outside of the field itself, so it can be accessed by a screen reader. 
 

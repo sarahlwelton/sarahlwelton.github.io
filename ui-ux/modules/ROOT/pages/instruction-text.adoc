@@ -23,6 +23,6 @@ Try and keep instruction text to under a sentence, where possible.
 
 Link to the documentation when needed. 
 
-== Don't Write Out Numbers 
+== Do Not Write Out Numbers 
 
 Unlike technical documentation, UI copy should always use numerals for ease of recognition. Use 3 over three. 

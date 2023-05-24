@@ -6,23 +6,34 @@ A contraction is made by omitting one or more letters from one word and adding i
 Many contractions combine a verb and a pronoun. 
 
 
-== Don't Use Negative Contractions 
+== Do Not Use Negative Contractions 
 
-Don't use negative contractions, especially in warning or error messages. 
+Do not use negative contractions, especially in warning or error messages. 
 
 Any `verb + not` combination should be written out in full. 
 
 For example, do not shorten `could not` to `couldn't`.
 
 
-== Don't Use Complex Contractions 
+== Do Not Use Informal Contractions
 
-Don't use complex contractions like: 
+Do not use informal contractions like "wanna" or "gonna".
+
+== Do Not Use Complex Contractions 
+
+Do not use complex contractions like: 
 
 * could've 
 * might've 
 * must've 
 * should've
+* what'll
+* what're
+* what've
+* we've
+* who'd
+* who'll
+* who've
 * would've 
 
 == Acceptable Contractions 

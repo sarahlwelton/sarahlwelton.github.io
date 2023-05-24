@@ -27,5 +27,5 @@ A user *enters* instead of *types*.
 
 A user *chooses* rather than *selects*. 
 
-Don't tell the user to choose "from this dropdown list" in the instruction text. 
+Do not tell the user to choose "from this dropdown list" in the instruction text. 
 Just tell them what they need to choose. 

@@ -2,6 +2,6 @@
 
 When the user hasn't yet created a database component, such as an index or a bucket, the UI should display a message stating *No <components> found*: 
 
-image::NoComponentFound.png["An image of the Search Service Data Tools. The user hasn't created a Search index or index alias yet, so two messages appear stating 'No search indexes found' and 'No index aliases found'.", align="center"]
+image::NoComponentFound.png["The Search Service Data Tools. The user hasn't created a Search index or index alias yet, so two messages appear stating 'No search indexes found' and 'No index aliases found'.", align="center"]
 
-Pluralize the component name and don't add a period at the end of "found."
+Pluralize the component name and do not add a period at the end of "found."

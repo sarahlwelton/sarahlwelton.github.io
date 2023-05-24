@@ -7,7 +7,7 @@ The following are some general principles for UI copy in the Couchbase Style:
 * <<can-do,Focus on What the User Can Do>>
 * <<short,Keep It Short and Simple>>
 * <<consistent,Keep It Consistent>>
-* <<numbers,Don't Write Out Numbers>>
+* <<numbers,Do Not Write Out Numbers>>
 * <<sentence,Use Sentence Case>>
 
 For an overview of voice and tone, see xref:voice.adoc[].
@@ -22,7 +22,7 @@ If a lower-level user would struggle or the required action isn't obvious, add t
 We want our UI to be accessible to all users and should always aim to add text to reduce friction. 
 
 [#critical]
-== Explain What is Critical 
+== Explain What Is Critical 
 
 Keep to the most critical and important information when adding UI copy. 
 
@@ -31,7 +31,7 @@ Lengthy explanations or unusual situations should be explained in the documentat
 [#can-do]
 == Focus on What the User Can Do 
 
-When writing an xref:error-messages.adoc[error message] or any kind of text guiding a user away from an action, don't reveal or focus on their lack of permissions. 
+When writing an xref:error-messages.adoc[error message] or any kind of text guiding a user away from an action, do not reveal or focus on their lack of permissions. 
 
 Focus on what the user can do in their current situation, unless there's no other option than to ask an administrator about their permissions.
 
@@ -52,7 +52,7 @@ Keep the terminology that you use consistent across the UI.
 What's called a cluster in one part of the UI shouldn't be called a database elsewhere. 
 
 [#numbers]
-== Don't Write Out Numbers 
+== Do Not Write Out Numbers 
 
 Unlike technical documentation, UI copy should always use numerals for ease of recognition. Use 3 over three. 
 

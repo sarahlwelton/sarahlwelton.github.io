@@ -3,7 +3,7 @@
 A decision dialog is a window that appears when a user needs to confirm an action in the UI. 
 They're given a choice to confirm or cancel that action. 
 
-image::DecisionDialog.png["An image of the Delete API Key decision dialog. The user is prompted to type delete in a text field, and warned that the action can't be undone. They can click Delete API Key or Cancel.", align=center]
+image::DecisionDialog.png["The Delete API Key decision dialog. The user is prompted to type delete in a text field, and warned that the action can't be undone. They can click Delete API Key or Cancel.", align=center]
 
 == Add a Title That's a Question 
 
@@ -22,7 +22,7 @@ In general, try to know ahead of time if you have space or character constraints
 
 Write in full and complete sentences inside the body text. 
 
-For example, the decision dialog that appears when a user tries to remove a user could simply state "This user is an Organization Owner. Removing this user from the Project won't remove their Project Owner role."
+For example, the decision dialog that appears when a user tries to remove a user could simply state "This user is an Organization Owner. Removing this user from the Project will not remove their Project Owner role."
 
 == Use the Same Words for the Actions
 

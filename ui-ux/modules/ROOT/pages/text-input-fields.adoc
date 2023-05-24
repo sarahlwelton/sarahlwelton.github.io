@@ -13,4 +13,4 @@ For example, put any text about special character limitations or whether the val
 +
 For example, put an example bucket name inside the *Bucket Name* text field to show the user an example of what value they can enter. 
 
-image::TextField.png["An image of a text field. It has a label of Bucket Name above the input area. It has hint text that says bucket-name-123. A character counter displays below the bottom-right corner, and it shows 0/100. Instruction text below the text field says 'Bucket names can only contain upper or lowercsae letters, numbers, underscores (_), periods (.), dashes (-), and percentages (%). You can't change this name later.", align="center"]
+image::TextField.png["A text field. It has a label of Bucket Name above the input area. It has hint text that says bucket-name-123. A character counter displays below the bottom-right corner, and it shows 0/100. Instruction text below the text field says 'Bucket names can only contain upper or lowercsae letters, numbers, underscores (_), periods (.), dashes (-), and percentages (%). You can't change this name later.", align="center"]
