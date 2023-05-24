@@ -1,6 +1,6 @@
 = Headings 
 
-Headings mark off areas of xref:instruction-text.adoc[] or other components in the UI. 
+Headings are text components that mark off areas of xref:instruction-text.adoc[] or other interactive components in the UI. 
 
 To write headings in UI copy: 
 

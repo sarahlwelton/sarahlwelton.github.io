@@ -49,5 +49,13 @@ To write in the Couchbase voice for UI copy:
 |====
 | Instead of this... | Try this...
 
-|It looks like you don't have any projects you can create a database in. Start by creating a new project. |There are no projects where you can create a database. Create a project from the Projects tab.
+| It looks like you don't have any projects you can create a database in. Start by creating a new project. 
+| There are no projects where you can create a database. Create a project from the Projects tab.
+
+| Import from a local file on your laptop or point to remote URL or file on blob storage. 
+| Load your data in CSV or JSON format from a file on your laptop, or point to a remote URL or file on blob storage.
+
+| The Playground is a learning tool for developers right in your browser. It executes example code and SQL++ queries against your database as you learn. You can disable the Playground feature if you like. 
+| Use the Playground to learn about Capella without leaving your browser! Execute sample code and SQL++ queries against your database as you learn. You can also turn off the Playground feature. 
+
 |====
