@@ -5,15 +5,40 @@ The Couchbase UI voice should try to meet the following guidelines:
 |====
 | Voice Characteristic | Description | Do | Don't 
 
-| Approachable 
-| We know databases are complicated, but we're going to show users the way and make it easy. 
-a| 
-* Use active voice. 
-* Use simple, clear words to get the point across.
-* Be more casual in tone. 
-a|
-* Be overly stiff and formal. 
-* Use passive voice.
+| Passionate
+| We're passionate about our work and we want to help developers get things done.
+a| * Use strong verbs. 
+* Champion Couchbase.
+* Show the user you mean what you say. 
+a| * Use passive voice. 
+* Be wishy-washy or tentative. 
+
+| Authentic 
+| We aim to be authentic, good humans. Always. 
+a| * Be conversational.
+* Use words and phrases that sound natural when spoken out-loud.
+* Be honest and direct.
+* Stay empathetic. 
+a| * Use too much jargon. Try to use words even the most beginner users will understand.
+* Oversell. 
+* Overpromise. 
+
+| Cheerful 
+| We want to celebrate our user's successes with them. 
+a| * Be encouraging. 
+* Celebrate success. 
+a| * Be overly negative.
+* Be prescriptive or demanding.
+
+| Professional
+| We want to be respected partners in our customer's journeys.
+a| * Present facts and data. 
+* Write to the point. 
+* Write clearly. 
+* Spell everything correctly. 
+* Capitalize proper nouns.
+a| * Be too casual or informal. 
+* Use extra language or fluff to convey a point.
 
 |====
 

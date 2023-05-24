@@ -31,9 +31,9 @@ As well, make sure you're using the right anchor link style for the type of anch
 
 |Other block elements |`[#anchor-link]`
 
-|Table entries |`[[anchor-link]]`
+|Table entries |`\[[anchor-link]]`
 
-|Inline text |`[[anchor-link]]`
+|Inline text |`\[[anchor-link]]`
 
 |====
 
