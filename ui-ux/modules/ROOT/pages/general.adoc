@@ -10,7 +10,7 @@ The following are some general principles for UI copy in the Couchbase Style:
 * <<numbers,Don't Write Out Numbers>>
 * <<sentence,Use Sentence Case>>
 
-For an overview of voice and tone, see xref:styleguide:ROOT:tone.adoc[] in the Couchbase Documentation Style Guide.
+For an overview of voice and tone, see xref:voice.adoc[].
 
 [#lowest]
 == Write for the Lowest Common Denominator 
@@ -41,6 +41,8 @@ Focus on what the user can do in their current situation, unless there's no othe
 Always write in full and complete sentences outside of headings. 
 
 Keep text short and to the point. 
+
+Also, see guidance on xref:contractions.adoc[].
 
 [#consistent]
 == Keep It Consistent 
