@@ -5,7 +5,6 @@ A contraction is made by omitting one or more letters from one word and adding i
 
 Many contractions combine a verb and a pronoun. 
 
-
 == Do Not Use Negative Contractions 
 
 Do not use negative contractions, especially in warning or error messages. 
@@ -13,7 +12,6 @@ Do not use negative contractions, especially in warning or error messages.
 Any `verb + not` combination should be written out in full. 
 
 For example, do not shorten `could not` to `couldn't`.
-
 
 == Do Not Use Informal Contractions
 

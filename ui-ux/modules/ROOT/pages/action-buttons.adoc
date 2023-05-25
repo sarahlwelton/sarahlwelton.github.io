@@ -21,6 +21,9 @@ Make sure that the text you use on the button aligns to the surrounding text.
 
 For example, if the preceding text tells the user that they can delete their organization, the button should say *Delete Organization*, not *Remove Organization*. 
 
+If the user is making a change that they need to save or cancel, the confirmation button should be *Save*, not *Apply* or *Update*.
+But, try to make the action match the surrounding text.
+
 == Keep It Between 3-5 Words
 
 Do not add a lot of words to a single button, or it might not be obvious that it's a button to the user. 

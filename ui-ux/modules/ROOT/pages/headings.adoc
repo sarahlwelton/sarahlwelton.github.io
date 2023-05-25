@@ -19,8 +19,14 @@ Capitalize proper nouns or other terms that are capitalized elsewhere in the UI.
 Do not add any end punctuation to headings.
 Do not add periods (.) or exclamation marks (!). 
 
+=== Commas
+
 Try to avoid adding commas (,), unless you need to list multiple items. 
 
 Make sure to use the Oxford comma. 
 
+=== Question Marks 
+
 Use question marks (?) if a heading is a question. 
+
+Phrase a heading as a question on xref:decision-dialogs.adoc[].
