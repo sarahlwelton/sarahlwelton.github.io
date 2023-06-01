@@ -3,5 +3,5 @@ message: Use the full product name (Couchbase Server Community Edition) first.
 level: error
 scope: text
 ignorecase: false
-first: Community Edition 
-second: (Couchbase Server \d\.\d Community Edition|Couchbase Server Community Edition)
+first: \b(Community Edition)\b
+second: (Couchbase Server |Couchbase Server \d\.\d )(Community Edition)

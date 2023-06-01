@@ -3,5 +3,5 @@ message: Use the full product name (Couchbase Server Enterprise Edition) first.
 level: error
 scope: text
 ignorecase: false
-first: Enterprise Edition 
-second: (Couchbase Server \d\.\d Enterprise Edition|Couchbase Server Enterprise Edition)
+first: \b(Enterprise Edition)\b
+second: (Couchbase Server |Couchbase Server \d\.\d )(Enterprise Edition)
