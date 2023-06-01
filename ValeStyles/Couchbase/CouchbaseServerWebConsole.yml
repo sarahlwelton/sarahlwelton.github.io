@@ -3,5 +3,5 @@ message: Use the full product name (Couchbase Server Web Console) first.
 level: error
 scope: text
 ignorecase: false
-first: Web Console 
-second: Couchbase Server Web Console
+first: \b(Web Console)\b
+second: (Couchbase Server )(Web Console)

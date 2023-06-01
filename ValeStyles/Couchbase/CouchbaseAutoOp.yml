@@ -3,5 +3,5 @@ message: Use the full product name (Couchbase Autonomous Operator) first.
 level: error
 scope: text
 ignorecase: false
-first: Operator 
-second: (Couchbase Autonomous Operator|Couchbase Autonomous Operator for Kubernetes)
+first: \b(Operator)\b
+second: (Couchbase Autonomous )(Operator)
