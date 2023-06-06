@@ -74,6 +74,12 @@ Stick to the active voice as much as you can.
 
 Start sentences with verbs, or directly address the user to avoid passive voice.
 
+Make sure to also use *strong* verbs. Avoid: 
+
+* Forms of `be`, such as `is`, `are`, `am`, `was`, `were`, etc. 
+* `Occur`
+* `Happen` 
+
 |===
 | Acceptable | Not Acceptable
 

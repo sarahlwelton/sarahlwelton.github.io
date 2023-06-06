@@ -9,6 +9,7 @@
 ** xref:capitalization.adoc[]
 ** xref:less-fewer.adoc[]
 ** xref:only.adoc[]
+** xref:there-is.adoc[]
 ** xref:which-that.adoc[]
 * Formatting Elements
 ** xref:admonitions.adoc[]
