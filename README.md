@@ -109,18 +109,18 @@ If you run into issues linting a folder:
 
 You can also get live feedback from the Vale VSCode extension:
 
-1. Click **Extensions** 
+1. Click **Extensions**  
 ![The extensions tab in VSCode](vscode-extensions-tab.png)
 2. Search for **Vale VSCode** (by Chris Chinchilla)
 3. Click **Install**
-4. Click the gear and go to **Extension Settings**
+4. Click the gear and go to **Extension Settings**  
 ![The manage extension button in VSCode](manage-button.png)
 5. In Config, input the path to your .vale.ini:
-    * Mac: /Users/<yourusername>/.vale.ini
-    * Windows: C:\Users\<yourusername>\.vale.ini
+    * Mac: `/Users/<yourusername>/.vale.ini`
+    * Windows: `C:\Users\<yourusername>\.vale.ini`
 6. (Optional) Find the path to the Vale.exe and add it in the Path field:
-    * Mac: /usr/local/bin/vale
-    * Windows: C:\ProgramData\chocolatey\lib\vale\tools\vale.exe
+    * Mac: `/usr/local/bin/vale`
+    * Windows: `C:\ProgramData\chocolatey\lib\vale\tools\vale.exe`
 
 > **Note**
 The linter only updates when the you save the file. You can go to **File** and select **Auto Save** to have VSCode automatically save files as you are typing. Be aware that this setting applies globally, and may have side-effects elsewhere.
