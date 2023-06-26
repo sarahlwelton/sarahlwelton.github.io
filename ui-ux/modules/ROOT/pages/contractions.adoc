@@ -33,6 +33,7 @@ Do not use complex contractions like:
 * who'll
 * who've
 * would've 
+* you've
 
 == Acceptable Contractions 
 
