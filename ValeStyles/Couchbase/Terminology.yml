@@ -77,9 +77,7 @@ swap:
   '(?:multi threaded|multithreaded)': multi-threaded
   '(?:name-servers|name servers)': nameservers
   '(?:non-persistent|non persistent)': nonpersistent
-  '(?:newer|higher)': later
   Objective C : Objective-C
-  '(?:older|lower)': earlier
   omni-channel : Omnichannel
   '(?:onsite|on site)': on-site
   '(?:offsite|off site)': off-site
