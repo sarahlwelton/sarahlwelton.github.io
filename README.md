@@ -88,7 +88,7 @@ After you've done all the setup, you're ready to lint some files!
 
 2. Run `vale <FileName>` or `vale <FolderName>`. 
 
-> **Tip**: If you want Vale to print to a file that you can review later, add `> <outputFileName>.txt` to the end of your Vale command. 
+**Tip**: If you want Vale to print to a file that you can review later, add `> <outputFileName>.txt` to the end of your Vale command. 
 
 Vale generates a report that provides the following information: 
 
