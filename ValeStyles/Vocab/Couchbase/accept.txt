@@ -41,6 +41,8 @@ DDL
 DevOps
 [Dd]igitization
 DML
+Dockerfiles
+Dockerfile
 Elasticsearch
 EMEA
 Engagement Database
