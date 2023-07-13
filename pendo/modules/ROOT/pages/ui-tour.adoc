@@ -180,6 +180,8 @@ Fill in the template with the Step number the user is currently on, out of the t
 
 For example, `STEP 1 OF 10`.
 
+Write in all capital letters, for aesthetic reasons. 
+
 === Titles
 
 The content style for a title changes based on what Step you're writing in the UI Tour. 
