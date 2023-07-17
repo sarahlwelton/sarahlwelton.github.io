@@ -4,6 +4,7 @@ Use the following guidance to write text for a Poll Guide.
 
 A Poll asks a user for feedback on a numeric scale or with an open-ended text field. 
 
+[#guide-name]
 == Guide Name 
 
 Start the Guide Name with *Poll -*. 
@@ -92,8 +93,11 @@ If you really want to emphasize a Poll, *Centered* is also acceptable.
 | Do not anchor a Poll to an element. 
 
 | Page Location
-| Set according to the needs of the Poll. 
+a| Set according to the needs of the Poll. 
+
 Usually, this should be *Only on this page*.
+
+Some Guides may need to be displayed *Sitewide*.
 |==== 
 
 === Activation 

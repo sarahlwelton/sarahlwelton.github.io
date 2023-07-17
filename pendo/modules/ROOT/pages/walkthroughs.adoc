@@ -6,6 +6,7 @@ A Walkthrough takes a user through a series of Steps to complete a specific task
 
 image::walkthrough-guide.png["The Walkthrough Guide template from the Pendo Designer. The top of the dialog has the template text 'STEP X OF Y'. The title is 'Target/Task name'. The body text states 'Provide a brief instruction or explanation about this Step or feature in the walkthrough. What can the user do or achieve with this?' The bottom of the dialog contains the standard Next and Back buttons.",align=center]
 
+[#guide-name]
 == Guide Name
 
 Start the Guide Name with *Walkthrough -*. 
@@ -48,6 +49,7 @@ Use the following guidelines for Walkthrough Guide settings.
 
 NOTE: You must configure the <<styling,>>, <<location,>> and <<behavior,>> settings for each Step in a Walkthrough.
 
+[#styling]
 === Styling 
 
 Use the following guidelines for Styling settings.
@@ -91,6 +93,7 @@ For example, `Set Query Context helper dialog`.
 | Leave as `Close`.
 |====
 
+[#location]
 === Location 
 
 Use the following guidelines for Location settings. 
@@ -105,6 +108,9 @@ a| Position on Page depends on the Walkthrough Step:
 * Subsequent Step: *Relative to Element*
 * Final Step: *Centered* 
 
+| Offset
+| For *Bottom Right Aligned* steps, leave the Offset as 20px by 20px. 
+
 | Position to Element (Relative to Element Steps Only)
 | Use *Auto*, or choose the location that provides the best visual result.
 Make sure the Step is fully visible and legible. 
@@ -115,10 +121,14 @@ a| The *Suggested Match* option after you select an element with *Anchor To Elem
 For some tips on syntax to try and use for targeting, see https://support.pendo.io/hc/en-us/articles/360031863612-What-CSS-selectors-are-supported-for-feature-tagging-[Using CSS Selectors in Feature Tagging].
 
 | Page Location
-| Set according to the needs of the Walkthrough. 
+a| Set according to the needs of the Walkthrough. 
+
 Usually, this should be *Only on this page*.
+
+Some Guides may need to be displayed *Sitewide*.
 |====
 
+[#behavior]
 === Behavior
 
 Use the following guidelines for Step Behavior. 

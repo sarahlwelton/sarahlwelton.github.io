@@ -6,6 +6,7 @@ A UI Tour takes a user through a series of Steps to showcase a particular area o
 
 image::walkthrough-guide.png["The UI Tour Guide template from the Pendo Designer. The top of the dialog has the template text 'STEP X OF Y'. The title is 'Target/Task name'. The body text states 'Provide a brief instruction or explanation about this Step or feature in the walkthrough. What can the user do or achieve with this?' The bottom of the dialog contains the standard Next and Back buttons.",align=center]
 
+[#guide-name]
 == Guide Name
 
 Start the Guide Name with *UI Tour -*. 
@@ -44,6 +45,7 @@ Use the following guidelines for UI Tour Guide settings.
 
 NOTE: You must configure the <<styling,>>, <<location,>> and <<behavior,>> settings for each Step in a UI Tour.
 
+[#styling]
 === Styling 
 
 Use the following guidelines for Styling settings.
@@ -77,7 +79,8 @@ For example, `Bucket list`.
 | You should not need to change the default Width dimension for a UI Tour Step. 
 
 | ARIA Label - Accessible Name
-| Use your Step Name to provide an accessible name for the UI Tour Step, with the phrase `helper dialog`. 
+a| Use your Step Name to provide an accessible name for the UI Tour Step, with the phrase `helper dialog`. 
+
 For example, `Bucket list helper dialog`.
 
 | Role 
@@ -90,6 +93,7 @@ For example, `Bucket list helper dialog`.
 | Leave as `Close`.
 |====
 
+[#location]
 === Location 
 
 Use the following guidelines for Location settings. 
@@ -104,6 +108,9 @@ a| Position on Page depends on the UI Tour Step:
 * Subsequent Step: *Relative to Element*
 * Final Step: *Centered* 
 
+| Offset
+| For *Bottom Right Aligned* steps, leave the Offset as 20px by 20px. 
+
 | Position to Element (Relative to Element Steps Only)
 | Use *Auto*, or choose the location that provides the best visual result.
 Make sure the Step is fully visible and legible. 
@@ -114,10 +121,14 @@ a| The *Suggested Match* option after you select an element with *Anchor To Elem
 For some tips on syntax to try and use for targeting, see https://support.pendo.io/hc/en-us/articles/360031863612-What-CSS-selectors-are-supported-for-feature-tagging-[Using CSS Selectors in Feature Tagging].
 
 | Page Location
-| Set according to the needs of the UI Tour. 
+a| Set according to the needs of the UI Tour. 
+
 Usually, this should be *Only on this page*.
+
+Some Guides may need to be displayed *Sitewide*.
 |====
 
+[#behavior]
 === Behavior
 
 Use the following guidelines for Step Behavior. 
@@ -129,8 +140,10 @@ Use the following guidelines for Step Behavior.
 | Do not change or remove the Close Button action.
 
 | Advance on Element Click 
-| Delete the *Advance on Element Click* action.
+a| Delete the *Advance on Element Click* action.
 Keep all other actions. 
+
+Never delete the *Next* or *Back* buttons.
 
 |====
 

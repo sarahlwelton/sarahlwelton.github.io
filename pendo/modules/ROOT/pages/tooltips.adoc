@@ -112,8 +112,11 @@ a| The *Suggested Match* option after you select an element with *Anchor To Elem
 For some tips on syntax to try and use for targeting, see https://support.pendo.io/hc/en-us/articles/360031863612-What-CSS-selectors-are-supported-for-feature-tagging-[Using CSS Selectors in Feature Tagging].
 
 | Page Location
-| Set according to the needs of the Tooltip. 
+a| Set according to the needs of the Tooltip. 
+
 Usually, this should be *Only on this page*.
+
+Some Guides may need to be displayed *Sitewide*.
 |====
 
 === Activation 
