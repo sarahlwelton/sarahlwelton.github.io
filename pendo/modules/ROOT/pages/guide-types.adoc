@@ -7,7 +7,6 @@ Each Guide Type has its own content plan template, based on its specific content
 Guides also have specific guidelines for settings and Guide behavior inside Pendo. 
 
 |====
-
 |Guide Type |Description 
 
 | xref:polls.adoc[]
