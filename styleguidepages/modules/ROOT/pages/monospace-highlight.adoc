@@ -3,7 +3,8 @@
 Use the highlighted monospace font to format: 
 
 * Any code that appears outside of a code block. 
-* N1QL/SQL++ commands and function names. 
+* N1QL/SQL++ commands and function names.
+* API methods, classes, and calls.  
 * File paths and filenames. 
 * Any text a user needs to input. 
 
