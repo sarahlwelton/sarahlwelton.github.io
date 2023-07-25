@@ -10,6 +10,7 @@
 * xref:documentation-links.adoc[]
 * xref:error-messages.adoc[]
 * xref:forms.adoc[]
+* xref:headings.adoc[]
 * xref:info-dialogs.adoc[]
 * xref:instruction-text.adoc[]
 * xref:lists.adoc[]
