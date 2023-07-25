@@ -26,3 +26,9 @@ Link to the documentation when needed.
 == Do Not Write Out Numbers 
 
 Unlike technical documentation, UI copy should always use numerals for ease of recognition. Use 3 over three. 
+
+== Use Choose, Not Select 
+
+When you need to tell a user to choose between options in the UI, use *choose*, not *select*. 
+
+For example, `Choose your source`.
