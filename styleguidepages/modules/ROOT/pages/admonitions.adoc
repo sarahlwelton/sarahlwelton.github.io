@@ -40,11 +40,21 @@ Use a tip when you:
 * Want to tell the user about something optional. 
 * Want to let the user know something that's useful, but isn't considered that important. 
 
+You should also use a tip to let a user know when they can also accomplish a task from the API as well as the UI.
+Make sure to provide a link to the API documentation as well as the specific method, call, or class the user should use. 
+
 For example: 
 
 TIP: The maximum allowed value is 2147483648 seconds (68.096 years). 
 
 TIP: You can also press kbd:[ENTER] to submit your query. 
+
+[TIP]
+====
+You can also foo the bar from the xref:admonitions.adoc#tips[Public Management API]: 
+
+* xref:admonitions.adoc#tips[`FOO`]
+====
 
 [#warnings]
 == Warnings 
