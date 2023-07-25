@@ -1,8 +1,9 @@
 * xref:index.adoc[]
 * xref:voice.adoc[]
-* Guide Types 
+* xref:guide-types.adoc[] 
 ** xref:polls.adoc[]
 ** xref:tooltips.adoc[]
+** xref:ui-tour.adoc[]
 ** xref:walkthroughs.adoc[]
 * xref:styleguide:ROOT:word-list.adoc[Docs A-Z Wordlist]
 ** xref:styleguide:ROOT:word-list.adoc#num[Numbers and Symbols]
