@@ -17,7 +17,7 @@ To install Vale:
 1. Install a package manager: 
     - On Windows: [Chocolatey](https://chocolatey.org/install)
     - On Mac: [Homebrew](https://brew.sh/)
-    - On GNU/Linux: Don't use the Snap paackage manager. [Download the precompiled binary of Vale](https://vale.sh/docs/vale-cli/installation/#github-releases).
+    - On GNU/Linux: Don't use the Snap package manager. [Download the precompiled binary of Vale](https://vale.sh/docs/vale-cli/installation/#github-releases).
 
 2. Open a terminal application with administrator permissions. 
 
@@ -88,7 +88,7 @@ After you've done all the setup, you're ready to lint some files!
 
 2. Run `vale <FileName>` or `vale <FolderName>`. 
 
-**TIP**: If you want Vale to print to a file that you can review later, add `> <outputFileName>.txt` to the end of your Vale command. 
+**Tip**: If you want Vale to print to a file that you can review later, add `> <outputFileName>.txt` to the end of your Vale command. 
 
 Vale generates a report that provides the following information: 
 
@@ -104,6 +104,27 @@ If you run into issues linting a folder:
 
 - Check your `.vale.ini` to see what file types Vale lints. If you see a [*] above the `BasedOnStyles` setting, Vale lints all file types. Enter a file type (`.adoc`, for example) to change the scope. 
 - Change the folder to limit the scope of the files you want Vale to lint.
+
+## Linting in Real Time
+
+You can also get live feedback from the Vale VSCode extension:
+
+1. Click **Extensions**  
+![The extensions tab in VSCode](vscode-extensions-tab.png)
+2. Search for **Vale VSCode** (by Chris Chinchilla)
+3. Click **Install**
+4. Click the gear and go to **Extension Settings**  
+![The manage extension button in VSCode](manage-button.png)
+5. In Config, input the path to your .vale.ini:
+    * Mac: `/Users/<yourusername>/.vale.ini`
+    * Windows: `C:\Users\<yourusername>\.vale.ini`
+6. (Optional) Find the path to the Vale.exe and add it in the Path field:
+    * Mac: `/usr/local/bin/vale`
+    * Windows: `C:\ProgramData\chocolatey\lib\vale\tools\vale.exe`
+
+> **Note**
+The linter only updates when the you save the file. You can go to **File** and select **Auto Save** to have VSCode automatically save files as you are typing. Be aware that this setting applies globally, and may have side-effects elsewhere.
+
 
 
 ## Tweak Styles 

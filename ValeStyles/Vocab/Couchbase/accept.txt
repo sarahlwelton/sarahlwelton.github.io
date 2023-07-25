@@ -41,6 +41,9 @@ DDL
 DevOps
 [Dd]igitization
 DML
+Docker
+Dockerfiles
+Dockerfile
 Elasticsearch
 EMEA
 Engagement Database
@@ -153,6 +156,7 @@ Views Service
 [Vv]irtualization
 vmstat
 VMware
+Vue
 X\.509
 XDCR
 XML
