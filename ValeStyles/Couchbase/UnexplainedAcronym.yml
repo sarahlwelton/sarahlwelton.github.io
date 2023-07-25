@@ -71,6 +71,7 @@ exceptions:
   - TBD
   - TIP
   - TCP
+  - TLS
   - TODO
   - UUID
   - URI
