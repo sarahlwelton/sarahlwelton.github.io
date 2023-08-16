@@ -76,6 +76,7 @@ JavaScript
 JIRA
 JSON
 Kafka
+[Kk]eyspace
 Kroki
 KV Service
 Last Write Wins
@@ -87,6 +88,7 @@ massively parallel processing
 MPP
 Memcached bucket
 Memcached
+[Nn]amespace
 Node\.js
 npm
 nvm
@@ -117,6 +119,7 @@ RBAC
 Read Committed
 [Rr]ebase
 [Rr]epositories
+[Rr]etryable
 Role-Based Access Control
 RYOW
 RxJava
@@ -147,6 +150,7 @@ time to live
 [Tt]oolchain
 TTL
 Ubuntu
+[Uu]psert
 UNNEST
 vBucket
 vBucketMap
