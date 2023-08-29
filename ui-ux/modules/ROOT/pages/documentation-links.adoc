@@ -6,17 +6,27 @@ It should never be a surprise where a user goes after they click a link in the U
 
 == Documentation Links
 
+NOTE: The issue of documentation links will still need to be revisited at a future date.
+
 To link out to documentation from inside the UI: 
 
 * Do not just link directly to the documentation with no context. 
 Add some introductory information to get the user started. 
 For example, `A bucket contains scopes and collections.` 
-* Invite the user to `Read more in the Couchbase Documentation`.
-* Set the actual blue link text to *Couchbase Documentation*.
-* Add an external link icon at the end of *Couchbase Documentation* to show that the user will navigate out of the UI. 
-* Do not put a period at the end of *Couchbase Documentation*. 
+* Invite the user to `Learn More`.
+* Set the actual blue link text to `Learn More`.
+* Use an external link icon at the end of `Learn More` to show that the user will navigate out of the UI.
+* Do not put a period at the end of `Learn More`.
 
-image::LearnMoreLink.png["Text that says Use a bucket to store data in your Couchbase Capella database. Every bucket contains a hierarchy of scopes and collections to further organize your data. Read more in the Couchbase Documentation",align="center"]
+//* Do not just link directly to the documentation with no context. 
+//Add some introductory information to get the user started. 
+//For example, `A bucket contains scopes and collections.` 
+//* Invite the user to `Read more in the Couchbase Documentation`.
+//* Set the actual blue link text to *Couchbase Documentation*.
+//* Add an external link icon at the end of *Couchbase Documentation* to show that the user will navigate out of the UI. 
+//* Do not put a period at the end of *Couchbase Documentation*.
+
+//image::LearnMoreLink.png["Text that says Use a bucket to store data in your Couchbase Capella database. Every bucket contains a hierarchy of scopes and collections to further organize your data. Read more in the Couchbase Documentation",align="center"]
 
 == External Resource Links
 
