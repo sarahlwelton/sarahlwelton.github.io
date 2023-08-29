@@ -89,7 +89,7 @@ For terms not covered here, see the https://developers.google.com/style/word-lis
 | checkpoint | Write as one word. Don't add a hyphen.
 | cloud | Write in lowercase unless as part of a product name. 
 | cloud native | Use cloud native as the noun. Use cloud-native as the adjective.
-| cluster | Don't capitalize, unless referring to a specific product. 
+| [[cluster]]cluster | Don't capitalize, unless referring to a specific product. Try to use <<database,database>>, instead.
 | Cluster Manager | Follow the official capitalization as set by Couchbase. For more information, see xref:capitalization.adoc[].
 | codebase | Write as one word. Don't add a hyphen.
 | command line | Use command line as the noun. Use command-line as the adjective.
@@ -118,6 +118,7 @@ For terms not covered here, see the https://developers.google.com/style/word-lis
 |===
 | Term | Notes
 
+| [[database]]database | Preferred term. Don't use <<cluster,cluster>> unless necessary.
 | Database Change Protocol (DCP) | Write out for the first use on a page. 
 | data center | Write as two words. Don't add a hyphen.
 | datacenter replication | Write as two words. Don't add a hyphen.
