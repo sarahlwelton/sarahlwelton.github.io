@@ -21,13 +21,13 @@ For example, "Let's set up your database now."
 
 It's acceptable to use "we" in UI copy when you're speaking on behalf of Couchbase, and: 
 
-* You're asking the user to put out an extraordinary effort or you've inconvenienced them in some way.
+* You're asking the user to put out an extraordinary effort or you have inconvenienced them in some way.
 * It's a message the customer is only going to see once. 
 
 For example, "We're sorry, but something went wrong and Capella is temporarily unavailable."
 
 Do not use We/Us in any way that would imply Couchbase is spying on the user or reviewing details about their data. 
-For example, "We see you haven't run maintenance on your database since August 08/2023. Do you want us to run maintenance for you now?"
+For example, "We see you have not run maintenance on your database since August 08/2023. Do you want us to run maintenance for you now?"
 
 [#i]
 == I 
@@ -36,6 +36,10 @@ It's acceptable to use "I" in UI copy when you're speaking as if you're the user
 
 * The user is asking or telling the product to do something specific. 
 
-For example, "What happens when I turn off my database?"
+For example: 
+
+----
+What happens when I turn off my database?
+----
 
 Try not to break the flow of the conversation between the customer and the application when using first-person. 

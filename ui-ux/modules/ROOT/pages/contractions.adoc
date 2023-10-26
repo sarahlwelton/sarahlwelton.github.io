@@ -51,9 +51,6 @@ When writing UI copy for Couchbase, you can only use the following contractions:
 | <<star,I'm*>>
 | I am
 
-| <<star,I've*>> 
-| I have
-
 | it's 
 | it is; it has
 

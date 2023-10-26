@@ -42,23 +42,26 @@ Bucket creation
 
 3+| *Capitalization*
 
-| Write all headings in sentence case.
-Capitalize proper nouns or other terms that are capitalized elsewhere in the UI. 
-a| Completed maintenance jobs 
+| Write all xref:decision-dialogs.adoc[] headings in sentence case.
 
-Configure database access credentials 
+Write main headings that appear as part of pages in title case. 
+
+Capitalize proper nouns or other terms that are capitalized elsewhere in the UI. 
+a| Completed Maintenance Jobs
+
+Configure Database Access Credentials 
 
 Replication
-a| Completed Jobs 
+a| Delete This Database?
 
-Self-Managed Targets 
+self-managed targets
 
 3+| *Punctuation*
 
 a| Try to avoid adding commas (,), unless you need to list multiple items. 
 
 Make sure to use the Oxford comma.
-| Configure a bucket, scope, and collection
+| Configure a Bucket, Scope, and Collection
 a| Configure a bucket scope and collection 
 
 Configure a bucket, scope and collection
@@ -80,7 +83,7 @@ Bucket creation
 | Never add a period (.) or exclamation mark (!) to the end of a heading. 
 a| Schedule On/Off
 
-Set schedule 
+Set Schedule 
 
 a| Set your schedule! 
 

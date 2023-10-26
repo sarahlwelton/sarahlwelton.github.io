@@ -4,3 +4,4 @@ package-lock.json
 docs
 ui/preview-src/index.adoc
 ui/preview-src/404.adoc
+.vscode/settings.json

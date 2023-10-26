@@ -12,7 +12,7 @@ The following are some general principles for UI copy in the Couchbase Style:
 * <<can-do,Focus on What the User Can Do>>
 * <<consistent,Keep It Consistent>>
 * <<numbers,Do Not Write Out Numbers>>
-* <<sentence,Use Sentence Case>>
+//* <<sentence,Use Sentence Case>>
 
 For an overview of voice and tone, see xref:voice.adoc[].
 
@@ -165,13 +165,13 @@ Unlike technical documentation, UI copy should always use numerals for ease of r
 
 Also aim to add units of measurement for numbers, where applicable. 
 
-[#sentence]
-== Use Sentence Case
+// [#sentence]
+// == Use Sentence Case
 
-Use sentence case capitalization for UI text.
+// Use sentence case capitalization for UI text.
 
-Use title case only for xref:action-buttons.adoc[buttons].
+// Use title case only for xref:action-buttons.adoc[buttons].
 
-Headings should be in sentence case. 
+// Headings should be in sentence case. 
 
-In general, find another visual way to add emphasis to text.
+// In general, find another visual way to add emphasis to text.

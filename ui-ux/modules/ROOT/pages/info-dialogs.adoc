@@ -22,3 +22,5 @@ Tell the user what happened and what they need to do next, if anything.
 Make sure to write in full sentences. 
 
 Any lengthy explanations or context should stay in the larger UI or the documentation. 
+
+For more information about how to write an effective error message, see xref:error-messages.adoc[].
