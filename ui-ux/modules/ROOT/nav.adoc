@@ -9,6 +9,8 @@
 * xref:decision-dialogs.adoc[]
 * xref:documentation-links.adoc[]
 * xref:error-messages.adoc[]
+* xref:progress-messages.adoc[]
+* xref:success-messages.adoc[]
 * xref:forms.adoc[]
 * xref:headings.adoc[]
 * xref:info-dialogs.adoc[]
