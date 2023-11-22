@@ -12,7 +12,7 @@
 ** xref:only.adoc[]
 ** xref:there-is.adoc[]
 ** xref:which-that.adoc[]
-* Formatting Elements
+* Formatting Elements 
 ** xref:admonitions.adoc[]
 ** xref:anchor-links.adoc[]
 ** xref:examples.adoc[]
@@ -26,13 +26,13 @@
 ** xref:unordered-list.adoc[]
 ** xref:sidebars.adoc[]
 ** xref:tables.adoc[]
-* Inline Formatting
-** xref:bold.adoc[]
-** xref:button-macro.adoc[]
-** xref:italic.adoc[]
-** xref:keyboard-macro.adoc[]
-** xref:menu-ui-macro.adoc[]
-** xref:monospace-highlight.adoc[]
+** Using Inline Formatting
+*** xref:bold.adoc[]
+*** xref:button-macro.adoc[]
+*** xref:italic.adoc[]
+*** xref:keyboard-macro.adoc[]
+*** xref:menu-ui-macro.adoc[]
+*** xref:monospace-highlight.adoc[]
 * Punctuation
 ** xref:colons.adoc[]
 ** xref:commas.adoc[]
@@ -40,10 +40,11 @@
 ** xref:dashes.adoc[]
 ** xref:quotation-marks.adoc[]
 ** xref:slashes.adoc[]
-* UI Elements
+* Formatting and Describing UI Elements
 ** xref:buttons.adoc[]
 ** xref:dialogs.adoc[]
 ** xref:data-insights-area.adoc[]
+** xref:dropdowns.adoc[]
 ** xref:ui-links.adoc[]
 ** xref:menus.adoc[]
 ** xref:more-options.adoc[]
