@@ -5,11 +5,12 @@ level: warning
 tokens: 
   - left
   - right
-  - up
+  - '(?<!set\s|sign\s)up'
+  - 'up(?!\sto)'
   - down
   - below
   - above
-exceptions:
-  - set up
-  - up to
-  - sign up
+# exceptions:
+#   - '(?<=set\s)up'
+#   - 'up(?=\sto)'
+#   - '(?<=sign\s)up'
