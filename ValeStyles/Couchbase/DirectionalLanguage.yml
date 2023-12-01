@@ -5,8 +5,7 @@ level: warning
 tokens: 
   - left
   - right
-  - '(?<!set\s|sign\s)up'
-  - 'up(?!\sto)'
+  - '(?<!(sign|set)\s)up(?!\sto)'
   - down
   - below
   - above
