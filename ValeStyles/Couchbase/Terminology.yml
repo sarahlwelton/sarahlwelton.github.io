@@ -18,7 +18,7 @@ swap:
   '(?:code base|code-base)': codebase
   '(?:compare-and-swap|compare-and swap|compare and-swap)': Compare and Swap
   '(?:cross-datacenter replication|cross data center replication|cross-datacenter-replication)': cross datacenter replication
-  '(?:datacenter|data-center)': data center
+  '(?:data center|data-center)': datacenter
   '(?:data center replication|data-center replication)': datacenter replication
   '(?:data centric|datacentric)': data-centric
   '(?:data driven|datadriven)': data-driven
