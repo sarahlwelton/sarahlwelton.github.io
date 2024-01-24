@@ -8,7 +8,7 @@ Antora has 5 admonition types:
 . <<cautions,Caution>>
 . <<importants,Important>> 
 
-Don't use more than two admonitions back-to-back on a page, and don't overuse them. 
+Do not use more than two admonitions back-to-back on a page, and do not overuse them. 
 
 Remember: if everything is important, nothing is. 
 
@@ -19,7 +19,7 @@ TIP: If you need to add block or "compound" content to an admonition block, use 
 
 Use a note when you:
 
-* Want to tell the user something that isn't critical. 
+* Want to tell the user something that's not critical. 
 * Want the user to keep something in mind while working through a procedure.
 * Want to highlight a specific point in a concept. 
 
@@ -66,16 +66,16 @@ Use a warning when you:
 
 For example:
 
-WARNING: Dropping a bucket is an irreversible action. You can't recover the data from a dropped bucket. 
+WARNING: Dropping a bucket is an irreversible action. You canot recover the data from a dropped bucket. 
 
-WARNING: A deleted repository and its back-up data can't be recovered.
+WARNING: A deleted repository and its back-up data cannot be recovered.
 
 [#cautions]
 == Cautions
 
 Use a caution when you: 
 
-* Need to tell the user that the code described or provided hasn't been extensively tested.
+* Need to tell the user that the code described or provided has not been extensively tested.
 * Need to tell the user about something that might cause an error. 
 
 For example:
@@ -90,7 +90,7 @@ Otherwise, all key-value writes with durability enabled will fail.
 
 Use an important when you: 
 
-* Need to tell the user about something that's changed across versions and doesn't work the same way.
+* Need to tell the user about something that's changed across versions and does not work the same way.
 
 Try to use an important at the top of a page or section. 
 
