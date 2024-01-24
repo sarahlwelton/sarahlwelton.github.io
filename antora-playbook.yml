@@ -1,6 +1,6 @@
 site:
   title: Couchbase Documentation Style Guide
-  url: https://sarahlweton.github.io/style-guide/
+  url: https://sarahlweton.github.io/cb-vale-style-guide/styleguide/
   robots: disallow
   start_page: styleguide:ROOT:index.adoc
 content:
