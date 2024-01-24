@@ -43,6 +43,8 @@ Don't start your alt text with the words "image of."
 
 If you need to specify the type of image, such as a diagram or illustration, add that at the end of the alt text.
 
+Screen readers automatically add "image of."
+
 [#icons]
 == Don't Add Alt Text To Icons or Decorative Images
 
