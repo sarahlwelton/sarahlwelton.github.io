@@ -11,7 +11,13 @@ on:
       - closed
     branches: [ "main" ]
   workflow_dispatch:
-
+concurrency:
+    group: github-pages
+    cancel-in-progress: false
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 jobs:
   if_merged_or_push:
     runs-on: ubuntu-latest
@@ -24,11 +30,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Install Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: '16'
+          node-version: '18'
       - name: Install Antora 
         run: npm i -global @antora/cli@3.1
       - name: Install Antora Site Generator
@@ -36,9 +42,9 @@ jobs:
       - name: Generate Site
         run: npx antora antora-playbook.yml
       - name: Setup Pages
-        uses: actions/configure-pages@v2
+        uses: actions/configure-pages@v3
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v2
         with: 
           path: ./docs
   deploy:
@@ -53,4 +59,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v2
