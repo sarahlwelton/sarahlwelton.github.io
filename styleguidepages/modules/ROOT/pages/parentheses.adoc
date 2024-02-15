@@ -2,10 +2,13 @@
 
 Use parentheses sparingly. 
 
-Don't use parentheses to set off an aside or comment in text. Use an xref:dashes.adoc[em dash], instead. 
+Do not use parentheses to set off an aside or comment in text. Use an xref:dashes.adoc[em dash], instead. 
 
 You must use parentheses when you mention an unfamiliar acronym for the first time in your documentation. For example, `the Alphabet Biscuit Club (ABC)`.
 
 Parentheses are always acceptable when used inside code blocks. 
 
-Don't add parentheses to xref:headings.adoc[].
+Do not add parentheses to xref:headings.adoc[].
+
+NOTE: Parentheses are acceptable in situations where you may be describing a SQL++ statement with an optional keyword.
+When in doubt, use your best judgment around parentheses, and ignore the Vale flags. 

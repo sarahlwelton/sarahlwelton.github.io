@@ -9,6 +9,7 @@
 ** xref:capitalization.adoc[]
 ** xref:contractions.adoc[]
 ** xref:less-fewer.adoc[]
+** xref:may-can.adoc[]
 ** xref:only.adoc[]
 ** xref:there-is.adoc[]
 ** xref:which-that.adoc[]

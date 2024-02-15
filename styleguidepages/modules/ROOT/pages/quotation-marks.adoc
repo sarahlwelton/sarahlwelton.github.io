@@ -1,5 +1,7 @@
 = Quotation Marks
 
-Don't use quotation marks outside of inline code or code blocks. 
+Do not use quotation marks outside of inline code or code blocks. 
 
 Use other emphasis options, such as xref:bold.adoc[] or xref:monospace-highlight.adoc[].
+
+NOTE: When you're writing JSON, you will use quotation marks everywhere. Make sure to enclose your JSON in a code block or use xref:monospace-highlight.adoc[].

@@ -1,0 +1,11 @@
+= May vs. Can
+
+Do not use *may* and *can* interchangeably. 
+They mean different things: 
+
+* Use *may* to convey a possibility, or something that could or might happen.
++
+For example, it *may* rain tomorrow.
+* Use *can* to convey ability, or something that the user is able to accomplish. 
++
+For example, a user *can* delete a database. 
