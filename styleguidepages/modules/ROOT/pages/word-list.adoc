@@ -141,6 +141,7 @@ For terms not covered here, see the https://developers.google.com/style/word-lis
 | DevOps | Capitalize the D and O. 
 | different from | Use different from, not different to.
 | digitization | Use the American English spelling rule and use a "z."
+| disassociate | Preferred term. Do not use "dissociate" or "unassociate," when describing removing the association with a key. 
 | Distributed Transactions | See <<transactions,transactions>>.
 |===
 
